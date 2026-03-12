@@ -3,13 +3,16 @@ name: Update Zoh.m3u Playlist
 on:
   workflow_dispatch:
   schedule:
-    - cron: "* * * * *" 
+    - cron: "*/5 * * * *" 
 
 jobs:
   update-playlist:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    env:
+      # ഇവിടെ സീക്രട്ട് പേര് 'Moi' എന്ന് നൽകിയിരിക്കുന്നു
+      COOKIE_DATA: ${{ secrets.Moi }}  
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -29,11 +32,11 @@ jobs:
           SOURCE_URL = 'https://raw.githubusercontent.com/alex4528x/m3u/refs/heads/main/jtv.m3u'
           CURRENT_PLAYLIST = 'Zoh.m3u'
           
-          # ഇവിടെ നിങ്ങളുടെ കുക്കീസും ഹെഡറുകളും കൃത്യമായി നൽകുക
+          # ഇവിടെ os.environ ഉപയോഗിച്ച് 'Moi' എന്ന സീക്രട്ട് എടുക്കുന്നു
           headers = {
               'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
               'Referer': 'https://example.com/',
-              'Cookie': 'YOUR_COOKIE_STRING_HERE'
+              'Cookie': os.environ.get('COOKIE_DATA')
           }
           
           existing_channels = []
