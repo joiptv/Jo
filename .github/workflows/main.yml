@@ -5,7 +5,7 @@ workflow_dispatch:
 schedule:
 - cron: '0 */1 * * *'
 
-Enable Node 24 for GitHub actions
+
 
 env:
 FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
