@@ -1,71 +1,63 @@
-name: Auto-Update Jojo.m3u
+name: Update Zoh.m3u Playlist
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */1 * * *"
-
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
-permissions:
-  contents: write
+    - cron: "0 */6 * * *" # 6 മണിക്കൂർ കൂടുമ്പോൾ അപ്ഡേറ്റ് ചെയ്യും
 
 jobs:
   update-playlist:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          persist-credentials: true # Ensures token is used for git commands
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.x"
 
-      - name: Install dependencies
+      - name: Install requests
         run: pip install requests
 
-      - name: Run Update Script
+      - name: Generate Playlist
         run: |
           python3 -c "
-          import requests, re, sys
-          FILE_NAME = 'Zoh.M3u'
-          JIO_SOURCE = 'https://raw.githubusercontent.com/alex4528x/m3u/refs/heads/main/jtv.m3u'
-          headers = {'User-Agent': 'Mozilla/5.0'}
+          import requests
           
-          try:
-              r = requests.get(JIO_SOURCE, headers=headers, timeout=15)
-              token = re.search(r'(__hdnea__=[^\"&\\s]*)', r.text)
-              if not token: sys.exit(1)
-              
-              with open(FILE_NAME, 'r', encoding='utf-8') as f:
-                  lines = f.readlines()
-              
-              with open(FILE_NAME, 'w', encoding='utf-8') as f:
-                  for line in lines:
-                      if '# >>> JIO_AUTO_START' in line:
-                          f.write(line)
-                          # Logic goes here...
-                      else:
-                          f.write(line)
-          except Exception as e:
-              print(e)
-              sys.exit(1)
+          SOURCE_URL = 'https://raw.githubusercontent.com/alex4528x/m3u/refs/heads/main/jtv.m3u'
+          OUTPUT_FILE = 'Zoh.m3u'
+          REQUIRED_FILE = 'wanted_channels.txt'
+          
+          # വേണ്ട ചാനലുകൾ ഫയലിൽ നിന്ന് എടുക്കുന്നു
+          with open(REQUIRED_FILE, 'r', encoding='utf-8') as f:
+              wanted = [line.strip().upper() for line in f if line.strip()]
+          
+          response = requests.get(SOURCE_URL)
+          lines = response.text.splitlines()
+          
+          new_m3u = ['#EXTM3U']
+          for i in range(len(lines)):
+              if '#EXTINF' in lines[i]:
+                  # ചാനലിന്റെ പേര് പരിശോധിക്കുന്നു
+                  if any(w in lines[i].upper() for w in wanted):
+                      new_m3u.append(lines[i])
+                      new_m3u.append(lines[i+1]) # അടുത്ത വരിയിലെ ലിങ്ക്
+          
+          with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+              f.write('\n'.join(new_m3u))
           "
 
       - name: Commit & Push
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Zoh.M3u
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add Zoh.m3u
           if ! git diff --cached --quiet; then
-            git commit -m "Auto-update tokens [skip ci]"
-            git push origin HEAD:main
+            git commit -m 'Auto-update Zoh.m3u'
+            git push
           else
-            echo 'No changes to commit'
+            echo 'No changes detected'
           fi
-
