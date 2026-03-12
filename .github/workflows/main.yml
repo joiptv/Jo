@@ -3,7 +3,8 @@ name: Update Zoh.m3u Playlist
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */6 * * *" # 6 മണിക്കൂർ കൂടുമ്പോൾ അപ്ഡേറ്റ് ചെയ്യും
+    # 30 മിനിറ്റ് കൂടുമ്പോൾ റൺ ചെയ്യാൻ (എല്ലാ മണിക്കൂറിലും 0, 30 മിനിറ്റുകളിൽ)
+    - cron: "*/30 * * * *" 
 
 jobs:
   update-playlist:
@@ -19,9 +20,6 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Install requests
-        run: pip install requests
-
       - name: Generate Playlist
         run: |
           python3 -c "
@@ -31,23 +29,27 @@ jobs:
           OUTPUT_FILE = 'Zoh.m3u'
           REQUIRED_FILE = 'wanted_channels.txt'
           
-          # വേണ്ട ചാനലുകൾ ഫയലിൽ നിന്ന് എടുക്കുന്നു
-          with open(REQUIRED_FILE, 'r', encoding='utf-8') as f:
-              wanted = [line.strip().upper() for line in f if line.strip()]
-          
-          response = requests.get(SOURCE_URL)
-          lines = response.text.splitlines()
-          
-          new_m3u = ['#EXTM3U']
-          for i in range(len(lines)):
-              if '#EXTINF' in lines[i]:
-                  # ചാനലിന്റെ പേര് പരിശോധിക്കുന്നു
-                  if any(w in lines[i].upper() for w in wanted):
-                      new_m3u.append(lines[i])
-                      new_m3u.append(lines[i+1]) # അടുത്ത വരിയിലെ ലിങ്ക്
-          
-          with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-              f.write('\n'.join(new_m3u))
+          try:
+              with open(REQUIRED_FILE, 'r', encoding='utf-8') as f:
+                  wanted = [line.strip().upper() for line in f if line.strip()]
+              
+              response = requests.get(SOURCE_URL, timeout=10)
+              response.raise_for_status()
+              lines = response.text.splitlines()
+              
+              new_m3u = ['#EXTM3U']
+              for i in range(len(lines) - 1):
+                  if '#EXTINF' in lines[i]:
+                      if any(w in lines[i].upper() for w in wanted):
+                          new_m3u.append(lines[i])
+                          if lines[i+1].startswith('http'):
+                              new_m3u.append(lines[i+1])
+              
+              with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+                  f.write('\n'.join(new_m3u))
+          except Exception as e:
+              print(f'Error: {e}')
+              exit(1)
           "
 
       - name: Commit & Push
