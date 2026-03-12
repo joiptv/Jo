@@ -1,18 +1,17 @@
-name: Update Zoh.m3u Playlist
+name: Auto-Update Zoh.m3u
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *" 
+    - cron: '*/5 * * * *'
+
+permissions:
+  contents: write
 
 jobs:
   update-playlist:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    env:
-      # ഇവിടെ സീക്രട്ട് പേര് 'Moi' എന്ന് നൽകിയിരിക്കുന്നു
-      COOKIE_DATA: ${{ secrets.Moi }}  
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -20,56 +19,52 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.x"
+          python-version: '3.x'
 
-      - name: Generate Playlist
+      - name: Install requests
+        run: pip install requests
+
+      - name: Run Update Script
         run: |
-          pip install requests
           python3 -c "
           import requests
-          import os
+          import re
 
+          FILE_NAME = 'Zoh.m3u'
           SOURCE_URL = 'https://raw.githubusercontent.com/alex4528x/m3u/refs/heads/main/jtv.m3u'
-          CURRENT_PLAYLIST = 'Zoh.m3u'
           
-          # ഇവിടെ os.environ ഉപയോഗിച്ച് 'Moi' എന്ന സീക്രട്ട് എടുക്കുന്നു
-          headers = {
-              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
-              'Referer': 'https://example.com/',
-              'Cookie': os.environ.get('COOKIE_DATA')
-          }
-          
-          existing_channels = []
-          if os.path.exists(CURRENT_PLAYLIST):
-              with open(CURRENT_PLAYLIST, 'r', encoding='utf-8') as f:
-                  for line in f:
-                      if '#EXTINF' in line:
-                          name = line.split(',')[-1].strip().upper()
-                          existing_channels.append(name)
+          headers = {'User-Agent': 'Mozilla/5.0'}
           
           response = requests.get(SOURCE_URL, headers=headers)
-          response.raise_for_status()
-          lines = response.text.splitlines()
+          token_match = re.search(r'(__hdnea__=[^\"&\s]*)', response.text)
           
-          new_m3u = ['#EXTM3U']
-          for i in range(len(lines)):
-              if '#EXTINF' in lines[i]:
-                  current_source_name = lines[i].split(',')[-1].strip().upper()
-                  if current_source_name in existing_channels:
-                      new_m3u.append(lines[i])
-                      if i + 1 < len(lines):
-                          new_m3u.append(lines[i+1])
-          
-          with open(CURRENT_PLAYLIST, 'w', encoding='utf-8') as f:
-              f.write('\n'.join(new_m3u))
+          if token_match:
+              new_token = token_match.group(1)
+              with open(FILE_NAME, 'r', encoding='utf-8') as f:
+                  lines = f.readlines()
+              
+              new_lines = []
+              for line in lines:
+                  if '.mpd' in line and 'jio' in line.lower():
+                      base_link = line.split('?')[0].split('.mpd')[0] + '.mpd'
+                      new_lines.append(f'{base_link}?{new_token}\n')
+                  else:
+                      new_lines.append(line)
+                      
+              with open(FILE_NAME, 'w', encoding='utf-8') as f:
+                  f.writelines(new_lines)
+              print('Zoh.m3u updated successfully')
+          else:
+              print('Token not found')
+              exit(1)
           "
 
       - name: Commit & Push
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add Zoh.m3u
           if ! git diff --cached --quiet; then
-            git commit -m 'Auto-update Zoh.m3u'
+            git commit -m "Updated Jio links in Zoh.m3u"
             git push
           fi
