@@ -3,7 +3,7 @@ name: Update Zoh.m3u Playlist
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */6 * * *" 
+    - cron: "*/30 * * * *" # Runs every 30 minutes
 
 jobs:
   update-playlist:
@@ -21,39 +21,43 @@ jobs:
 
       - name: Generate Playlist
         run: |
-          # Install dependencies within the same shell session
           pip install requests
-          
-          # Run the python script
           python3 -c "
           import requests
-          
+          import os
+
           SOURCE_URL = 'https://raw.githubusercontent.com/alex4528x/m3u/refs/heads/main/jtv.m3u'
-          OUTPUT_FILE = 'Zoh.m3u'
-          REQUIRED_FILE = 'wanted_channels.txt'
+          CURRENT_PLAYLIST = 'Zoh.m3u'
           
-          # Read wanted channels safely
-          try:
-              with open(REQUIRED_FILE, 'r', encoding='utf-8') as f:
-                  wanted = [line.strip().upper() for line in f if line.strip()]
-          except FileNotFoundError:
-              print(f'Error: {REQUIRED_FILE} not found.')
-              exit(1)
+          # 1. Get channel names currently in Zoh.m3u
+          existing_channels = []
+          if os.path.exists(CURRENT_PLAYLIST):
+              with open(CURRENT_PLAYLIST, 'r', encoding='utf-8') as f:
+                  for line in f:
+                      if '#EXTINF' in line:
+                          # Extract name after the last comma
+                          name = line.split(',')[-1].strip().upper()
+                          existing_channels.append(name)
           
+          # 2. Fetch Source
           response = requests.get(SOURCE_URL)
-          response.raise_for_status() # Check for request errors
+          response.raise_for_status()
           lines = response.text.splitlines()
           
+          # 3. Filter source based on existing channel names
           new_m3u = ['#EXTM3U']
           for i in range(len(lines)):
               if '#EXTINF' in lines[i]:
-                  if any(w in lines[i].upper() for w in wanted):
+                  current_source_name = lines[i].split(',')[-1].strip().upper()
+                  
+                  # Keep if it exists in your current list
+                  if current_source_name in existing_channels:
                       new_m3u.append(lines[i])
-                      # Ensure we don't go out of bounds
                       if i + 1 < len(lines):
                           new_m3u.append(lines[i+1])
           
-          with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
+          # 4. Save the updated list
+          with open(CURRENT_PLAYLIST, 'w', encoding='utf-8') as f:
               f.write('\n'.join(new_m3u))
           "
 
@@ -63,7 +67,7 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add Zoh.m3u
           if ! git diff --cached --quiet; then
-            git commit -m 'Auto-update Zoh.m3u'
+            git commit -m 'Auto-update Zoh.m3u based on existing channels'
             git push
           else
             echo 'No changes detected'
