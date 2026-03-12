@@ -3,7 +3,7 @@ name: Update Zoh.m3u Playlist
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/30 * * * *" # Runs every 30 minutes
+    - cron: "* * * * *" 
 
 jobs:
   update-playlist:
@@ -29,34 +29,34 @@ jobs:
           SOURCE_URL = 'https://raw.githubusercontent.com/alex4528x/m3u/refs/heads/main/jtv.m3u'
           CURRENT_PLAYLIST = 'Zoh.m3u'
           
-          # 1. Get channel names currently in Zoh.m3u
+          # ഇവിടെ നിങ്ങളുടെ കുക്കീസും ഹെഡറുകളും കൃത്യമായി നൽകുക
+          headers = {
+              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
+              'Referer': 'https://example.com/',
+              'Cookie': 'YOUR_COOKIE_STRING_HERE'
+          }
+          
           existing_channels = []
           if os.path.exists(CURRENT_PLAYLIST):
               with open(CURRENT_PLAYLIST, 'r', encoding='utf-8') as f:
                   for line in f:
                       if '#EXTINF' in line:
-                          # Extract name after the last comma
                           name = line.split(',')[-1].strip().upper()
                           existing_channels.append(name)
           
-          # 2. Fetch Source
-          response = requests.get(SOURCE_URL)
+          response = requests.get(SOURCE_URL, headers=headers)
           response.raise_for_status()
           lines = response.text.splitlines()
           
-          # 3. Filter source based on existing channel names
           new_m3u = ['#EXTM3U']
           for i in range(len(lines)):
               if '#EXTINF' in lines[i]:
                   current_source_name = lines[i].split(',')[-1].strip().upper()
-                  
-                  # Keep if it exists in your current list
                   if current_source_name in existing_channels:
                       new_m3u.append(lines[i])
                       if i + 1 < len(lines):
                           new_m3u.append(lines[i+1])
           
-          # 4. Save the updated list
           with open(CURRENT_PLAYLIST, 'w', encoding='utf-8') as f:
               f.write('\n'.join(new_m3u))
           "
@@ -67,8 +67,6 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add Zoh.m3u
           if ! git diff --cached --quiet; then
-            git commit -m 'Auto-update Zoh.m3u based on existing channels'
+            git commit -m 'Auto-update Zoh.m3u'
             git push
-          else
-            echo 'No changes detected'
           fi
