@@ -36,7 +36,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Asianet_BTS/output/index.mpd?__hdnea__=st
 https://livestream6.sunnxt.com/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_index.mpd
 
 
-#EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://i.imgur.com/fjgzW20.png" group-title="Entertainment",Mazhavil Manorama
+#EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Mazhavil_Manorama.png" group-title="Entertainment",Mazhavil Manorama
 https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mazhavilmanorama_nim_https/050522/mazhavilmanorama/playlist.m3u8
 
 
@@ -98,10 +98,8 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Kairali_WE_TV_BTS/output/index.mpd?__hdne
 
 =======NEWS======
 #EXTINF:-1 tvg-id="282" tvg-chno="601" tvg-name="AsianetNews" tvg-logo="https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/vmbjeu.png" group-title="News", Asianet News
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_type=hls
-#EXTVLCOPT:http-user-agent=YuppTV/7.18.1 (Linux;Android 16) ExoPlayerLib/2.19.1
-https://asianet-yupptv.vgcdn.net/ptnr-yupptv/title-Asianet_News/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/26f4b1f3-41c6-4a57-b7f2-759f8b319ac8/main.m3u8?hdnts=st%3D1771142463~exp%3D1771164063~acl%3D%21%2A%2Fptnr-yupptv%2Ftitle-Asianet_News%2Fv1%2Fmaster%2F611d79b11b77e2f571934fd80ca1413453772ac7%2F26f4b1f3-41c6-4a57-b7f2-759f8b319ac8%2F%2A%21%2Fpayload%2Fyupptvott_5_-1_7c03c72952b44aa4_DE_20.55.87.177_yuppfast_2_channel_282_-1%2F%2A~data%3Dyupptvott_5_-1_7c03c72952b44aa4_DE_20.55.87.177_yuppfast_2_channel_282_-1~hmac%3D9174d9259c4f852ef602b9ff3905b003330e8a34c33b826f18c18f8ea0e96e94
+https://amg13737-amg13737c1-amgplt0016.playout.now3.amagi.tv/playlist/amg13737-amg13737c1-amgplt0016/playlist.m3u8
+
 
 #EXTINF:-1 tvg-id="ManoramaNews.in@SD" tvg-logo="https://i.imgur.com/adjRrVx.png" group-title="News",Manorama News
 https://mmtvnews1.akamaized.net/v1/master/673630b269b766886555eebfddd4f27f3de3ab50/mmtvNewsCampaign1/index.m3u8
