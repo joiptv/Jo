@@ -1,0 +1,71 @@
+name: Auto-Update Jojo.m3u
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */1 * * *"
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+permissions:
+  contents: write
+
+jobs:
+  update-playlist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true # Ensures token is used for git commands
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run Update Script
+        run: |
+          python3 -c "
+          import requests, re, sys
+          FILE_NAME = 'Zoh.M3u'
+          JIO_SOURCE = 'https://raw.githubusercontent.com/alex4528x/m3u/refs/heads/main/jtv.m3u'
+          headers = {'User-Agent': 'Mozilla/5.0'}
+          
+          try:
+              r = requests.get(JIO_SOURCE, headers=headers, timeout=15)
+              token = re.search(r'(__hdnea__=[^\"&\\s]*)', r.text)
+              if not token: sys.exit(1)
+              
+              with open(FILE_NAME, 'r', encoding='utf-8') as f:
+                  lines = f.readlines()
+              
+              with open(FILE_NAME, 'w', encoding='utf-8') as f:
+                  for line in lines:
+                      if '# >>> JIO_AUTO_START' in line:
+                          f.write(line)
+                          # Logic goes here...
+                      else:
+                          f.write(line)
+          except Exception as e:
+              print(e)
+              sys.exit(1)
+          "
+
+      - name: Commit & Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Zoh.M3u
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto-update tokens [skip ci]"
+            git push origin HEAD:main
+          else
+            echo 'No changes to commit'
+          fi
+
