@@ -72,6 +72,12 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Asianet_Movies_HD_BTS/output/index.mpd?__
 #EXTHTTP:{"cookie":"__hdnea__=st=1773321083~exp=1773407483~acl=/*~hmac=688f83d0a046764b8a1fe15fb41a30b23a22b6047fe6a87d8b951899e602fd63"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Asianet_Movies_BTS/output/index.mpd?__hdnea__=st=1773369037~exp=1773455437~acl=/*~hmac=58f36fd52dbf839fda3b709f9cf6901b476db42d2e67e31cc5e0861fcf03dac4
 
+#EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://i.ibb.co/DgfjRPnf/Picsart-25-02-10-14-22-46-534.png" group-title="SunNXT",SURYA Movies
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=6b67bccef7024f2da29b42e10dc13f89:2e8460c47d3f01693e193dba5963a5e1
+https://livestream.sunnxt.com/e24ee14c395945bd8ccb065e1bce8b9b/SuryaMoviesB_IN_index.mpd
+
+
 
 #EXTINF:-1 tvg-id="1139" group-title="Entertainment" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_Plus.png",Asianet Plus
 #KODIPROP:inputstream.adaptive.license_type=clearkey
