@@ -67,7 +67,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/ZeeKeralamHD_BTS/output/index.mpd?__hdnea
 #EXTHTTP:{"cookie":"__hdnea__=st=1773579785~exp=1773666185~acl=/*~hmac=ad774b7188d2567fbe89076dd3b43af3b6542133045d32e2069d876ae017bdf4"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Asianet_Movies_HD_BTS/output/index.mpd?__hdnea__=st=1773579785~exp=1773666185~acl=/*~hmac=ad774b7188d2567fbe89076dd3b43af3b6542133045d32e2069d876ae017bdf4
 
-#EXTINF:-1 tvg-id="1153" group-title="Movies" tvg-logo="https://www.keralatv.in/media/2023/03/Asianet-Movies-HD-Logo.png",Asianet Movies
+#EXTINF:-1 tvg-id="1153" group-title="Movies" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7400/567400-h",Asianet Movies
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ca83419dfa1b56f794032b271b8f2c84:d592520eea361507a63c94bff799dfb6
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/824.1 ExoPlayerLib/824.0
@@ -110,7 +110,7 @@ https://j78dp346yq5r-hls-live.5centscdn.com/safari/live.stream/playlist.m3u8
 https://cdn-3.pishow.tv/live/1123/master.m3u8
 
 =======NEWS======
-#EXTINF:-1 tvg-id="282" tvg-chno="601" tvg-name="AsianetNews" tvg-logo="https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/vmbjeu.png" group-title="News", Asianet News
+#EXTINF:-1 tvg-id="282" tvg-chno="601" tvg-name="AsianetNews" tvg-logo="https://images.seeklogo.com/logo-png/34/1/asianet-news-logo-png_seeklogo-343770.png" group-title="News", Asianet News
 https://amg13737-amg13737c1-amgplt0016.playout.now3.amagi.tv/playlist/amg13737-amg13737c1-amgplt0016/playlist.m3u8
 
 
