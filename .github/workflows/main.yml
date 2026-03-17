@@ -25,6 +25,7 @@ jobs:
         run: pip install requests
 
       - name: Update Playlist with Failover
+        shell: python
         env:
           API_ENDPOINT_1: ${{ secrets.API_ENDPOINT_1 }}
           API_ENDPOINT_2: ${{ secrets.API_ENDPOINT_2 }}
@@ -32,7 +33,6 @@ jobs:
           API_ENDPOINT_4: ${{ secrets.API_ENDPOINT_4 }}
           API_ENDPOINT_5: ${{ secrets.API_ENDPOINT_5 }}
         run: |
-          python << 'EOF'
           import requests
           import os
           import re
@@ -47,7 +47,6 @@ jobs:
               os.environ.get("API_ENDPOINT_5")
           ]
           
-          # ഫ്രീയായ അല്ലെങ്കിൽ സെറ്റ് ചെയ്യാത്ത എൻഡ്‌പോയിന്റുകൾ ഒഴിവാക്കാൻ
           ENDPOINTS = [url for url in ENDPOINTS if url] 
 
           if not ENDPOINTS:
@@ -57,7 +56,6 @@ jobs:
           headers = {"User-Agent": "Mozilla/5.0"}
           source_channels = {}
 
-          # എൻഡ്‌പോയിന്റുകൾ പരിശോധിച്ച് ഡാറ്റ എടുക്കുന്നു
           for url in ENDPOINTS:
               try:
                   print(f"Trying to fetch from: {url}")
@@ -78,7 +76,7 @@ jobs:
                       
                       if source_channels:
                           print("Successfully fetched channels.")
-                          break # ആദ്യത്തെ വർക്കിംഗ് ലിങ്ക് കിട്ടിയാൽ ലൂപ്പ് നിർത്തുന്നു
+                          break 
               except Exception as e:
                   print(f"Failed to fetch {url}: {e}")
                   continue
@@ -87,7 +85,6 @@ jobs:
               print("Error: Could not fetch channels from any endpoint.")
               sys.exit(1)
 
-          # ഫയൽ ഇല്ലെങ്കിൽ പുതിയത് ഉണ്ടാക്കുന്നു
           if not os.path.exists(FILE_NAME):
               print(f"Warning: {FILE_NAME} not found. Creating a new empty file.")
               open(FILE_NAME, 'w').close()
@@ -99,7 +96,6 @@ jobs:
           new_lines = []
           current_user_channel = None
 
-          # നിലവിലെ പ്ലേലിസ്റ്റിലെ ലിങ്കുകൾ പുതിയവ ഉപയോഗിച്ച് മാറ്റുന്നു
           for line in user_lines:
               if line.strip().startswith("#EXTINF"):
                   match = re.search(r',(.*)$', line.strip())
@@ -116,11 +112,9 @@ jobs:
               else:
                   new_lines.append(line)
 
-          # പുതിയ ഡാറ്റ ഫയലിലേക്ക് സേവ് ചെയ്യുന്നു
           with open(FILE_NAME, "w", encoding="utf-8") as f:
               f.writelines(new_lines)
           print(f"{FILE_NAME} updated successfully.")
-          EOF
 
       - name: Commit & Push
         run: |
@@ -132,3 +126,4 @@ jobs:
             git push
           else
             echo "No changes to commit."
+          fi
