@@ -11,19 +11,20 @@ permissions:
 jobs:
   update-playlist:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - name: Set up Python
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Install requests
         run: pip install requests
 
       - name: Update Playlist with Failover
-        shell: python
         env:
           API_ENDPOINT_1: ${{ secrets.API_ENDPOINT_1 }}
           API_ENDPOINT_2: ${{ secrets.API_ENDPOINT_2 }}
@@ -31,6 +32,7 @@ jobs:
           API_ENDPOINT_4: ${{ secrets.API_ENDPOINT_4 }}
           API_ENDPOINT_5: ${{ secrets.API_ENDPOINT_5 }}
         run: |
+          python << 'EOF'
           import requests
           import os
           import re
@@ -48,12 +50,17 @@ jobs:
           # ഫ്രീയായ അല്ലെങ്കിൽ സെറ്റ് ചെയ്യാത്ത എൻഡ്‌പോയിന്റുകൾ ഒഴിവാക്കാൻ
           ENDPOINTS = [url for url in ENDPOINTS if url] 
 
+          if not ENDPOINTS:
+              print("Error: No API endpoints found. Please check GitHub Secrets.")
+              sys.exit(1)
+
           headers = {"User-Agent": "Mozilla/5.0"}
           source_channels = {}
 
           # എൻഡ്‌പോയിന്റുകൾ പരിശോധിച്ച് ഡാറ്റ എടുക്കുന്നു
           for url in ENDPOINTS:
               try:
+                  print(f"Trying to fetch from: {url}")
                   response = requests.get(url, headers=headers, timeout=15)
                   if response.status_code == 200:
                       lines = response.text.splitlines()
@@ -68,7 +75,10 @@ jobs:
                               if current_channel not in source_channels:
                                   source_channels[current_channel] = line
                               current_channel = None
-                      break # ആദ്യത്തെ വർക്കിംഗ് ലിങ്ക് കിട്ടിയാൽ ലൂപ്പ് നിർത്തുന്നു
+                      
+                      if source_channels:
+                          print("Successfully fetched channels.")
+                          break # ആദ്യത്തെ വർക്കിംഗ് ലിങ്ക് കിട്ടിയാൽ ലൂപ്പ് നിർത്തുന്നു
               except Exception as e:
                   print(f"Failed to fetch {url}: {e}")
                   continue
@@ -77,13 +87,14 @@ jobs:
               print("Error: Could not fetch channels from any endpoint.")
               sys.exit(1)
 
-          # നിലവിലെ Zoh.m3u ഫയൽ വായിക്കുന്നു
-          try:
+          # ഫയൽ ഇല്ലെങ്കിൽ പുതിയത് ഉണ്ടാക്കുന്നു
+          if not os.path.exists(FILE_NAME):
+              print(f"Warning: {FILE_NAME} not found. Creating a new empty file.")
+              open(FILE_NAME, 'w').close()
+              user_lines = []
+          else:
               with open(FILE_NAME, "r", encoding="utf-8") as f:
                   user_lines = f.readlines()
-          except FileNotFoundError:
-              print(f"Error: {FILE_NAME} not found.")
-              sys.exit(1)
 
           new_lines = []
           current_user_channel = None
@@ -109,6 +120,7 @@ jobs:
           with open(FILE_NAME, "w", encoding="utf-8") as f:
               f.writelines(new_lines)
           print(f"{FILE_NAME} updated successfully.")
+          EOF
 
       - name: Commit & Push
         run: |
