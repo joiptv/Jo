@@ -24,7 +24,7 @@ jobs:
       - name: Install requests
         run: pip install requests
 
-      - name: Update Playlist with Failover
+      - name: Update Jio Token Strictly
         shell: python
         env:
           API_ENDPOINT_1: ${{ secrets.API_ENDPOINT_1 }}
@@ -54,67 +54,47 @@ jobs:
               sys.exit(1)
 
           headers = {"User-Agent": "Mozilla/5.0"}
-          source_channels = {}
+          new_token_val = None
 
+          # എൻഡ്‌പോയിന്റുകളിൽ നിന്ന് പുതിയ ടോക്കൺ മാത്രം കൃത്യമായി എടുക്കുന്നു
           for url in ENDPOINTS:
               try:
-                  print(f"Trying to fetch from: {url}")
+                  print(f"Trying to fetch token from: {url}")
                   response = requests.get(url, headers=headers, timeout=15)
                   if response.status_code == 200:
-                      lines = response.text.splitlines()
-                      current_channel = None
-                      for line in lines:
-                          line = line.strip()
-                          if line.startswith("#EXTINF"):
-                              match = re.search(r',(.*)$', line)
-                              if match:
-                                  current_channel = match.group(1).strip().lower()
-                          elif line and not line.startswith("#") and current_channel:
-                              if current_channel not in source_channels:
-                                  source_channels[current_channel] = line
-                              current_channel = None
-                      
-                      if source_channels:
-                          print("Successfully fetched channels.")
-                          break 
+                      # 'st=' വെച്ച് തുടങ്ങുന്ന ടോക്കൺ മാത്രം വേർതിരിച്ചെടുക്കുന്നു
+                      match = re.search(r'__hdnea__=(st=[a-zA-Z0-9~=/*_-]+)', response.text)
+                      if match:
+                          new_token_val = match.group(1)
+                          print("Successfully fetched the new Jio token.")
+                          break
               except Exception as e:
                   print(f"Failed to fetch {url}: {e}")
                   continue
 
-          if not source_channels:
-              print("Error: Could not fetch channels from any endpoint.")
+          if not new_token_val:
+              print("Error: Could not find __hdnea__ token from any endpoint.")
               sys.exit(1)
 
           if not os.path.exists(FILE_NAME):
-              print(f"Warning: {FILE_NAME} not found. Creating a new empty file.")
-              open(FILE_NAME, 'w').close()
-              user_lines = []
-          else:
-              with open(FILE_NAME, "r", encoding="utf-8") as f:
-                  user_lines = f.readlines()
+              print(f"Error: {FILE_NAME} not found.")
+              sys.exit(1)
+
+          with open(FILE_NAME, "r", encoding="utf-8") as f:
+              lines = f.readlines()
 
           new_lines = []
-          current_user_channel = None
-
-          for line in user_lines:
-              if line.strip().startswith("#EXTINF"):
-                  match = re.search(r',(.*)$', line.strip())
-                  if match:
-                      current_user_channel = match.group(1).strip().lower()
-                  new_lines.append(line)
-              elif line.strip() and not line.strip().startswith("#") and current_user_channel:
-                  if current_user_channel in source_channels:
-                      new_url = source_channels[current_user_channel]
-                      new_lines.append(new_url + "\n")
-                  else:
-                      new_lines.append(line)
-                  current_user_channel = None
-              else:
-                  new_lines.append(line)
+          
+          # ഫയലിലെ പഴയ ടോക്കൺ മാത്രം മാറ്റി പുതിയത് വെക്കുന്നു (ബാക്കി ഡാറ്റ നിലനിർത്തുന്നു)
+          for line in lines:
+              if "__hdnea__=" in line:
+                  # ടോക്കൺ അക്ഷരങ്ങൾ മാത്രം മാറ്റി റീപ്ലേസ് ചെയ്യുന്നു
+                  line = re.sub(r'__hdnea__=[a-zA-Z0-9~=/*_-]+', f'__hdnea__={new_token_val}', line)
+              new_lines.append(line)
 
           with open(FILE_NAME, "w", encoding="utf-8") as f:
               f.writelines(new_lines)
-          print(f"{FILE_NAME} updated successfully.")
+          print("Jio tokens updated strictly. Rest of the link is untouched.")
 
       - name: Commit & Push
         run: |
@@ -122,8 +102,9 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add Zoh.m3u
           if ! git diff --cached --quiet; then
-            git commit -m "Auto update playlist with 5-endpoint failover logic"
+            git commit -m "Auto update only Jio tokens securely"
             git push
           else
             echo "No changes to commit."
           fi
+
