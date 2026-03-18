@@ -1,4 +1,4 @@
-name: Auto-Update Zoh.m3u
+name: Auto-Update and Verify Zoh.m3u
 
 on:
   workflow_dispatch:
@@ -11,35 +11,36 @@ permissions:
 jobs:
   update-playlist:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: '3.x'
 
-      - name: Install requests
+      - name: Install dependencies
         run: pip install requests
 
-      - name: Update Jio Token Strictly
-        shell: python
+      - name: Fetch, Test and Update Playlist
         env:
+          # GitHub Secrets-ൽ നിന്ന് എൻഡ് പോയിന്റുകൾ എടുക്കുന്നു
           API_ENDPOINT_1: ${{ secrets.API_ENDPOINT_1 }}
           API_ENDPOINT_2: ${{ secrets.API_ENDPOINT_2 }}
           API_ENDPOINT_3: ${{ secrets.API_ENDPOINT_3 }}
           API_ENDPOINT_4: ${{ secrets.API_ENDPOINT_4 }}
           API_ENDPOINT_5: ${{ secrets.API_ENDPOINT_5 }}
+        shell: python
         run: |
-          import requests
           import os
+          import requests
           import re
           import sys
 
           FILE_NAME = "Zoh.m3u"
-          ENDPOINTS = [
+          
+          # എൻവയോൺമെന്റ് വേരിയബിളുകളിൽ നിന്ന് എൻഡ് പോയിന്റുകൾ ഒരു ലിസ്റ്റിലേക്ക് മാറ്റുന്നു
+          raw_endpoints = [
               os.environ.get("API_ENDPOINT_1"),
               os.environ.get("API_ENDPOINT_2"),
               os.environ.get("API_ENDPOINT_3"),
@@ -47,64 +48,68 @@ jobs:
               os.environ.get("API_ENDPOINT_5")
           ]
           
-          ENDPOINTS = [url for url in ENDPOINTS if url] 
-
-          if not ENDPOINTS:
-              print("Error: No API endpoints found. Please check GitHub Secrets.")
-              sys.exit(1)
-
+          # ഇതിൽ കാലിയായവ (None) ഒഴിവാക്കി യഥാർത്ഥ ലിങ്കുകൾ മാത്രം എടുക്കുന്നു
+          ENDPOINTS = [ep for ep in raw_endpoints if ep]
+          
           headers = {"User-Agent": "Mozilla/5.0"}
-          new_token_val = None
+          
+          # സ്ട്രീം വർക്കിംഗ് ആണോ എന്ന് ചെക്ക് ചെയ്യാനുള്ള ഫംഗ്ഷൻ
+          def is_stream_working(url):
+              try:
+                  response = requests.get(url, headers=headers, stream=True, timeout=5)
+                  if response.status_code == 200:
+                      return True
+                  return False
+              except Exception:
+                  return False
 
-          # എൻഡ്‌പോയിന്റുകളിൽ നിന്ന് പുതിയ ടോക്കൺ മാത്രം കൃത്യമായി എടുക്കുന്നു
+          new_token = None
+          
+          # ഓരോ എൻഡ് പോയിന്റും പരിശോധിച്ച് വർക്കിംഗ് ആയത് കണ്ടുപിടിക്കുന്നു
           for url in ENDPOINTS:
               try:
-                  print(f"Trying to fetch token from: {url}")
-                  response = requests.get(url, headers=headers, timeout=15)
+                  print(f"Checking endpoint: {url}")
+                  response = requests.get(url, headers=headers, timeout=10)
+                  
                   if response.status_code == 200:
-                      # 'st=' വെച്ച് തുടങ്ങുന്ന ടോക്കൺ മാത്രം വേർതിരിച്ചെടുക്കുന്നു
-                      match = re.search(r'__hdnea__=(st=[a-zA-Z0-9~=/*_-]+)', response.text)
-                      if match:
-                          new_token_val = match.group(1)
-                          print("Successfully fetched the new Jio token.")
-                          break
+                      temp_token = response.text.strip()
+                      
+                      # ലഭിച്ച ടോക്കൺ വെച്ച് ഒരു ടെസ്റ്റ് ലിങ്ക് ഉണ്ടാക്കുന്നു (ഉദാഹരണത്തിന്)
+                      # നിങ്ങളുടെ യഥാർത്ഥ ചാനൽ ലിങ്ക് ഇവിടെ നൽകുക
+                      test_stream_url = f"http://example.com/stream.m3u8?__hdnea__={temp_token}"
+                      
+                      if is_stream_working(test_stream_url):
+                          print(f"Working token found at {url} and stream is LIVE!")
+                          new_token = temp_token
+                          break # വർക്കിംഗ് ആണെങ്കിൽ ലൂപ്പ് നിർത്തുന്നു, അടുത്തതിലേക്ക് പോകില്ല
+                      else:
+                          print(f"Token found at {url}, but stream is NOT working. Moving to next...")
               except Exception as e:
-                  print(f"Failed to fetch {url}: {e}")
-                  continue
-
-          if not new_token_val:
-              print("Error: Could not find __hdnea__ token from any endpoint.")
+                  print(f"Failed to fetch from {url}: {e}")
+                  
+          if not new_token:
+              print("Error: No working stream found from any endpoints.")
+              sys.exit(1)
+              
+          # വർക്കിംഗ് ആയ ടോക്കൺ ഉപയോഗിച്ച് ഫയൽ അപ്ഡേറ്റ് ചെയ്യുന്നു
+          try:
+              with open(FILE_NAME, "r", encoding="utf-8") as f:
+                  content = f.read()
+                  
+              updated_content = re.sub(r'__hdnea__=st=\d+~exp=\d+~acl=[^~&"]+~hmac=[a-f0-9]+', f'__hdnea__={new_token}', content)
+              
+              with open(FILE_NAME, "w", encoding="utf-8") as f:
+                  f.write(updated_content)
+                  
+              print(f"Successfully updated {FILE_NAME} with a working link.")
+          except FileNotFoundError:
+              print(f"Error: {FILE_NAME} not found in repository.")
               sys.exit(1)
 
-          if not os.path.exists(FILE_NAME):
-              print(f"Error: {FILE_NAME} not found.")
-              sys.exit(1)
-
-          with open(FILE_NAME, "r", encoding="utf-8") as f:
-              lines = f.readlines()
-
-          new_lines = []
-          
-          # ഫയലിലെ പഴയ ടോക്കൺ മാത്രം മാറ്റി പുതിയത് വെക്കുന്നു (ബാക്കി ഡാറ്റ നിലനിർത്തുന്നു)
-          for line in lines:
-              if "__hdnea__=" in line:
-                  # ടോക്കൺ അക്ഷരങ്ങൾ മാത്രം മാറ്റി റീപ്ലേസ് ചെയ്യുന്നു
-                  line = re.sub(r'__hdnea__=[a-zA-Z0-9~=/*_-]+', f'__hdnea__={new_token_val}', line)
-              new_lines.append(line)
-
-          with open(FILE_NAME, "w", encoding="utf-8") as f:
-              f.writelines(new_lines)
-          print("Jio tokens updated strictly. Rest of the link is untouched.")
-
-      - name: Commit & Push
+      - name: Commit and Push
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add Zoh.m3u
-          if ! git diff --cached --quiet; then
-            git commit -m "Auto update only Jio tokens securely"
-            git push
-          else
-            echo "No changes to commit."
-          fi
-
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update working Jio tokens"
+          git push
