@@ -17,11 +17,11 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Asianet_HD_BTS/output/index.mpd?__hdnea__
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"glnODBEnJaTSyU0VQgdCXw", "kid":"6ug4zNddSh+/9v190cl3gA" } ], "type":"temporary" }
 #EXTINF:-1 tvg-id="Surya HD" tvg-logo="https://sund-images.sunnxt.com/194397/640x360_SuryaTVHD_194397_7b54e231-bbb9-48d2-8aae-35a5886deed3.jpg" group-title="Sun NX",Surya HD
-https://jiotvpllive.cdn.jio.com/bpk-tv/Surya_HD_MOB/WDVLive/index.mpd?__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4&xxx=%7Ccookie=__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4
+https://livestream15.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_index.mpd
 
 
 #EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://www.keralatv.in/media/2019/03/mazhavil-manorama-hd-latest-logo.png" group-title="Entertainment",Mazhavil Manorama HD
-https://jiotvpllive.cdn.jio.com/bpk-tv/Mazavali_Manorama_HD_BTS/output/index.mpd?__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4&xxx=%7Ccookie=__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4
+https://cdn-7.pishow.tv/live/1129/master.m3u8
 
 
 
@@ -39,7 +39,7 @@ https://livestream6.sunnxt.com/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_inde
 
 
 #EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://exchange4media.gumlet.io/news-photo/92907-MazhavilManorama.jpg" group-title="Entertainment",Mazhavil Manorama
-https://jiotvpllive.cdn.jio.com/bpk-tv/Mazhavil_Manorama_BTS/output/index.mpd?__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4&xxx=%7Ccookie=__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4
+https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mazhavilmanorama_nim_https/050522/mazhavilmanorama/playlist.m3u8
 
 
 
@@ -78,7 +78,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Asianet_Movies_BTS/output/index.mpd?__hdn
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://i.ibb.co/DgfjRPnf/Picsart-25-02-10-14-22-46-534.png" group-title="SunNXT",SURYA Movies
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=6b67bccef7024f2da29b42e10dc13f89:2e8460c47d3f01693e193dba5963a5e1
-https://jiotvpllive.cdn.jio.com/bpk-tv/Surya_Movies_MOB/WDVLive/index.mpd?__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4&xxx=%7Ccookie=__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4
+https://livestream.sunnxt.com/e24ee14c395945bd8ccb065e1bce8b9b/SuryaMoviesB_IN_index.mpd
 
 
 #EXTINF:-1 tvg-id="1139" group-title="Entertainment" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7424/567424-h",Asianet Plus
@@ -100,52 +100,52 @@ https://cdn-3.pishow.tv/live/1530/master.m3u8
 
 
 #EXTINF:-1 tvg-id="10582" tvg-chno="070" tvg-name="dd-malayalam" tvg-id="abusaeeidx" tvg-logo="https://prodcdn1.wavespb.com/shows/poster_url/1443058650DD_malayalam_______384x512.webp" group-title="DD Regional", DD MALAYALAM
-https://jiotvpllive.cdn.jio.com/bpk-tv/DD_Malayalam_BTS/output/index.mpd?__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4&xxx=%7Ccookie=__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4
+https://d2lk5u59tns74c.cloudfront.net/out/v1/c313674ffced4c9a90f1bba436df2b9b/index.m3u8
 
 
 #EXTINF:-1 tvg-id="SafariTV" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SAFARI_TV/images/LOGO_HD/image.png" group-title="Documentary",Safari TV
-https://jiotvpllive.cdn.jio.com/bpk-tv/Safari_TV_BTS/output/index.mpd?__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4&xxx=%7Ccookie=__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4
+https://j78dp346yq5r-hls-live.5centscdn.com/safari/live.stream/playlist.m3u8
 
 #EXTINF:-1 tvg-id="KappaTV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Kappa_TV.png" group-title="Lifestyle",Kappa TV
-https://jiotvpllive.cdn.jio.com/bpk-tv/Kappa_TV_BTS/output/index.mpd?__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4&xxx=%7Ccookie=__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4
+https://cdn-3.pishow.tv/live/1123/master.m3u8
 
 =======NEWS======
 #EXTINF:-1 tvg-id="282" tvg-chno="601" tvg-name="AsianetNews" tvg-logo="https://play-lh.googleusercontent.com/rMgagys9KOji0wHPQzdDeS2QFe5lbOPZ0q_PsMl98kGc2putJD5gFUO1Xz_vE9siqdo" group-title="News", Asianet News
-https://jiotvpllive.cdn.jio.com/bpk-tv/Asianet_News_BTS/output/index.mpd?__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4&xxx=%7Ccookie=__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4
+https://amg13737-amg13737c1-amgplt0016.playout.now3.amagi.tv/playlist/amg13737-amg13737c1-amgplt0016/playlist.m3u8
 
 
 #EXTINF:-1 tvg-id="ManoramaNews" tvg-logo="https://i.imgur.com/n9ABnlu.jpeg" group-title="News",Manorama News
-https://jiotvpllive.cdn.jio.com/bpk-tv/Manorama_News_BTS/output/index.mpd?__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4&xxx=%7Ccookie=__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4
+https://mmtvnews1.akamaized.net/v1/master/673630b269b766886555eebfddd4f27f3de3ab50/mmtvNewsCampaign1/index.m3u8
 
 #EXTINF:-1 tvg-id="MathrubhumiNews" tvg-logo="https://i.imgur.com/ANh7Zpg.jpeg" group-title="News",Mathrubhumi News
-https://jiotvpllive.cdn.jio.com/bpk-tv/Mathrubhumi_News_BTS/output/index.mpd?__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4&xxx=%7Ccookie=__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4
+https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mathrubhuminews_nim_https/110322/mathrubhuminews/playlist.m3u8
 
 #EXTINF:-1 tvg-id="TwentyFourNews" tvg-logo="https://i.imgur.com/6DOCPsl.jpeg" group-title="News",Twenty Four News
-https://jiotvpllive.cdn.jio.com/bpk-tv/Twenty_Four_News_BTS/output/index.mpd?__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4&xxx=%7Ccookie=__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4
+https://segment.yuppcdn.net/110322/channel24/playlist.m3u8
 
 #EXTINF:-1 tvg-id="ReporterTV" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_REPORTER_TV/images/LOGO_HD/image.png" group-title="News",Reporter TV
-https://jiotvpllive.cdn.jio.com/bpk-tv/Reporter_TV_BTS/output/index.mpd?__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4&xxx=%7Ccookie=__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4
+https://segment.yuppcdn.net/050522/reporter/playlist.m3u8
 
 
 #EXTINF:-1 tvg-id="MediaOne" tvg-logo="https://i.imgur.com/Jmdo2L6.jpeg" group-title="News",Media One
 https://cdn-3.pishow.tv/live/1481/master.m3u8
 
 #EXTINF:-1 tvg-id="JaihindTV" tvg-logo="https://i.imgur.com/NaiA73p.png" group-title="News",Jaihind TV
-https://jiotvpllive.cdn.jio.com/bpk-tv/Jaihind_tv_BTS/output/index.mpd?__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4&xxx=%7Ccookie=__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4
+https://yuppnimrestreammum.akamaized.net/260723/smil:jaihind1.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
 
 
 #EXTINF:-1 tvg-id="News18Kerala" tvg-logo="https://i.imgur.com/HIFufHH.jpeg" group-title="News",News18 Kerala
-https://jiotvpllive.cdn.jio.com/bpk-tv/News18Kerala_BTS/output/index.mpd?__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4&xxx=%7Ccookie=__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4
+https://nw18live.cdn.jio.com/bpk-tv/News18_Kerala_NW18_MOB/output01/index.m3u8
 
 #EXTINF:-1 tvg-id="ZeeMalayalamNews" tvg-logo="https://i.imgur.com/MePj7ET.png" group-title="News",Zee News Malayalam
 https://d1ty2af03alkwd.cloudfront.net/index_4.m3u8
 
 #EXTINF:-1 tvg-id="KairaliNews" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KAIRALI_NEWS/images/LOGO_HD/image.png" group-title="News",Kairali News
-https://jiotvpllive.cdn.jio.com/bpk-tv/Kairali_People_TV_BTS/output/index.mpd?__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4&xxx=%7Ccookie=__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4
+https://cdn-3.pishow.tv/live/1469/master.m3u8
 
 
 #EXTINF:-1 tvg-id="RealNewsKerala" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Real_News_Kerala.png" group-title="News",Real News Kerala
-https://jiotvpllive.cdn.jio.com/bpk-tv/Real_News_Kerala_BTS/output/index.mpd?__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4&xxx=%7Ccookie=__hdnea__=st=1773801517~exp=1773823117~acl=/*~hmac=5ff26b07b466677a4ee101bfc6b231b4b89770a28c4cfac0517af9ecc5d765a4
+https://bk7l298nyx53-hls-live.5centscdn.com/realnews/e7dee419f91aa9e65939d3677fb9c4f5.sdp/playlist.m3u8
 
 
 #EXTINF:-1 tvg-id="News Malayalam 24x7" tvg-logo="https://i.imgur.com/9Yyzvp9.jpeg" group-title="Malayalam News",News Malayalam 24x7 
