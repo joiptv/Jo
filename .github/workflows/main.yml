@@ -24,7 +24,6 @@ jobs:
 
       - name: Fetch, Test and Update Playlist
         env:
-          # GitHub Secrets-ൽ നിന്ന് എൻഡ് പോയിന്റുകൾ എടുക്കുന്നു
           API_ENDPOINT_1: ${{ secrets.API_ENDPOINT_1 }}
           API_ENDPOINT_2: ${{ secrets.API_ENDPOINT_2 }}
           API_ENDPOINT_3: ${{ secrets.API_ENDPOINT_3 }}
@@ -39,7 +38,28 @@ jobs:
 
           FILE_NAME = "Zoh.m3u"
           
-          # എൻവയോൺമെന്റ് വേരിയബിളുകളിൽ നിന്ന് എൻഡ് പോയിന്റുകൾ ഒരു ലിസ്റ്റിലേക്ക് മാറ്റുന്നു
+          # 1. നിങ്ങളുടെ ഫയൽ വായിക്കുന്നു
+          try:
+              with open(FILE_NAME, "r", encoding="utf-8") as f:
+                  content = f.read()
+          except FileNotFoundError:
+              print(f"Error: {FILE_NAME} not found.")
+              sys.exit(1)
+
+          # 2. ഫയലിൽ നിന്ന് ഒരു യഥാർത്ഥ ജിയോ ലിങ്ക് ഓട്ടോമാറ്റിക് ആയി കണ്ടുപിടിക്കുന്നു (മാന്വൽ അല്ല)
+          match = re.search(r'(https://[^"\'\s]+\.(?:mpd|m3u8))\?__hdnea__=', content)
+          if not match:
+              print("Error: Could not find a valid Jio stream URL in the M3U file to test.")
+              sys.exit(1)
+          
+          base_test_url = match.group(1)
+          print(f"Auto-detected test stream from file: {base_test_url}")
+
+          # 3. ജിയോ വീഡിയോ പ്ലേ ചെയ്യാൻ ആവശ്യമായ ശരിയായ User-Agent
+          headers = {
+              "User-Agent": "plaYtv/7.1.3 (Linux;Android 13) ygx/824.1 ExoPlayerLib/824.0"
+          }
+
           raw_endpoints = [
               os.environ.get("API_ENDPOINT_1"),
               os.environ.get("API_ENDPOINT_2"),
@@ -47,13 +67,8 @@ jobs:
               os.environ.get("API_ENDPOINT_4"),
               os.environ.get("API_ENDPOINT_5")
           ]
-          
-          # ഇതിൽ കാലിയായവ (None) ഒഴിവാക്കി യഥാർത്ഥ ലിങ്കുകൾ മാത്രം എടുക്കുന്നു
           ENDPOINTS = [ep for ep in raw_endpoints if ep]
-          
-          headers = {"User-Agent": "Mozilla/5.0"}
-          
-          # സ്ട്രീം വർക്കിംഗ് ആണോ എന്ന് ചെക്ക് ചെയ്യാനുള്ള ഫംഗ്ഷൻ
+
           def is_stream_working(url):
               try:
                   response = requests.get(url, headers=headers, stream=True, timeout=5)
@@ -65,7 +80,6 @@ jobs:
 
           new_token = None
           
-          # ഓരോ എൻഡ് പോയിന്റും പരിശോധിച്ച് വർക്കിംഗ് ആയത് കണ്ടുപിടിക്കുന്നു
           for url in ENDPOINTS:
               try:
                   print(f"Checking endpoint: {url}")
@@ -74,16 +88,15 @@ jobs:
                   if response.status_code == 200:
                       temp_token = response.text.strip()
                       
-                      # ലഭിച്ച ടോക്കൺ വെച്ച് ഒരു ടെസ്റ്റ് ലിങ്ക് ഉണ്ടാക്കുന്നു (ഉദാഹരണത്തിന്)
-                      # നിങ്ങളുടെ യഥാർത്ഥ ചാനൽ ലിങ്ക് ഇവിടെ നൽകുക
-                      test_stream_url = f"http://example.com/stream.m3u8?__hdnea__={temp_token}"
+                      # ഫയലിൽ നിന്ന് എടുത്ത ലിങ്കിലേക്ക് പുതിയ ടോക്കൺ ചേർത്ത് ടെസ്റ്റ് ചെയ്യുന്നു
+                      test_url_with_token = f"{base_test_url}?__hdnea__={temp_token}"
                       
-                      if is_stream_working(test_stream_url):
+                      if is_stream_working(test_url_with_token):
                           print(f"Working token found at {url} and stream is LIVE!")
                           new_token = temp_token
-                          break # വർക്കിംഗ് ആണെങ്കിൽ ലൂപ്പ് നിർത്തുന്നു, അടുത്തതിലേക്ക് പോകില്ല
+                          break
                       else:
-                          print(f"Token found at {url}, but stream is NOT working. Moving to next...")
+                          print(f"Token found at {url}, but stream is NOT working (Blocked or Expired).")
               except Exception as e:
                   print(f"Failed to fetch from {url}: {e}")
                   
@@ -91,20 +104,13 @@ jobs:
               print("Error: No working stream found from any endpoints.")
               sys.exit(1)
               
-          # വർക്കിംഗ് ആയ ടോക്കൺ ഉപയോഗിച്ച് ഫയൽ അപ്ഡേറ്റ് ചെയ്യുന്നു
-          try:
-              with open(FILE_NAME, "r", encoding="utf-8") as f:
-                  content = f.read()
-                  
-              updated_content = re.sub(r'__hdnea__=st=\d+~exp=\d+~acl=[^~&"]+~hmac=[a-f0-9]+', f'__hdnea__={new_token}', content)
+          # 4. വർക്കിംഗ് ആയ ടോക്കൺ വെച്ച് ഫയലിലെ എല്ലാ പഴയ ടോക്കണുകളും അപ്ഡേറ്റ് ചെയ്യുന്നു
+          updated_content = re.sub(r'__hdnea__=st=\d+~exp=\d+~acl=[^~&"]+~hmac=[a-f0-9]+', f'__hdnea__={new_token}', content)
+          
+          with open(FILE_NAME, "w", encoding="utf-8") as f:
+              f.write(updated_content)
               
-              with open(FILE_NAME, "w", encoding="utf-8") as f:
-                  f.write(updated_content)
-                  
-              print(f"Successfully updated {FILE_NAME} with a working link.")
-          except FileNotFoundError:
-              print(f"Error: {FILE_NAME} not found in repository.")
-              sys.exit(1)
+          print(f"Successfully updated {FILE_NAME} with a working token.")
 
       - name: Commit and Push
         run: |
