@@ -2,8 +2,11 @@ name: Auto Update Zoh Playlist
 
 on:
   schedule:
-    - cron: '*/30 * * * *' # ഓരോ 30 മിനിറ്റിലും റൺ ചെയ്യും
-  workflow_dispatch: # മാനുവൽ ആയി റൺ ചെയ്യാൻ
+    - cron: '*/30 * * * *'  # ഓരോ 30 മിനിറ്റിലും റൺ ചെയ്യും
+  workflow_dispatch:
+
+permissions:
+  contents: write   # 🔥 ഇത് നിർബന്ധമാണ് push ചെയ്യാൻ
 
 jobs:
   update-playlist:
@@ -11,12 +14,12 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4   # 🔥 latest version
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5   # 🔥 latest version
         with:
-          python-version: '3.x'
+          python-version: '3.11'
 
       - name: Install Dependencies
         run: |
@@ -34,8 +37,15 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          
           git add Zoh.m3u
-          # എന്തെങ്കിലും പുതിയ മാറ്റങ്ങൾ ഉണ്ടെങ്കിൽ മാത്രം കമ്മിറ്റ് ചെയ്യുക
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-updated Jio headers and cookies" && git push)
+
+          # മാറ്റം ഉണ്ടെങ്കിൽ മാത്രം commit
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto-updated playlist"
+            git push
+          else
+            echo "No changes to commit"
+          fi
