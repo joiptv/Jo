@@ -9,7 +9,10 @@
 #EXTHTTP:{"cookie":"__hdnea__=st=1773920044~exp=1774006444~acl=/*~hmac=f964c1543a383f60b0a8a8a3bf8e6282612a23f51282e07ea5224c883598cfe9"}
 https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_HD_BTS/output/index.mpd?__hdnea__=st=1773920044~exp=1774006444~acl=/*~hmac=f964c1543a383f60b0a8a8a3bf8e6282612a23f51282e07ea5224c883598cfe9&xxx=%7Ccookie=__hdnea__=st=1773920044~exp=1774006444~acl=/*~hmac=f964c1543a383f60b0a8a8a3bf8e6282612a23f51282e07ea5224c883598cfe9
 
-
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"glnODBEnJaTSyU0VQgdCXw", "kid":"6ug4zNddSh+/9v190cl3gA" } ], "type":"temporary" }
+#EXTINF:-1 tvg-id="Surya HD" tvg-logo="https://sund-images.sunnxt.com/194397/640x360_SuryaTVHD_194397_7b54e231-bbb9-48d2-8aae-35a5886deed3.jpg" group-title="Sun NX",Surya HD
+https://livestream15.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_index.mpd
 
 
 #EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://www.keralatv.in/media/2019/03/mazhavil-manorama-hd-latest-logo.png" group-title="Entertainment",Mazhavil Manorama HD
@@ -57,6 +60,11 @@ https://jiotvmblive.cdn.jio.com/bpk-tv/ZeeKeralamHD_MOB/WDVLive/index.mpd?__hdne
 #EXTHTTP:{"cookie":"__hdnea__=st=1773920044~exp=1774006444~acl=/*~hmac=f964c1543a383f60b0a8a8a3bf8e6282612a23f51282e07ea5224c883598cfe9"}
 https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Movies_HD_BTS/output/index.mpd?__hdnea__=st=1773920044~exp=1774006444~acl=/*~hmac=f964c1543a383f60b0a8a8a3bf8e6282612a23f51282e07ea5224c883598cfe9&xxx=%7Ccookie=__hdnea__=st=1773920044~exp=1774006444~acl=/*~hmac=f964c1543a383f60b0a8a8a3bf8e6282612a23f51282e07ea5224c883598cfe9
 
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"LoRgxH0/AWk+GT26WWOl4Q", "kid":"a2e8zvcCTy2im0LhDcE/iQ" } ], "type":"temporary" }
+#EXTINF:-1 tvg-id="Surya Movies" tvg-logo="https://sund-images.sunnxt.com/194385/640x360_SuryaMovies_194385_2d5dbc38-915d-4e41-b8b0-ea98ca6c88d3.jpg" group-title="Sun NX",Surya Movies
+https://livestream.sunnxt.com/e24ee14c395945bd8ccb065e1bce8b9b/SuryaMoviesB_IN_index.mpd
+
 #EXTINF:-1 tvg-id="1139" tvg-language="Malayalam" group-title="Entertainment" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_Plus.png",Asianet Plus
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=90ffee26840f5b329f5f9c978d30bb41:4cbb95492e7b342a772883f221243127
@@ -72,6 +80,12 @@ https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Plus_BTS/output/index.mpd?__hdnea
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/824.1 ExoPlayerLib/824.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1773920044~exp=1774006444~acl=/*~hmac=f964c1543a383f60b0a8a8a3bf8e6282612a23f51282e07ea5224c883598cfe9"}
 https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Movies_BTS/output/index.mpd?__hdnea__=st=1773920044~exp=1774006444~acl=/*~hmac=f964c1543a383f60b0a8a8a3bf8e6282612a23f51282e07ea5224c883598cfe9&xxx=%7Ccookie=__hdnea__=st=1773920044~exp=1774006444~acl=/*~hmac=f964c1543a383f60b0a8a8a3bf8e6282612a23f51282e07ea5224c883598cfe9
+
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"m60orW8j27kXxj7mgPZqHw", "kid":"EVY7AKRrQ/Kg+A7PQqT7dw" } ], "type":"temporary" }
+#EXTINF:-1 tvg-id="Surya Comedy" tvg-logo="https://sund-images.sunnxt.com/194400/640x360_UdayaComedy_194400_476f38f8-3104-4816-a540-968b36f27a5f.jpg" group-title="Sun NX",Surya Comedy
+https://livestream.sunnxt.com/6505e922bf164423ad122f404747356a/SuryaComedyB_IN_index.mpd
+
 
 #EXTINF:-1 tvg-id="KairaliWe" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KAIRALI_WE/images/LOGO_HD/image.png" group-title="Movies",Kairali We
 https://cdn-3.pishow.tv/live/1530/master.m3u8
