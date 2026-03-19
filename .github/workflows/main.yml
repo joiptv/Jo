@@ -1,0 +1,82 @@
+name: Auto-Update Zoh.m3u
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/30 * * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  update-playlist:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Update Token
+        run: |
+          python << 'EOF'
+          import requests
+          import re
+
+          FILE_NAME = "Zoh.m3u"
+          SOURCE_URL = "https://raw.githubusercontent.com/alex4528x/m3u/main/jtv.m3u"
+
+          headers = {"User-Agent": "Mozilla/5.0"}
+
+          response = requests.get(SOURCE_URL, headers=headers)
+
+          token_match = re.search(r'__hdnea__=[^"&\s]*', response.text)
+
+          if not token_match:
+              print("Token not found")
+              exit(1)
+
+          new_token = token_match.group(0)
+
+          with open(FILE_NAME, "r", encoding="utf-8") as f:
+              lines = f.readlines()
+
+          new_lines = []
+
+          for line in lines:
+
+              if "__hdnea__=" in line:
+                  line = re.sub(r'__hdnea__=[^"&\s]*', new_token, line)
+
+              if ".mpd" in line and "jio" in line.lower():
+                  base = line.split("?")[0]
+                  line = f"{base}?{new_token}\n"
+
+              new_lines.append(line)
+
+          with open(FILE_NAME, "w", encoding="utf-8") as f:
+              f.writelines(new_lines)
+
+          print("Zoh.m3u updated successfully")
+          EOF
+
+      - name: Commit & Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add Zoh.m3u
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto update Jio token"
+            git push
+          else
+            echo "No changes"
+          fi
