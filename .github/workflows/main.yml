@@ -31,7 +31,7 @@ jobs:
           import re
 
           FILE_NAME = "Zoh.m3u"
-          SOURCE_URL = "https://netx.streamstar18.workers.dev/zio1"
+          SOURCE_URL = "https://raw.githubusercontent.com/Sflex0719/ZioGarmTara/main/ZioGarmTara.m3u"
 
           headers = {"User-Agent": "Mozilla/5.0"}
 
