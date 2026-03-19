@@ -35,12 +35,17 @@ jobs:
 
           headers = {"User-Agent": "Mozilla/5.0"}
 
-          response = requests.get(SOURCE_URL, headers=headers)
+          try:
+              response = requests.get(SOURCE_URL, headers=headers)
+              response.raise_for_status()
+          except Exception as e:
+              print(f"Error fetching URL: {e}")
+              exit(1)
 
           token_match = re.search(r'__hdnea__=[^"&\s]*', response.text)
 
           if not token_match:
-              print("Token not found")
+              print("Token not found in the source")
               exit(1)
 
           new_token = token_match.group(0)
@@ -51,20 +56,23 @@ jobs:
           new_lines = []
 
           for line in lines:
+              # Remove hidden \n and spaces at the ends
+              clean_line = line.strip()
 
-              if "__hdnea__=" in line:
-                  line = re.sub(r'__hdnea__=[^"&\s]*', new_token, line)
+              if "__hdnea__=" in clean_line:
+                  clean_line = re.sub(r'__hdnea__=[^"&\s]*', new_token, clean_line)
 
-              if ".mpd" in line and "jio" in line.lower():
-                  base = line.split("?")[0]
-                  line = f"{base}?{new_token}\n"
+              if ".mpd" in clean_line and "jio" in clean_line.lower():
+                  base = clean_line.split("?")[0]
+                  clean_line = f"{base}?{new_token}"
 
-              new_lines.append(line)
+              # Add the newline back properly
+              new_lines.append(clean_line + "\n")
 
           with open(FILE_NAME, "w", encoding="utf-8") as f:
               f.writelines(new_lines)
 
-          print("Zoh.m3u updated successfully")
+          print("Zoh.m3u updated successfully with new token!")
           EOF
 
       - name: Commit & Push
@@ -78,5 +86,5 @@ jobs:
             git commit -m "Auto update Jio token"
             git push
           else
-            echo "No changes"
+            echo "No changes detected"
           fi
