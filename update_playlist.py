@@ -9,14 +9,21 @@ API_ENDPOINTS = [
 ]
 
 def fetch_updated_channel(channel_id):
+    if not API_ENDPOINTS:
+        print("Error: No Endpoints found! Check your GitHub Secrets.")
+        return None
+        
     for endpoint in API_ENDPOINTS:
         try:
             url = f"{endpoint}?id={channel_id}"
             response = requests.get(url, timeout=15)
             if response.status_code == 200 and "#EXTINF" in response.text:
+                print(f"Success: Updated channel ID {channel_id}")
                 return response.text.strip()
         except requests.exceptions.RequestException:
             continue
+    
+    print(f"Failed: Could not update channel ID {channel_id}")
     return None
 
 def update_playlist():
@@ -84,4 +91,6 @@ def update_playlist():
         f.write("\n\n".join(updated_playlist) + "\n")
 
 if __name__ == "__main__":
+    print("Starting playlist update process...")
     update_playlist()
+    print("Process finished.")
