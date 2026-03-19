@@ -31,7 +31,7 @@ jobs:
           import re
 
           FILE_NAME = "Zoh.m3u"
-          SOURCE_URL = "https://raw.githubusercontent.com/alex4528x/m3u/main/jtv.m3u"
+          SOURCE_URL = "https://netx.streamstar18.workers.dev/zio1"
 
           headers = {"User-Agent": "Mozilla/5.0"}
 
