@@ -12,6 +12,10 @@ https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_HD_BTS/output/index.mpd?__hdnea__
 
 
 
+#EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://www.keralatv.in/media/2019/03/mazhavil-manorama-hd-latest-logo.png" group-title="Entertainment",Mazhavil Manorama HD
+https://cdn-7.pishow.tv/live/1129/master.m3u8
+
+
 #EXTINF:-1 tvg-id="1118" tvg-language="Malayalam" group-title="Entertainment" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet.png",Asianet
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=6b68a5a175d45f0ba8ed12b3016ea4d8:c7b8ce1a3a24e2f9b4d1249d04155c49
@@ -20,9 +24,14 @@ https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_HD_BTS/output/index.mpd?__hdnea__
 https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_BTS/output/index.mpd?__hdnea__=st=1773920044~exp=1774006444~acl=/*~hmac=f964c1543a383f60b0a8a8a3bf8e6282612a23f51282e07ea5224c883598cfe9&xxx=%7Ccookie=__hdnea__=st=1773920044~exp=1774006444~acl=/*~hmac=f964c1543a383f60b0a8a8a3bf8e6282612a23f51282e07ea5224c883598cfe9
 
 
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"be6GY+Y8yPjdqEeLiy87cQ", "kid":"VuH1tbcuTkWpi28ofCZauQ" } ], "type":"temporary" }
+#EXTINF:-1 tvg-id="Surya" tvg-logo="https://sund-images.sunnxt.com/194398/640x360_SuryaTV_194398_45a56617-7aa9-4ced-a1c8-82b80adb83a7.jpg" group-title="Sun NX",Surya
+https://livestream6.sunnxt.com/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_index.mpd
 
 
-
+#EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://exchange4media.gumlet.io/news-photo/92907-MazhavilManorama.jpg" group-title="Entertainment",Mazhavil Manorama
+https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mazhavilmanorama_nim_https/050522/mazhavilmanorama/playlist.m3u8
 
 
 #EXTINF:-1 tvg-id="634" tvg-language="Malayalam" group-title="Entertainment" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Flower_TV.png",Flower TV
@@ -65,11 +74,67 @@ https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Plus_BTS/output/index.mpd?__hdnea
 https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Movies_BTS/output/index.mpd?__hdnea__=st=1773920044~exp=1774006444~acl=/*~hmac=f964c1543a383f60b0a8a8a3bf8e6282612a23f51282e07ea5224c883598cfe9&xxx=%7Ccookie=__hdnea__=st=1773920044~exp=1774006444~acl=/*~hmac=f964c1543a383f60b0a8a8a3bf8e6282612a23f51282e07ea5224c883598cfe9
 
 
+#EXTINF:-1 tvg-log="https://www.lyngsat.com/logo/tv/kk/kairali_in_we.png" tvg-logo="https://www.lyngsat.com/logo/tv/kk/kairali_in_we.png" group-title="All",WE
+https://starshare.org:443/live/1010/0101/53199.ts
 
-====NEWS====
+#EXTINF:-1 tvg-log="https://i.ibb.co/1bvStm3/unnamed.png" tvg-logo="https://i.imgur.com/dSOfYyh.png" group-title="All",SAFARI TV
+https://j78dp346yq5r-hls-live.5centscdn.com/safari/live.stream/playlist.m3u8
+
+#EXTINF:-1 tvg-id="KairaliWe" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KAIRALI_WE/images/LOGO_HD/image.png" group-title="Movies",Kairali We
+https://cdn-3.pishow.tv/live/1530/master.m3u8
 
 
+#EXTINF:-1 tvg-id="10582" tvg-chno="070" tvg-name="dd-malayalam" tvg-id="abusaeeidx" tvg-logo="https://prodcdn1.wavespb.com/shows/poster_url/1443058650DD_malayalam_______384x512.webp" group-title="DD Regional", DD MALAYALAM
+https://d2lk5u59tns74c.cloudfront.net/out/v1/c313674ffced4c9a90f1bba436df2b9b/index.m3u8
 
+
+#EXTINF:-1 tvg-id="SafariTV" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SAFARI_TV/images/LOGO_HD/image.png" group-title="Documentary",Safari TV
+https://j78dp346yq5r-hls-live.5centscdn.com/safari/live.stream/playlist.m3u8
+
+#EXTINF:-1 tvg-id="KappaTV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Kappa_TV.png" group-title="Lifestyle",Kappa TV
+https://cdn-3.pishow.tv/live/1123/master.m3u8
+
+=======NEWS======
+#EXTINF:-1 tvg-id="282" tvg-chno="601" tvg-name="AsianetNews" tvg-logo="https://play-lh.googleusercontent.com/rMgagys9KOji0wHPQzdDeS2QFe5lbOPZ0q_PsMl98kGc2putJD5gFUO1Xz_vE9siqdo" group-title="News", Asianet News
+https://amg13737-amg13737c1-amgplt0016.playout.now3.amagi.tv/playlist/amg13737-amg13737c1-amgplt0016/playlist.m3u8
+
+
+#EXTINF:-1 tvg-id="ManoramaNews" tvg-logo="https://i.imgur.com/n9ABnlu.jpeg" group-title="News",Manorama News
+https://mmtvnews1.akamaized.net/v1/master/673630b269b766886555eebfddd4f27f3de3ab50/mmtvNewsCampaign1/index.m3u8
+
+#EXTINF:-1 tvg-id="MathrubhumiNews" tvg-logo="https://i.imgur.com/ANh7Zpg.jpeg" group-title="News",Mathrubhumi News
+https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mathrubhuminews_nim_https/110322/mathrubhuminews/playlist.m3u8
+
+#EXTINF:-1 tvg-id="TwentyFourNews" tvg-logo="https://i.imgur.com/6DOCPsl.jpeg" group-title="News",Twenty Four News
+https://segment.yuppcdn.net/110322/channel24/playlist.m3u8
+
+#EXTINF:-1 tvg-id="ReporterTV" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_REPORTER_TV/images/LOGO_HD/image.png" group-title="News",Reporter TV
+https://segment.yuppcdn.net/050522/reporter/playlist.m3u8
+
+
+#EXTINF:-1 tvg-id="MediaOne" tvg-logo="https://i.imgur.com/Jmdo2L6.jpeg" group-title="News",Media One
+https://cdn-3.pishow.tv/live/1481/master.m3u8
+
+#EXTINF:-1 tvg-id="JaihindTV" tvg-logo="https://i.imgur.com/NaiA73p.png" group-title="News",Jaihind TV
+https://yuppnimrestreammum.akamaized.net/260723/smil:jaihind1.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
+
+
+#EXTINF:-1 tvg-id="News18Kerala" tvg-logo="https://i.imgur.com/HIFufHH.jpeg" group-title="News",News18 Kerala
+https://nw18live.cdn.jio.com/bpk-tv/News18_Kerala_NW18_MOB/output01/index.m3u8
+
+#EXTINF:-1 tvg-id="ZeeMalayalamNews" tvg-logo="https://i.imgur.com/MePj7ET.png" group-title="News",Zee News Malayalam
+https://d1ty2af03alkwd.cloudfront.net/index_4.m3u8
+
+#EXTINF:-1 tvg-id="KairaliNews" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KAIRALI_NEWS/images/LOGO_HD/image.png" group-title="News",Kairali News
+https://cdn-3.pishow.tv/live/1469/master.m3u8
+
+
+#EXTINF:-1 tvg-id="RealNewsKerala" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Real_News_Kerala.png" group-title="News",Real News Kerala
+https://bk7l298nyx53-hls-live.5centscdn.com/realnews/e7dee419f91aa9e65939d3677fb9c4f5.sdp/playlist.m3u8
+
+
+#EXTINF:-1 tvg-id="News Malayalam 24x7" tvg-logo="https://i.imgur.com/9Yyzvp9.jpeg" group-title="Malayalam News",News Malayalam 24x7 
+https://cdn-3.pishow.tv/live/1629/master.m3u8
 
 ==MOVIES===
 
@@ -103,6 +168,25 @@ https://jiotvmblive.cdn.jio.com/bpk-tv/Star_Movies_BTS/output/index.mpd?__hdnea_
 https://jiotvmblive.cdn.jio.com/bpk-tv/SonyPIX_BTS/output/index.mpd?__hdnea__=st=1773920044~exp=1774006444~acl=/*~hmac=f964c1543a383f60b0a8a8a3bf8e6282612a23f51282e07ea5224c883598cfe9&xxx=%7Ccookie=__hdnea__=st=1773920044~exp=1774006444~acl=/*~hmac=f964c1543a383f60b0a8a8a3bf8e6282612a23f51282e07ea5224c883598cfe9
 
 
+#EXTINF:-1 tvg-logo="https://d229kpbsb5jevy.cloudfront.net/timesplay/content/common/logos/channel/logos/wthfwe.jpeg" group-logo="https://upload.wikimedia.org/wikipedia/commons/1/19/DishTV_logo_%282025%29.svg" group-title="Movies",Movies Now HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=40f019b86241d23ef075633fd7f1e927:058dec845bd340178a388edd104a015e
+https://times-ott-live.akamaized.net/moviesnow_wv_drm/index.mpd
+
+#EXTINF:-1 tvg-logo="https://d229kpbsb5jevy.cloudfront.net/timesplay/content/common/logos/channel/logos/vunjev.jpeg" group-logo="https://upload.wikimedia.org/wikipedia/commons/1/19/DishTV_logo_%282025%29.svg" group-title="Movies",MNX HD
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=40f019b86241d23ef075633fd7f1e927:058dec845bd340178a388edd104a015e
+https://times-ott-live.akamaized.net/mnxhd_wv_drm/index.mpd
+
+#EXTINF:-1 tvg-logo="https://d229kpbsb5jevy.cloudfront.net/timesplay/content/common/logos/channel/logos/leazcc.jpeg" group-logo="https://upload.wikimedia.org/wikipedia/commons/1/19/DishTV_logo_%282025%29.svg" group-title="Movies",MN+ HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=40f019b86241d23ef075633fd7f1e927:058dec845bd340178a388edd104a015e
+https://times-ott-live.akamaized.net/mnplus_wv_drm/index.mpd
+
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=40f019b86241d23ef075633fd7f1e927:058dec845bd340178a388edd104a015e
+#EXTINF:-1 tvg-id="ts174" tvg-logo="https://tatalogo.pages.dev/174.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/1/19/DishTV_logo_%282025%29.svg" group-title="Movies", Romedy Now
+https://times-ott-live.akamaized.net/romedynow_wv_drm/index.mpd
 
 
 ====SPORTS===
