@@ -73,13 +73,6 @@ https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Plus_BTS/output/index.mpd?__hdnea
 #EXTHTTP:{"cookie":"__hdnea__=st=1773920044~exp=1774006444~acl=/*~hmac=f964c1543a383f60b0a8a8a3bf8e6282612a23f51282e07ea5224c883598cfe9"}
 https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Movies_BTS/output/index.mpd?__hdnea__=st=1773920044~exp=1774006444~acl=/*~hmac=f964c1543a383f60b0a8a8a3bf8e6282612a23f51282e07ea5224c883598cfe9&xxx=%7Ccookie=__hdnea__=st=1773920044~exp=1774006444~acl=/*~hmac=f964c1543a383f60b0a8a8a3bf8e6282612a23f51282e07ea5224c883598cfe9
 
-
-#EXTINF:-1 tvg-log="https://www.lyngsat.com/logo/tv/kk/kairali_in_we.png" tvg-logo="https://www.lyngsat.com/logo/tv/kk/kairali_in_we.png" group-title="All",WE
-https://starshare.org:443/live/1010/0101/53199.ts
-
-#EXTINF:-1 tvg-log="https://i.ibb.co/1bvStm3/unnamed.png" tvg-logo="https://i.imgur.com/dSOfYyh.png" group-title="All",SAFARI TV
-https://j78dp346yq5r-hls-live.5centscdn.com/safari/live.stream/playlist.m3u8
-
 #EXTINF:-1 tvg-id="KairaliWe" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KAIRALI_WE/images/LOGO_HD/image.png" group-title="Movies",Kairali We
 https://cdn-3.pishow.tv/live/1530/master.m3u8
 
