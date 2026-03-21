@@ -74,18 +74,18 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Asianet_Plus_BTS/output/index.mpd?__hdnea
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"m60orW8j27kXxj7mgPZqHw", "kid":"EVY7AKRrQ/Kg+A7PQqT7dw" } ], "type":"temporary" }
-#EXTINF:-1 tvg-id="Surya Comedy" tvg-logo="https://sund-images.sunnxt.com/194400/640x360_UdayaComedy_194400_476f38f8-3104-4816-a540-968b36f27a5f.jpg" group-title="Sun NX",Surya Comedy
+#EXTINF:-1 tvg-id="Surya Comedy" tvg-logo="https://sund-images.sunnxt.com/194400/640x360_UdayaComedy_194400_476f38f8-3104-4816-a540-968b36f27a5f.jpg" group-title="Movies",Surya Comedy
 https://livestream.sunnxt.com/6505e922bf164423ad122f404747356a/SuryaComedyB_IN_index.mpd
 
 #EXTINF:-1 tvg-id="KairaliWe" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KAIRALI_WE/images/LOGO_HD/image.png" group-title="Movies",Kairali We
 https://cdn-3.pishow.tv/live/1530/master.m3u8
 
 
-#EXTINF:-1 tvg-id="10582" tvg-chno="070" tvg-name="dd-malayalam" tvg-id="abusaeeidx" tvg-logo="https://prodcdn1.wavespb.com/shows/poster_url/1443058650DD_malayalam_______384x512.webp" group-title="DD Regional", DD MALAYALAM
+#EXTINF:-1 tvg-id="10582" tvg-chno="070" tvg-name="dd-malayalam" tvg-id="abusaeeidx" tvg-logo="https://prodcdn1.wavespb.com/shows/poster_url/1443058650DD_malayalam_______384x512.webp" group-title="Entertainment", DD MALAYALAM
 https://d2lk5u59tns74c.cloudfront.net/out/v1/c313674ffced4c9a90f1bba436df2b9b/index.m3u8
 
 
-#EXTINF:-1 tvg-id="SafariTV" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SAFARI_TV/images/LOGO_HD/image.png" group-title="Documentary",Safari TV
+#EXTINF:-1 tvg-id="SafariTV" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SAFARI_TV/images/LOGO_HD/image.png" group-title="Entertainment",Safari TV
 https://j78dp346yq5r-hls-live.5centscdn.com/safari/live.stream/playlist.m3u8
 
 #EXTINF:-1 tvg-id="KappaTV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Kappa_TV.png" group-title="Lifestyle",Kappa TV
@@ -130,7 +130,7 @@ https://cdn-3.pishow.tv/live/1469/master.m3u8
 https://bk7l298nyx53-hls-live.5centscdn.com/realnews/e7dee419f91aa9e65939d3677fb9c4f5.sdp/playlist.m3u8
 
 
-#EXTINF:-1 tvg-id="News Malayalam 24x7" tvg-logo="https://i.imgur.com/9Yyzvp9.jpeg" group-title="Malayalam News",News Malayalam 24x7 
+#EXTINF:-1 tvg-id="News Malayalam 24x7" tvg-logo="https://i.imgur.com/9Yyzvp9.jpeg" group-title="News",News Malayalam
 https://cdn-3.pishow.tv/live/1629/master.m3u8
 
 
@@ -165,7 +165,7 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Movies_BTS/output/index.mpd?__hdnea_
 https://times-ott-live.akamaized.net/moviesnow_wv_drm/index.mpd
 
 
-#EXTINF:-1 tvg-id="HBO" group-title="Astro GO" tvg-logo="https://linear-poster.astro.com.my/prod/logo/HBO_v1.png",HBO
+#EXTINF:-1 tvg-id="HBO" group-title="Movies" tvg-logo="https://linear-poster.astro.com.my/prod/logo/HBO_v1.png",HBO
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=c2b7a1e95d4f4c3a8e617f9d0a2b6c18:27fca1ab042998b0c2f058b0764d7ed4
