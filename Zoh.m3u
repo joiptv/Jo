@@ -194,3 +194,41 @@ https://times-ott-live.akamaized.net/mnplus_wv_drm/index.mpd
 #KODIPROP:inputstream.adaptive.license_key=40f019b86241d23ef075633fd7f1e927:058dec845bd340178a388edd104a015e
 #EXTINF:-1 tvg-id="ts174" tvg-logo="https://tatalogo.pages.dev/174.png" group-logo="https://upload.wikimedia.org/wikipedia/commons/1/19/DishTV_logo_%282025%29.svg" group-title="Movies", Romedy Now
 https://times-ott-live.akamaized.net/romedynow_wv_drm/index.mpd
+
+
+#EXTINF:-1 tvg-id="1067" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-249-j5fyl7tk-v1/imageContent-249-j5fyl7tk-m1.png" group-title="Tamil", Star Sports 1 Tamil
+http://tv.tamilwebcast.com/live/admin/a0e93b12-b582-4def-a080-cdc0b2e7f0e2/427803.ts?channelId=89820&uid=4710&deviceMac=00:1A:79:83:6F:C5
+
+#EXTINF:-1 tvg-id="ts1187" tvg-logo="https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/StarSports2Tamil_Thumbnail_62ccb7be-f9e6-49c0-8382-7ee6a812fe50.png" group-title="Sports", Star Sports 2 Tamil
+http://tv.tamilwebcast.com/live/admin/a11db501-7fd3-43a0-8d20-5adebd1c68ac/443297.ts?channelId=132885&uid=4710&deviceMac=00:1A:79:83:6F:C5
+
+#EXTINF:-1 tvg-id="78" tvg-logo="https://raw.githubusercontent.com/abusaeeidx/Tv-Channel-Logo/heads/main/CricHD/runded/16-by-xfireflix.png" group-title="Sports",Star Sports 1 HD
+http://front-main.eagle-4k.me/live/rmt8r91bac/tsleey7v5g/276730.ts
+
+#EXTINF: -1 tvg-id="ts235" tvg-logo="https://abusaeeidx.github.io/Tv-Channel-Logo/CricHD/V2.0/new/Star_Sports_2.png" group-title="Sports", Star Sports 2 HD
+http://iptvtree.net:8080/F18600/cb13d048/3631
+
+#EXTINF:-1 tvg-id="ts223" tvg-logo="https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/imageContent-941-j5mhk5fc-v1/imageContent-941-j5mhk5fc-m1.png" group-title="Sports",DD Sports
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index.m3u8
+
+--- SONYLIV 
+
+#EXTINF: -1 tvg-id="81" tvg-logo="https://tatalogo.pages.dev/81.png" group-title="Sports", Sony Sports Ten 1 HD
+http://play.denver69.fun/Play/sliv/Test00/index.m3u8?id=sliv_162
+#EXTINF: -1 tvg-id="462" tvg-logo="https://tatalogo.pages.dev/462.png" group-title="Sports", Sony Sports Ten 2 HD
+http://play.denver69.fun/Play/sliv/Test00/index.m3u8?id=sliv_891
+#EXTINF: -1 tvg-id="464" tvg-logo="https://tatalogo.pages.dev/464.png" group-title="Sports", Sony Sports Ten 3 HD
+http://play.denver69.fun/Play/sliv/Test00/index.m3u8?id=sliv_892
+#EXTINF:-1 tvg-id="1187" tvg-logo="https://i.ibb.co/nqJRcGMd/Picsart-25-09-02-13-13-07-905.png" group-title="Sports", Sony Sports Ten 4 Tamil
+http://play.denver69.fun/Play/sliv/Test00/index.m3u8?id=sliv_1775
+#EXTINF: -1 tvg-id="35" tvg-logo="https://tatalogo.pages.dev/35.png" group-title="Sports", Sony Sports Ten 5 HD
+http://play.denver69.fun/Play/sliv/Test00/index.m3u8?id=sliv_155
+
+
+
+#EXTINF: -1 tvg-id="Cricbuzz" tvg-logo="https://divign0fdw3sv.cloudfront.net/Images/ChannelLogo/contenthub/600_144.png" group-title="Sports", Cricbuzz
+http://4kgood.org:80/live/4o48up5evz/r4fiast66u/1163988.ts
+#EXTINF:-1 group-title="Sports" tvg-logo="https://ethnicchannels.com/images/channeldetail/ten-cricket/ten-ckt-logo.png",TEN CRICKET
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36
+https://bd.drmlive.net/toffee/cdn/live/ten_cricket/playlist.m3u8
