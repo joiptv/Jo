@@ -20,12 +20,12 @@ https://livestream15.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_i
 https://cdn-7.pishow.tv/live/1129/master.m3u8
 
 
-#EXTINF:-1 tvg-id="1118" tvg-language="Malayalam" group-title="Entertainment" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet.png",Asianet
+#EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7420/567420-h" group-title="Entertainment" group-logo="https://clarity1-tv.vercel.app/IMG/JioStar.png",Asianet
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=6b68a5a175d45f0ba8ed12b3016ea4d8:c7b8ce1a3a24e2f9b4d1249d04155c49
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/824.1 ExoPlayerLib/824.0
-#EXTHTTP:{"cookie":"__hdnea__=st=1774609514~exp=1774695914~acl=/*~hmac=717b8a350f21df70c27a52b56e149118042a7c63c29b5f9eb2718bdc469e9a01"}
-https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_BTS/output/index.mpd?__hdnea__=st=1774609514~exp=1774695914~acl=/*~hmac=717b8a350f21df70c27a52b56e149118042a7c63c29b5f9eb2718bdc469e9a01
+#KODIPROP:inputstream.adaptive.license_key=1dd2d0a48be14cc3a9666d861dd60000:24e889ab81444af0bceb8f8b9a530b18
+#EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
+#EXTHTTP:{"Cookie":"hdntl=exp=1774694071~acl=%2f*~id=77eb4529af0c7fe4a17588b49b5709ef~data=hdntl~hmac=688bbd58e72a42fc2322458c0934c930ee66310a85c2f18966a608592967f677","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
+https://livetv.hotstar.com/mp2/gec-india-1540057084/6569043a1d874fb49fc2cf2f273fe097/index.mpd|Cookie="hdntl=exp=1774694071~acl=%2f*~id=77eb4529af0c7fe4a17588b49b5709ef~data=hdntl~hmac=688bbd58e72a42fc2322458c0934c930ee66310a85c2f18966a608592967f677"
 
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
