@@ -1,0 +1,97 @@
+name: Auto-Update Hotstar Link for Playlist Channels
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/30 * * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  update-playlist:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Update Hotstar Link for Channels
+        run: |
+          python << 'EOF'
+          import requests
+          import re
+          import sys
+
+          FILE_NAME = "Zoh.txt"
+          SOURCE_URL = "https://raw.githubusercontent.com/joiptv/jojo/refs/heads/main/Clarity.m3u"  # Hotstar token source URL
+
+          headers = {
+              "User-Agent": "Mozilla/5.0"
+          }
+
+          try:
+              response = requests.get(SOURCE_URL, headers=headers, timeout=10)
+              response.raise_for_status()
+          except Exception as e:
+              print("Request failed:", e)
+              sys.exit(1)
+
+          cookie_match = re.search(r'hdntl=[^"]+', response.text)
+          if not cookie_match:
+              print("Cookie not found")
+              sys.exit(1)
+
+          new_cookie = cookie_match.group(0)
+
+          try:
+              with open(FILE_NAME, "r", encoding="utf-8") as f:
+                  lines = f.readlines()
+          except FileNotFoundError:
+              print(f"{FILE_NAME} not found!")
+              sys.exit(1)
+
+          new_lines = []
+
+          for line in lines:
+              # Check if line has a channel name (e.g., after #EXTINF)
+              if "#EXTINF:" in line:
+                  channel_name = line.split(",")[-1].strip()
+                  if channel_name:  # If we have a channel name, we update this line and following URLs
+                      # Update all lines associated with this channel
+                      print(f"Updating channel: {channel_name}")
+                      # Replace cookie in this line
+                      line = re.sub(r'hdntl=[^"]+', new_cookie, line)
+              # Update the line if it has a cookie field
+              if "|Cookie=" in line:
+                  base = line.split("|")[0]
+                  line = f'{base}|Cookie="{new_cookie}"\n'
+              new_lines.append(line)
+
+          with open(FILE_NAME, "w", encoding="utf-8") as f:
+              f.writelines(new_lines)
+
+          print("Zoh.txt updated successfully")
+          EOF
+
+      - name: Commit & Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add Zoh.txt
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto update Hotstar link for playlist channels"
+            git push
+          else
+            echo "No changes"
+          fi
