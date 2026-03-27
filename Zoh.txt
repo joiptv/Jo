@@ -25,7 +25,7 @@ https://cdn-7.pishow.tv/live/1129/master.m3u8
 #KODIPROP:inputstream.adaptive.license_key=1dd2d0a48be14cc3a9666d861dd60000:24e889ab81444af0bceb8f8b9a530b18
 #EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
 #EXTHTTP:{"Cookie":"hdntl=exp=1774694071~acl=%2f*~id=77eb4529af0c7fe4a17588b49b5709ef~data=hdntl~hmac=688bbd58e72a42fc2322458c0934c930ee66310a85c2f18966a608592967f677","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
-https://livetv.hotstar.com/mp2/gec-india-1540057084/6569043a1d874fb49fc2cf2f273fe097/index.mpd|Cookie="hdntl=exp=1774694071~acl=%2f*~id=77eb4529af0c7fe4a17588b49b5709ef~data=hdntl~hmac=688bbd58e72a42fc2322458c0934c930ee66310a85c2f18966a608592967f677"
+https://livetv.hotstar.com/mp2/gec-india-1540057084/6569043a1d874fb49fc2cf2f273fe097/index.mpd|Cookie="hdntl=exp=1774648264~acl=%2f*~id=2daed055742a9223e881c03f06270edb~data=hdntl~hmac=f9c7ee263767041cdc6628747bfcde81d7bf0e6703d1a90efb5457d4dc375dc5"
 
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
