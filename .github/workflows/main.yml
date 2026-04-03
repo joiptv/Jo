@@ -1,0 +1,25 @@
+name: Update Playlist
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/30 * * * *'  # 30 മിനിറ്റ് ഇടവേളയിൽ
+
+jobs:
+  update-playlist:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run update script
+        run: python update_playlist.py
