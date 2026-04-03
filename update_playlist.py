@@ -1,96 +1,35 @@
-import os
-import re
 import requests
 
-PLAYLIST_FILE = "Zoh.m3u"
+SOURCE_URL = "https://raw.githubusercontent.com/alex4528x/m3u/refs/heads/main/jtv.m3u"
+OLD_FILE_NAME = "Zoh.m3u"
+NEW_FILE_NAME = "Updated_Zoh.m3u"
 
-API_ENDPOINTS = [
-    os.environ.get(f"ENDPOINT_{i}") for i in range(1, 6) if os.environ.get(f"ENDPOINT_{i}")
-]
+# പഴയ പ്ലേലിസ്റ്റ് വായിക്കുക
+with open(OLD_FILE_NAME, "r", encoding="utf-8") as f:
+    old_lines = f.readlines()
 
-def fetch_updated_channel(channel_id):
-    if not API_ENDPOINTS:
-        print("Error: No Endpoints found! Check your GitHub Secrets.")
-        return None
-        
-    for endpoint in API_ENDPOINTS:
-        try:
-            url = f"{endpoint}?id={channel_id}"
-            response = requests.get(url, timeout=15)
-            if response.status_code == 200 and "#EXTINF" in response.text:
-                print(f"Success: Updated channel ID {channel_id}")
-                return response.text.strip()
-        except requests.exceptions.RequestException:
-            continue
-    
-    print(f"Failed: Could not update channel ID {channel_id}")
-    return None
+# പഴയ tvg-id കളുടെ ഒരു സെറ്റ് സൃഷ്ടിക്കുക
+tvg_ids = set()
+for line in old_lines:
+    if "tvg-id=" in line:
+        tvg_id = line.split('tvg-id="')[1].split('"')[0]
+        tvg_ids.add(tvg_id)
 
-def update_playlist():
-    if not os.path.exists(PLAYLIST_FILE):
-        print("Playlist file not found!")
-        return
+# പുതിയ സോഴ്‌സ് പ്ലേലിസ്റ്റ് വായിക്കുക
+response = requests.get(SOURCE_URL)
+new_lines_source = response.text.splitlines()
 
-    with open(PLAYLIST_FILE, 'r', encoding='utf-8') as f:
-        lines = f.readlines()
+# ഫില്ടർ ചെയ്ത് പുതിയ ലൈൻകൾ ചേർക്കുക
+new_lines = []
 
-    updated_playlist = []
-    current_block = []
-    is_jio_channel = False
-    channel_id = None
+for line in new_lines_source:
+    if "tvg-id=" in line:
+        tvg_id = line.split('tvg-id="')[1].split('"')[0]
+        if tvg_id in tvg_ids:
+            new_lines.append(line + "\n")
 
-    handled_channels = set()  # ചാനലുകൾ ട്രാക്ക് ചെയ്യാൻ
+# ഫൈനൽ ഫയൽ എഴുതുക
+with open(NEW_FILE_NAME, "w", encoding="utf-8") as f:
+    f.writelines(new_lines)
 
-    for line in lines:
-        stripped = line.strip()
-
-        if stripped.startswith("#EXTM3U"):
-            updated_playlist.append(stripped)
-            continue
-
-        if stripped.startswith("#EXTINF:"):
-            if current_block:
-                if is_jio_channel and channel_id and channel_id not in handled_channels:
-                    new_data = fetch_updated_channel(channel_id)
-                    if new_data:
-                        updated_playlist.append(new_data)
-                        handled_channels.add(channel_id)  # ട്രാക്ക് ചെയ്തു
-                    else:
-                        updated_playlist.append("\n".join(current_block))
-                else:
-                    updated_playlist.append("\n".join(current_block))
-                
-                current_block = []
-                is_jio_channel = False
-                channel_id = None
-
-            current_block.append(stripped)
-
-            match = re.search(r'tvg-id="([^"]+)"', stripped)
-            if match:
-                channel_id = match.group(1)
-
-        else:
-            if stripped:
-                current_block.append(stripped)
-                if any(x in stripped.lower() for x in ["jio", "hdnea", "bpk-tv"]):
-                    is_jio_channel = True
-
-    if current_block:
-        if is_jio_channel and channel_id and channel_id not in handled_channels:
-            new_data = fetch_updated_channel(channel_id)
-            if new_data:
-                updated_playlist.append(new_data)
-                handled_channels.add(channel_id)
-            else:
-                updated_playlist.append("\n".join(current_block))
-        else:
-            updated_playlist.append("\n".join(current_block))
-    
-    with open(PLAYLIST_FILE, 'w', encoding='utf-8') as f:
-        f.write("\n\n".join(updated_playlist) + "\n")
-
-if __name__ == "__main__":
-    print("Starting playlist update process...")
-    update_playlist()
-    print("Process finished.")
+print("Playlist updated successfully")
