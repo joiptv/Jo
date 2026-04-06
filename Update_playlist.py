@@ -7,10 +7,13 @@ MY_PLAYLIST_FILE = 'Zoh.m3u'
 
 def update_playlist():
     try:
-        # സോഴ്‌സ് ലിങ്ക് ഡൗൺലോഡ് ചെയ്യുന്നു
-        print("Fetching source data...")
-        source_response = requests.get(SOURCE_URL)
-        source_content = source_response.text
+        print("Fetching latest data from source...")
+        response = requests.get(SOURCE_URL, timeout=30)
+        if response.status_code != 200:
+            print("Error: Could not fetch source link")
+            return
+        
+        source_content = response.text
 
         # നിങ്ങളുടെ പ്ലേലിസ്റ്റ് ഫയൽ വായിക്കുന്നു
         with open(MY_PLAYLIST_FILE, 'r', encoding='utf-8') as f:
@@ -22,45 +25,42 @@ def update_playlist():
         while i < len(my_lines):
             line = my_lines[i]
             
-            # EXTINF ലൈൻ ആണോ എന്ന് നോക്കുന്നു
+            # EXTINF ലൈൻ കണ്ടെത്തിയാൽ (ചാനൽ പേര് ഇതിലാണ്)
             if line.startswith('#EXTINF'):
                 updated_playlist.append(line)
                 
-                # ചാനൽ പേര് വേർതിരിച്ചെടുക്കുന്നു (അവസാന കോമയ്ക്ക് ശേഷമുള്ള ഭാഗം)
-                channel_name_match = re.search(r',([^,]+)$', line.strip())
-                if channel_name_match:
-                    channel_name = channel_name_match.group(1).strip()
+                # ചാനൽ പേര് കൃത്യമായി വേർതിരിച്ചെടുക്കുന്നു (ഉദാ: Asianet Plus)
+                name_match = re.search(r',([^,]+)$', line.strip())
+                if name_match:
+                    channel_name = name_match.group(1).strip()
                     
-                    # സോഴ്‌സിൽ ഈ ചാനലിന്റെ പുതിയ ഡാറ്റ തിരയുന്നു
-                    # ഓരോ ചാനലിനും #KODIPROP മുതൽ ലിങ്ക് (.mpd/m3u8) വരെയുള്ള ഭാഗം പിടിച്ചെടുക്കുന്നു
-                    pattern = rf'#EXTINF:.*{re.escape(channel_name)}.*?\n((?:#KODIPROP:.*?\n)*http.*)'
+                    # സോഴ്‌സിൽ ഈ ചാനലിന്റെ ബ്ലോക്ക് തിരയുന്നു
+                    # ഇതിൽ #KODIPROP, #EXTVLCOPT, #EXTHTTP, കൂടാതെ URL എന്നിവ ഉൾപ്പെടും
+                    pattern = rf'#EXTINF:.*,{re.escape(channel_name)}\s*\n((?:#(?:KODIPROP|EXTVLCOPT|EXTHTTP):.*?\n)*http.*)'
                     match = re.search(pattern, source_content, re.IGNORECASE | re.MULTILINE)
                     
                     if match:
-                        new_data = match.group(1)
-                        updated_playlist.append(new_data + '\n')
+                        # പുതിയ ഡാറ്റ (Headers + Link) ചേർക്കുന്നു
+                        new_block = match.group(1)
+                        updated_playlist.append(new_block + '\n')
                         
-                        # നിങ്ങളുടെ പഴയ ലിങ്ക് സെക്ഷൻ സ്കിപ്പ് ചെയ്യുന്നു
+                        # നിങ്ങളുടെ പഴയ പ്ലേലിസ്റ്റിലെ ലിങ്ക് സെക്ഷൻ ഒഴിവാക്കുന്നു
                         i += 1
-                        while i < len(my_lines) and not my_lines[i].strip().startswith('#EXTINF') and not my_lines[i].strip().startswith('#EXTM3U'):
-                            # അടുത്ത EXTINF വരുന്നത് വരെയുള്ള പഴയ വരികൾ ഒഴിവാക്കാൻ
-                            if i + 1 < len(my_lines) and my_lines[i+1].startswith('#EXTINF'):
-                                break
+                        while i < len(my_lines) and not my_lines[i].strip().startswith('#EXTINF'):
                             i += 1
-                        i += 1
                         continue
             
             updated_playlist.append(line)
             i += 1
 
-        # പുതിയ ഫയലിലേക്ക് സേവ് ചെയ്യുന്നു
+        # ഫയൽ സേവ് ചെയ്യുന്നു
         with open(MY_PLAYLIST_FILE, 'w', encoding='utf-8') as f:
             f.writelines(updated_playlist)
         
-        print(f"Success! {MY_PLAYLIST_FILE} has been updated.")
+        print(f"Successfully updated {MY_PLAYLIST_FILE} with all headers and cookies!")
 
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"An error occurred: {e}")
 
 if __name__ == "__main__":
     update_playlist()
