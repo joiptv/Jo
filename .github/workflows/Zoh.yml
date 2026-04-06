@@ -36,7 +36,8 @@ jobs:
           HEADERS = {"User-Agent": "Mozilla/5.0"}
 
           def get_all_blocks(content):
-              return re.findall(r'(#EXTINF:.*?(?=#EXTINF:|$))', content, re.DOTALL)
+              # Extracts the entire block starting from #KODIPROP or #EXTINF until the next #EXTINF or end of file
+              return re.findall(r'((?:#KODIPROP:.*?|#EXTINF:.*?)\n(?:^[^#].*$\n?)*)', content, re.MULTILINE)
 
           def get_name(block):
               match = re.search(r'#EXTINF:.*?,(.*)', block)
@@ -48,6 +49,7 @@ jobs:
               source_content = response.text
               
               source_blocks = get_all_blocks(source_content)
+              # Create a dictionary where the key is the channel name and the value is the FULL block (KODI props + Link)
               source_dict = {get_name(sb): sb.strip() for sb in source_blocks if get_name(sb)}
 
               if not os.path.exists(FILE_NAME):
@@ -61,11 +63,13 @@ jobs:
               updated_playlist = my_playlist
 
               for mb in my_blocks:
+                  # Check if the block contains "jiotv" tag anywhere (Logo URL, ID, or Title)
                   if "jiotv" in mb.lower():
                       name = get_name(mb)
                       if name in source_dict:
+                          # Replaces the entire old block with the entire new block (Kodi Props + Link)
                           updated_playlist = updated_playlist.replace(mb.strip(), source_dict[name])
-                          print(f"Synced: {name}")
+                          print(f"Full Update: {name}")
 
               with open(FILE_NAME, "w", encoding="utf-8") as f:
                   f.write(updated_playlist)
@@ -81,8 +85,8 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           if ! git diff --cached --quiet; then
-            git commit -m "Auto-sync JioTV licenses and tokens"
+            git commit -m "Auto-sync full JioTV blocks including Kodi Props"
             git push
           else
-            echo "No changes"
+            echo "No changes detected"
           fi
