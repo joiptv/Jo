@@ -1,4 +1,4 @@
-name: Auto-Sync Zoh.m3u
+name: Auto-Sync JioTV Only
 
 on:
   workflow_dispatch:
@@ -31,14 +31,17 @@ jobs:
           import re
           import os
 
+          # Updated settings
           FILE_NAME = "Zoh.m3u"
           SOURCE_URL = "https://clarity-tv.vercel.app/api/playlist/?id=ALLINONE"
           HEADERS = {"User-Agent": "Mozilla/5.0"}
 
           def get_all_blocks(content):
+              # Extracts blocks starting with #KODIPROP or #EXTINF
               return re.findall(r'((?:#KODIPROP:.*?|#EXTINF:.*?)\n(?:^[^#].*$\n?)*)', content, re.MULTILINE)
 
           def get_channel_id(block):
+              # Using tvg-id for accurate matching
               match = re.search(r'tvg-id="([^"]+)"', block)
               return match.group(1) if match else None
 
@@ -46,9 +49,12 @@ jobs:
               response = requests.get(SOURCE_URL, headers=HEADERS, timeout=30)
               response.raise_for_status()
               source_blocks = get_all_blocks(response.text)
+              
+              # Map source channels by their ID
               source_dict = {get_channel_id(sb): sb.strip() for sb in source_blocks if get_channel_id(sb)}
 
               if not os.path.exists(FILE_NAME):
+                  print(f"Error: {FILE_NAME} not found")
                   exit(1)
 
               with open(FILE_NAME, "r", encoding="utf-8") as f:
@@ -58,16 +64,19 @@ jobs:
               new_playlist = current_playlist
 
               for mb in my_blocks:
-                  # Focus strictly on the "JioTV" tag
+                  # STRICT RULE: Only update if "jiotv" tag exists in the block
                   if "jiotv" in mb.lower():
                       cid = get_channel_id(mb)
                       if cid in source_dict:
+                          # Replaces the entire block with updated data from source
                           new_playlist = new_playlist.replace(mb.strip(), source_dict[cid])
+                          print(f"Updated: {cid}")
 
               with open(FILE_NAME, "w", encoding="utf-8") as f:
                   f.write(new_playlist)
 
           except Exception as e:
+              print(f"Error: {e}")
               exit(1)
           EOF
 
@@ -77,6 +86,8 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           if ! git diff --cached --quiet; then
-            git commit -m "Sync JioTV tagged blocks"
+            git commit -m "Sync JioTV channels from clarity-tv"
             git push
+          else
+            echo "No changes detected."
           fi
