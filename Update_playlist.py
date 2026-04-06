@@ -1,71 +1,66 @@
 import requests
 import re
 
-# ചാനലുകളുടെ ലിസ്റ്റ്
-TARGET_CHANNELS = ["Asianet", "Asianet Plus", "Asianet Movies"]
-
-# ഫയൽ വിവരങ്ങൾ (Z Capital ആക്കി മാറ്റിയിട്ടുണ്ട്)
-SOURCE_URL = "https://voot.vodep39240327.workers.dev?voot.m3u"
-MY_PLAYLIST = "Zoh.m3u" 
-
-def get_source_data():
-    try:
-        response = requests.get(SOURCE_URL, timeout=20)
-        return response.text if response.status_code == 200 else None
-    except:
-        return None
+# സെറ്റിംഗുകൾ
+SOURCE_URL = 'https://voot.vodep39240327.workers.dev?voot.m3u'
+MY_PLAYLIST_FILE = 'Zoh.m3u'
 
 def update_playlist():
-    source_content = get_source_data()
-    if not source_content:
-        return
-
-    source_lines = source_content.splitlines()
-    source_map = {}
-    
-    for i, line in enumerate(source_lines):
-        if line.startswith("#EXTINF"):
-            for channel in TARGET_CHANNELS:
-                if f'tvg-name="{channel}"' in line or f',{channel}' in line:
-                    block = []
-                    for j in range(i + 1, len(source_lines)):
-                        if source_lines[j].startswith("#EXTINF"): break
-                        if source_lines[j].startswith("#KODIPROP") or block:
-                            block.append(source_lines[j])
-                            if ".mpd" in source_lines[j]: break
-                    source_map[channel] = block
-
     try:
-        with open(MY_PLAYLIST, 'r', encoding='utf-8') as f:
+        # സോഴ്‌സ് ലിങ്ക് ഡൗൺലോഡ് ചെയ്യുന്നു
+        print("Fetching source data...")
+        source_response = requests.get(SOURCE_URL)
+        source_content = source_response.text
+
+        # നിങ്ങളുടെ പ്ലേലിസ്റ്റ് ഫയൽ വായിക്കുന്നു
+        with open(MY_PLAYLIST_FILE, 'r', encoding='utf-8') as f:
             my_lines = f.readlines()
-    except:
-        print("ഫയൽ തുറക്കാൻ പറ്റിയില്ല")
-        return
 
-    final_playlist = []
-    skip = False
+        updated_playlist = []
+        i = 0
+        
+        while i < len(my_lines):
+            line = my_lines[i]
+            
+            # EXTINF ലൈൻ ആണോ എന്ന് നോക്കുന്നു
+            if line.startswith('#EXTINF'):
+                updated_playlist.append(line)
+                
+                # ചാനൽ പേര് വേർതിരിച്ചെടുക്കുന്നു (അവസാന കോമയ്ക്ക് ശേഷമുള്ള ഭാഗം)
+                channel_name_match = re.search(r',([^,]+)$', line.strip())
+                if channel_name_match:
+                    channel_name = channel_name_match.group(1).strip()
+                    
+                    # സോഴ്‌സിൽ ഈ ചാനലിന്റെ പുതിയ ഡാറ്റ തിരയുന്നു
+                    # ഓരോ ചാനലിനും #KODIPROP മുതൽ ലിങ്ക് (.mpd/m3u8) വരെയുള്ള ഭാഗം പിടിച്ചെടുക്കുന്നു
+                    pattern = rf'#EXTINF:.*{re.escape(channel_name)}.*?\n((?:#KODIPROP:.*?\n)*http.*)'
+                    match = re.search(pattern, source_content, re.IGNORECASE | re.MULTILINE)
+                    
+                    if match:
+                        new_data = match.group(1)
+                        updated_playlist.append(new_data + '\n')
+                        
+                        # നിങ്ങളുടെ പഴയ ലിങ്ക് സെക്ഷൻ സ്കിപ്പ് ചെയ്യുന്നു
+                        i += 1
+                        while i < len(my_lines) and not my_lines[i].strip().startswith('#EXTINF') and not my_lines[i].strip().startswith('#EXTM3U'):
+                            # അടുത്ത EXTINF വരുന്നത് വരെയുള്ള പഴയ വരികൾ ഒഴിവാക്കാൻ
+                            if i + 1 < len(my_lines) and my_lines[i+1].startswith('#EXTINF'):
+                                break
+                            i += 1
+                        i += 1
+                        continue
+            
+            updated_playlist.append(line)
+            i += 1
 
-    for line in my_lines:
-        if line.startswith("#EXTINF"):
-            final_playlist.append(line)
-            skip = False
-            for channel in TARGET_CHANNELS:
-                if f'tvg-name="{channel}"' in line or f',{channel}' in line:
-                    if channel in source_map:
-                        for new_line in source_map[channel]:
-                            final_playlist.append(new_line + "\n")
-                        skip = True
-                    break
-        elif skip:
-            if ".mpd" in line or "#KODIPROP" in line: continue
-            if line.strip() == "": continue
-            skip = False
-            final_playlist.append(line)
-        else:
-            final_playlist.append(line)
+        # പുതിയ ഫയലിലേക്ക് സേവ് ചെയ്യുന്നു
+        with open(MY_PLAYLIST_FILE, 'w', encoding='utf-8') as f:
+            f.writelines(updated_playlist)
+        
+        print(f"Success! {MY_PLAYLIST_FILE} has been updated.")
 
-    with open(MY_PLAYLIST, 'w', encoding='utf-8') as f:
-        f.writelines(final_playlist)
+    except Exception as e:
+        print(f"Error: {e}")
 
 if __name__ == "__main__":
     update_playlist()
