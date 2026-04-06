@@ -1,4 +1,4 @@
-name: Auto-Sync JioTV Only
+name: Auto-Sync zoh.m3u
 
 on:
   workflow_dispatch:
