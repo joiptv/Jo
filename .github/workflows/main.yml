@@ -1,4 +1,4 @@
-name: Auto-Update Zoh.m3u
+name: Auto-Sync Zoh.m3u
 
 on:
   workflow_dispatch:
@@ -13,70 +13,70 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
 
-      - name: Install requests
+      - name: Install Dependencies
         run: pip install requests
 
-      - name: Update Token
+      - name: Run Tag Based Sync Script
         run: |
           python << 'EOF'
           import requests
           import re
+          import os
 
           FILE_NAME = "Zoh.m3u"
-          SOURCE_URL = "https://raw.githubusercontent.com/alex4528x/m3u/refs/heads/main/jtv.m3u"
+          SOURCE_URL = "https://clarity-tv.vercel.app/api/playlist/?id=ALLINONE"
+          HEADERS = {"User-Agent": "Mozilla/5.0"}
 
-          headers = {"User-Agent": "Mozilla/5.0"}
+          def get_all_blocks(content):
+              return re.findall(r'((?:#KODIPROP:.*?|#EXTINF:.*?)\n(?:^[^#].*$\n?)*)', content, re.MULTILINE)
 
-          response = requests.get(SOURCE_URL, headers=headers)
+          def get_channel_id(block):
+              match = re.search(r'tvg-id="([^"]+)"', block)
+              return match.group(1) if match else None
 
-          token_match = re.search(r'__hdnea__=[^"&\s]*', response.text)
+          try:
+              response = requests.get(SOURCE_URL, headers=HEADERS, timeout=30)
+              response.raise_for_status()
+              source_blocks = get_all_blocks(response.text)
+              source_dict = {get_channel_id(sb): sb.strip() for sb in source_blocks if get_channel_id(sb)}
 
-          if not token_match:
-              print("Token not found")
+              if not os.path.exists(FILE_NAME):
+                  exit(1)
+
+              with open(FILE_NAME, "r", encoding="utf-8") as f:
+                  current_playlist = f.read()
+
+              my_blocks = get_all_blocks(current_playlist)
+              new_playlist = current_playlist
+
+              for mb in my_blocks:
+                  # Focus strictly on the "JioTV" tag
+                  if "jiotv" in mb.lower():
+                      cid = get_channel_id(mb)
+                      if cid in source_dict:
+                          new_playlist = new_playlist.replace(mb.strip(), source_dict[cid])
+
+              with open(FILE_NAME, "w", encoding="utf-8") as f:
+                  f.write(new_playlist)
+
+          except Exception as e:
               exit(1)
-
-          new_token = token_match.group(0)
-
-          with open(FILE_NAME, "r", encoding="utf-8") as f:
-              lines = f.readlines()
-
-          new_lines = []
-
-          for line in lines:
-
-              if "__hdnea__=" in line:
-                  line = re.sub(r'__hdnea__=[^"&\s]*', new_token, line)
-
-              if ".mpd" in line and "jio" in line.lower():
-                  base = line.split("?")[0]
-                  line = f"{base}?{new_token}\n"
-
-              new_lines.append(line)
-
-          with open(FILE_NAME, "w", encoding="utf-8") as f:
-              f.writelines(new_lines)
-
-          print("Zoh.m3u updated successfully")
           EOF
 
-      - name: Commit & Push
+      - name: Commit and Push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add Zoh.m3u
-
+          git add .
           if ! git diff --cached --quiet; then
-            git commit -m "Auto update Jio token"
+            git commit -m "Sync JioTV tagged blocks"
             git push
-          else
-            echo "No changes"
           fi
