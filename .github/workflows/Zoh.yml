@@ -1,4 +1,4 @@
-name: Auto-Update JioTV Playlist
+name: Auto-Sync JioTV Only
 
 on:
   workflow_dispatch:
@@ -24,69 +24,59 @@ jobs:
       - name: Install Dependencies
         run: pip install requests
 
-      - name: Run Auto Sync Script
+      - name: Run Tag Based Sync Script
         run: |
           python << 'EOF'
           import requests
           import re
           import os
 
-          FILE_NAME = "Zoh.txt" 
+          FILE_NAME = "Zoh.txt"
           SOURCE_URL = "https://netx.streamstar18.workers.dev/zio1"
           HEADERS = {"User-Agent": "Mozilla/5.0"}
 
           def get_all_blocks(content):
-              # Extracts the entire block starting from #KODIPROP or #EXTINF until the next #EXTINF or end of file
               return re.findall(r'((?:#KODIPROP:.*?|#EXTINF:.*?)\n(?:^[^#].*$\n?)*)', content, re.MULTILINE)
 
-          def get_name(block):
-              match = re.search(r'#EXTINF:.*?,(.*)', block)
-              return match.group(1).strip() if match else None
+          def get_channel_id(block):
+              match = re.search(r'tvg-id="([^"]+)"', block)
+              return match.group(1) if match else None
 
           try:
               response = requests.get(SOURCE_URL, headers=HEADERS, timeout=30)
               response.raise_for_status()
-              source_content = response.text
-              
-              source_blocks = get_all_blocks(source_content)
-              # Create a dictionary where the key is the channel name and the value is the FULL block (KODI props + Link)
-              source_dict = {get_name(sb): sb.strip() for sb in source_blocks if get_name(sb)}
+              source_blocks = get_all_blocks(response.text)
+              source_dict = {get_channel_id(sb): sb.strip() for sb in source_blocks if get_channel_id(sb)}
 
               if not os.path.exists(FILE_NAME):
-                  print(f"Error: {FILE_NAME} not found")
                   exit(1)
 
               with open(FILE_NAME, "r", encoding="utf-8") as f:
-                  my_playlist = f.read()
+                  current_playlist = f.read()
 
-              my_blocks = get_all_blocks(my_playlist)
-              updated_playlist = my_playlist
+              my_blocks = get_all_blocks(current_playlist)
+              new_playlist = current_playlist
 
               for mb in my_blocks:
-                  # Check if the block contains "jiotv" tag anywhere (Logo URL, ID, or Title)
+                  # Focus strictly on the "JioTV" tag
                   if "jiotv" in mb.lower():
-                      name = get_name(mb)
-                      if name in source_dict:
-                          # Replaces the entire old block with the entire new block (Kodi Props + Link)
-                          updated_playlist = updated_playlist.replace(mb.strip(), source_dict[name])
-                          print(f"Full Update: {name}")
+                      cid = get_channel_id(mb)
+                      if cid in source_dict:
+                          new_playlist = new_playlist.replace(mb.strip(), source_dict[cid])
 
               with open(FILE_NAME, "w", encoding="utf-8") as f:
-                  f.write(updated_playlist)
+                  f.write(new_playlist)
 
           except Exception as e:
-              print(f"Error: {e}")
               exit(1)
           EOF
 
-      - name: Commit and Push Changes
+      - name: Commit and Push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           if ! git diff --cached --quiet; then
-            git commit -m "Auto-sync full JioTV blocks including Kodi Props"
+            git commit -m "Sync JioTV tagged blocks"
             git push
-          else
-            echo "No changes detected"
           fi
