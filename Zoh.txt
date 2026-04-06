@@ -105,13 +105,15 @@ https://cdn-3.pishow.tv/live/1530/master.m3u8
 #EXTINF:-1 tvg-id="10582" tvg-chno="070" tvg-name="dd-malayalam" tvg-id="abusaeeidx" tvg-logo="https://prodcdn1.wavespb.com/shows/poster_url/1443058650DD_malayalam_______384x512.webp" group-title="DD Regional", DD MALAYALAM
 https://d2lk5u59tns74c.cloudfront.net/out/v1/c313674ffced4c9a90f1bba436df2b9b/index.m3u8
 
+#EXTINF:-1 tvg-id="SafariTV" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SAFARI_TV/images/LOGO_HD/image.png" group-title="Entertainment",Safari TV
+https://j78dp346yq5r-hls-live.5centscdn.com/safari/live.stream/playlist.m3u8
 
-#EXTINF:-1 tvg-id="1666" tvg-language="Malayalam" group-title="Infotainment" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Safari_TV.png",Safari TV
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=e87670587ac95b74bfc3cbdc0156e09b:88162d38c9e3e62bcabd56fe204bce4a
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/824.1 ExoPlayerLib/824.0
-#EXTHTTP:{"cookie":"__hdnea__=st=1775466032~exp=1775552432~acl=/*~hmac=65738724011cd4d35bae10009686b54eda6ff9a67a907f0372a7984e3bbb3204"}
-https://jiotvioslive.cdn.jio.com/bpk-tv/Kappa_TV_BTS/output/index.mpd?__hdnea__=st=1775466032~exp=1775552432~acl=/*~hmac=65738724011cd4d35bae10009686b54eda6ff9a67a907f0372a7984e3bbb3204&xxx=%7Ccookie=__hdnea__=st=1775466032~exp=1775552432~acl=/*~hmac=65738724011cd4d35bae10009686b54eda6ff9a67a907f0372a7984e3bbb3204
+#EXTINF:-1 tvg-id="KappaTV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Kappa_TV.png" group-title="Lifestyle",Kappa TV
+https://cdn-3.pishow.tv/live/1123/master.m3u8
+
+
+****news***₹
+
 #EXTINF:-1 tvg-id="282" tvg-chno="601" tvg-name="AsianetNews" tvg-logo="https://play-lh.googleusercontent.com/rMgagys9KOji0wHPQzdDeS2QFe5lbOPZ0q_PsMl98kGc2putJD5gFUO1Xz_vE9siqdo" group-title="News", Asianet News
 https://amg13737-amg13737c1-amgplt0016.playout.now3.amagi.tv/playlist/amg13737-amg13737c1-amgplt0016/playlist.m3u8
 
