@@ -21,7 +21,7 @@ jobs:
         run: pip install requests
 
       - name: Run Update Script
-        run: python update_playlist.py
+        run: python Update_playlist.py
 
       - name: Commit Changes
         run: |
