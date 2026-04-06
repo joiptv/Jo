@@ -1,4 +1,4 @@
-name: 30Min Auto Update
+name: Hot Auto Update
 
 on:
   schedule:
@@ -27,7 +27,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add zoh.m3u
-          git commit -m "Updated Asianet Hotstar Links" || exit 0
+          git add Zoh.m3u
+          git commit -m "Updated Asianet Links" || exit 0
           git push
-          
