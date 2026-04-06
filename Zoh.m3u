@@ -1,5 +1,13 @@
 
 
+
+#EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7400/567400-h" group-title="VT OTT | Jio Cinema",Asianet Movies
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=53e552bf422a4feeb017e38ba43e0000:9cf91549836b4ce98e9d8137591dd38e
+#EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
+#EXTHTTP:{"Cookie":"hdntl=exp=1775565471~acl=%2f*~id=1ecee9e475d608b5b1b01b9ffc0c7f0c~data=hdntl~hmac=3a62de1018bf596bc838d34ed6b2180a19f551a65acd58cf9f82a4df93a5bd54","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
+https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a1a60/index.mpd
+
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"glnODBEnJaTSyU0VQgdCXw", "kid":"6ug4zNddSh+/9v190cl3gA" } ], "type":"temporary" }
 #EXTINF:-1 tvg-id="Surya HD" tvg-logo="https://sund-images.sunnxt.com/194397/640x360_SuryaTVHD_194397_7b54e231-bbb9-48d2-8aae-35a5886deed3.jpg" group-title="Sun NX",Surya HD
@@ -9,16 +17,6 @@ https://livestream15.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_i
 #EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://www.keralatv.in/media/2019/03/mazhavil-manorama-hd-latest-logo.png" group-title="Entertainment",Mazhavil Manorama HD
 #EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://www.keralatv.in/media/2019/03/mazhavil-manorama-hd-latest-logo.png" group-title="Entertainment",Mazhavil Manorama HD
 https://cdn-7.pishow.tv/live/1129/master.m3u8
-
-#EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7420/567420-h" group-title="VT OTT | Jio Cinema",Asianet
-#EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7420/567420-h" group-title="VT OTT | Jio Cinema",Asianet
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=53e552bf422a4feeb017e38ba43e0000:9cf91549836b4ce98e9d8137591dd38e
-#EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
-#EXTHTTP:{"Cookie":"hdntl=exp=1775565471~acl=%2f*~id=1ecee9e475d608b5b1b01b9ffc0c7f0c~data=hdntl~hmac=3a62de1018bf596bc838d34ed6b2180a19f551a65acd58cf9f82a4df93a5bd54","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
-https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a1a60/index.mpd
-
-
 
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -52,8 +50,14 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Flower_TV_BTS/output/index.mpd?__hdnea__=
 https://jiotvpllive.cdn.jio.com/bpk-tv/ZeeKeralamHD_MOB/WDVLive/index.mpd?__hdnea__=st=1775473002~exp=1775494602~acl=/*~hmac=22220b042d6d115420befc5dade032719fe9f7703f18a0876d1cff326ec574d7
 
 
+#EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7400/567400-h" group-title="VT OTT | Jio Cinema",Asianet Movies
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=53e552bf422a4feeb017e38ba43e0000:9cf91549836b4ce98e9d8137591dd38e
+#EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
+#EXTHTTP:{"Cookie":"hdntl=exp=1775565471~acl=%2f*~id=1ecee9e475d608b5b1b01b9ffc0c7f0c~data=hdntl~hmac=3a62de1018bf596bc838d34ed6b2180a19f551a65acd58cf9f82a4df93a5bd54","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
+https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a1a60/index.mpd
 
-#EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7424/567424-h" group-title="VT OTT | Jio Cinema",Asianet Plus
+
 #EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7424/567424-h" group-title="VT OTT | Jio Cinema",Asianet Plus
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=53e552bf422a4feeb017e38ba43e0000:9cf91549836b4ce98e9d8137591dd38e
@@ -69,13 +73,6 @@ https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a
 #EXTINF:-1 tvg-id="Surya Movies" tvg-logo="https://sund-images.sunnxt.com/194385/640x360_SuryaMovies_194385_2d5dbc38-915d-4e41-b8b0-ea98ca6c88d3.jpg" group-title="Sun NX",Surya Movies
 https://livestream.sunnxt.com/e24ee14c395945bd8ccb065e1bce8b9b/SuryaMoviesB_IN_index.mpd
 
-#EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7400/567400-h" group-title="VT OTT | Jio Cinema",Asianet Movies
-#EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7400/567400-h" group-title="VT OTT | Jio Cinema",Asianet Movies
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=53e552bf422a4feeb017e38ba43e0000:9cf91549836b4ce98e9d8137591dd38e
-#EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
-#EXTHTTP:{"Cookie":"hdntl=exp=1775565471~acl=%2f*~id=1ecee9e475d608b5b1b01b9ffc0c7f0c~data=hdntl~hmac=3a62de1018bf596bc838d34ed6b2180a19f551a65acd58cf9f82a4df93a5bd54","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
-https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a1a60/index.mpd
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"m60orW8j27kXxj7mgPZqHw", "kid":"EVY7AKRrQ/Kg+A7PQqT7dw" } ], "type":"temporary" }
