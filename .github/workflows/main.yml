@@ -33,7 +33,7 @@ jobs:
 
           # Updated settings
           FILE_NAME = "Zoh.m3u"
-          SOURCE_URL = "https://clarity-tv.vercel.app/api/playlist/?id=ALLINONE"
+          SOURCE_URL = "https://github.com/alex4528x/m3u/raw/refs/heads/main/jtv.m3u"
           HEADERS = {"User-Agent": "Mozilla/5.0"}
 
           def get_all_blocks(content):
