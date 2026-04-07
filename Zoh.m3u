@@ -104,16 +104,6 @@ https://cdn-3.pishow.tv/live/1123/master.m3u8
 
 ****news***₹
 
-#EXTINF:-1 tvg-id="282" tvg-chno="601" tvg-name="AsianetNews" tvg
-#EXTINF:-1 tvg-id="1153" group-title="Movies" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_Movies.png",Asianet Movies
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=ca83419dfa1b56f794032b271b8f2c84:d592520eea361507a63c94bff799dfb6
-#EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/824.1 ExoPlayerLib/824.0
-#EXTHTTP:{"cookie":"__hdnea__=st=1775559827~exp=1775581427~acl=/*~hmac=9caed4eb708b5826a735970ddcfee749274b5e92ac349e008c81d58fe43def36"}
-https://jiotvpllive.cdn.jio.com/bpk-tv/Asianet_Movies_BTS/output/index.mpd?#__hdnea__=st=1775559827~exp=1775581427~acl=/*~hmac=9caed4eb708b5826a735970ddcfee749274b5e92ac349e008c81d58fe43def36&xxx=%7Ccookie=__hdnea__=st=1775559827~exp=1775581427~acl=/*~hmac=9caed4eb708b5826a735970ddcfee749274b5e92ac349e008c81d58fe43def36
--logo="https://play-lh.googleusercontent.com/rMgagys9KOji0wHPQzdDeS2QFe5lbOPZ0q_PsMl98kGc2putJD5gFUO1Xz_vE9siqdo" group-title="News", Asianet News
-https://amg13737-amg13737c1-amgplt0016.playout.now3.amagi.tv/playlist/amg13737-amg13737c1-amgplt0016/playlist.m3u8
-
 
 #EXTINF:-1 tvg-id="ManoramaNews" tvg-logo="https://i.imgur.com/n9ABnlu.jpeg" group-title="News",Manorama News
 https://mmtvnews1.akamaized.net/v1/master/673630b269b766886555eebfddd4f27f3de3ab50/mmtvNewsCampaign1/index.m3u8
@@ -145,7 +135,9 @@ https://d1ty2af03alkwd.cloudfront.net/index_4.m3u8
 https://cdn-3.pishow.tv/live/1469/master.m3u8
 
 
-#EXTINF:-1 tvg-id="1618" group-title="News" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Real_News_Kerala.png",Real News Kerala
+#EXTINF:-1 tvg-id="1618" group-title="News" tvg-logo=
+#EXTINF:-1 tvg-id="282" tvg-chno="601" tvg-name="AsianetNews" tvg-logo="https://play-lh.googleusercontent.com/rMgagys9KOji0wHPQzdDeS2QFe5lbOPZ0q_PsMl98kGc2putJD5gFUO1Xz_vE9siqdo" group-title="News", Asianet News
+https://amg13737-amg13737c1-amgplt0016.playout.now3.amagi.tv/playlist/amg13737-amg13737c1-amgplt0016/playlist.m3u8"https://jiotv.catchup.cdn.jio.com/dare_images/images/Real_News_Kerala.png",Real News Kerala
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=1c9e1a56021b589ab4daef68d72778d5:9eeef90b3ee4d10fb8524fbf0dc08e96
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) ygx/824.1 ExoPlayerLib/824.0
