@@ -1,4 +1,4 @@
-Name: Auto-Sync JioTV Only
+name: Auto-Sync JioTV Only
 
 on:
   workflow_dispatch:
@@ -31,9 +31,7 @@ jobs:
           import re
           import os
 
-          # ഫയൽ പേര് ശ്രദ്ധിക്കുക
           FILE_NAME = "Zoh.m3u" 
-          # നിങ്ങൾ നൽകിയ പുതിയ ലിങ്ക്
           SOURCE_URL = "https://raw.githubusercontent.com/joiptv/jojo/refs/heads/main/Jojo.m3u"
           
           HEADERS = {
@@ -42,25 +40,22 @@ jobs:
           }
 
           def get_all_blocks(content):
-              # M3U ബ്ലോക്കുകൾ വേർതിരിച്ചെടുക്കാനുള്ള വഴി
               return re.findall(r'(#EXTINF:.*?(?:\n#KODIPROP:.*)*\n(?:http|https)://\S+)', content, re.DOTALL)
 
           def get_channel_id(block):
-              # tvg-id നോക്കി ചാനലിനെ തിരിച്ചറിയുന്നു
               match = re.search(r'tvg-id="([^"]+)"', block)
               return match.group(1) if match else None
 
           try:
-              print(f"Fetching source playlist from: {SOURCE_URL}")
+              print(f"Fetching source playlist...")
               response = requests.get(SOURCE_URL, headers=HEADERS, timeout=30)
               response.raise_for_status()
               
               source_blocks = get_all_blocks(response.text)
-              # ഓരോ ചാനൽ ഐഡിക്കും അനുസരിച്ചുള്ള ലിങ്കുകൾ സൂക്ഷിക്കുന്നു
               source_dict = {get_channel_id(sb): sb.strip() for sb in source_blocks if get_channel_id(sb)}
 
               if not os.path.exists(FILE_NAME):
-                  print(f"Error: {FILE_NAME} not found in repository!")
+                  print(f"Error: {FILE_NAME} not found!")
                   exit(1)
 
               with open(FILE_NAME, "r", encoding="utf-8") as f:
@@ -71,25 +66,21 @@ jobs:
 
               changes_made = False
               for mb in my_blocks:
-                  # "jiotv" എന്ന് ടാഗ് ചെയ്ത ചാനലുകൾ മാത്രം നോക്കുന്നു
                   if "jiotv" in mb.lower():
                       cid = get_channel_id(mb)
                       if cid in source_dict:
                           original_block = mb.strip()
                           new_block = source_dict[cid]
-                          
-                          # മാറ്റങ്ങൾ ഉണ്ടെങ്കിൽ മാത്രം റീപ്ലേസ് ചെയ്യുന്നു
                           if original_block != new_block:
                               new_playlist = new_playlist.replace(original_block, new_block)
                               changes_made = True
-                              print(f"Updating channel: {cid}")
 
               if changes_made:
                   with open(FILE_NAME, "w", encoding="utf-8") as f:
                       f.write(new_playlist)
-                  print("Playlist updated successfully with new links.")
+                  print("Playlist updated.")
               else:
-                  print("No changes found in source.")
+                  print("No changes.")
 
           except Exception as e:
               print(f"An error occurred: {e}")
@@ -102,7 +93,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           if ! git diff --cached --quiet; then
-            git commit -m "Sync JioTV links from Jojo.m3u"
+            git commit -m "Sync JioTV tagged blocks"
             git push
           else
             echo "No changes to commit"
