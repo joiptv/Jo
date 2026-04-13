@@ -32,7 +32,7 @@ jobs:
           import os
 
           FILE_NAME = "Zoh.txt"
-          SOURCE_URL = "https://netx.streamstar18.workers.dev/zio1"
+          SOURCE_URL = "https://jp.techparag.xyz/playlist.m3u"
           HEADERS = {"User-Agent": "Mozilla/5.0"}
 
           def get_all_blocks(content):
