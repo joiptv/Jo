@@ -33,7 +33,7 @@ jobs:
 
           # ഫയൽ പേര് ശ്രദ്ധിക്കുക (Zoh.m3u അല്ലെങ്കിൽ Zoh.txt)
           FILE_NAME = "Zoh.m3u" 
-          SOURCE_URL = "https://jp.techparag.xyz/playlist.m3u"
+          SOURCE_URL = "https://allinonereborn.online/jiotv-m3u/playlist009.m3u8"
           HEADERS = {"User-Agent": "Mozilla/5.0"}
 
           def get_all_blocks(content):
