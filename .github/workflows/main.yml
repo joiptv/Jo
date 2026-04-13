@@ -3,7 +3,7 @@ import re
 import os
 
 FILE_NAME = "Zoh.m3u"
-SOURCE_URL = "https://github.com/alex4528x/m3u/raw/refs/heads/main/jtv.m3u"
+SOURCE_URL = "https://jp.techparag.xyz/playlist.m3u"
 HEADERS = {"User-Agent": "Mozilla/5.0"}
 
 def get_all_blocks(content):
