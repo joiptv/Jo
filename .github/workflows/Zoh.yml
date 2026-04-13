@@ -1,4 +1,4 @@
-name: Auto-Sync JioTV Only
+Name: Auto-Sync JioTV Only
 
 on:
   workflow_dispatch:
@@ -31,24 +31,32 @@ jobs:
           import re
           import os
 
-          # ഫയൽ പേര് ശ്രദ്ധിക്കുക (Zoh.m3u അല്ലെങ്കിൽ Zoh.txt)
+          # ഫയൽ പേര് ശ്രദ്ധിക്കുക
           FILE_NAME = "Zoh.m3u" 
-          SOURCE_URL = "https://allinonereborn.online/jiotv-m3u/playlist009.m3u8"
-          HEADERS = {"User-Agent": "Mozilla/5.0"}
+          # നിങ്ങൾ നൽകിയ പുതിയ ലിങ്ക്
+          SOURCE_URL = "https://raw.githubusercontent.com/joiptv/jojo/refs/heads/main/Jojo.m3u"
+          
+          HEADERS = {
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+              "Accept": "*/*"
+          }
 
           def get_all_blocks(content):
-              # Blocks identify regex
+              # M3U ബ്ലോക്കുകൾ വേർതിരിച്ചെടുക്കാനുള്ള വഴി
               return re.findall(r'(#EXTINF:.*?(?:\n#KODIPROP:.*)*\n(?:http|https)://\S+)', content, re.DOTALL)
 
           def get_channel_id(block):
+              # tvg-id നോക്കി ചാനലിനെ തിരിച്ചറിയുന്നു
               match = re.search(r'tvg-id="([^"]+)"', block)
               return match.group(1) if match else None
 
           try:
-              print("Fetching source playlist...")
+              print(f"Fetching source playlist from: {SOURCE_URL}")
               response = requests.get(SOURCE_URL, headers=HEADERS, timeout=30)
               response.raise_for_status()
+              
               source_blocks = get_all_blocks(response.text)
+              # ഓരോ ചാനൽ ഐഡിക്കും അനുസരിച്ചുള്ള ലിങ്കുകൾ സൂക്ഷിക്കുന്നു
               source_dict = {get_channel_id(sb): sb.strip() for sb in source_blocks if get_channel_id(sb)}
 
               if not os.path.exists(FILE_NAME):
@@ -63,22 +71,25 @@ jobs:
 
               changes_made = False
               for mb in my_blocks:
-                  # JioTV ടാഗ് ഉള്ളവ മാത്രം നോക്കുന്നു
+                  # "jiotv" എന്ന് ടാഗ് ചെയ്ത ചാനലുകൾ മാത്രം നോക്കുന്നു
                   if "jiotv" in mb.lower():
                       cid = get_channel_id(mb)
                       if cid in source_dict:
                           original_block = mb.strip()
                           new_block = source_dict[cid]
+                          
+                          # മാറ്റങ്ങൾ ഉണ്ടെങ്കിൽ മാത്രം റീപ്ലേസ് ചെയ്യുന്നു
                           if original_block != new_block:
                               new_playlist = new_playlist.replace(original_block, new_block)
                               changes_made = True
+                              print(f"Updating channel: {cid}")
 
               if changes_made:
                   with open(FILE_NAME, "w", encoding="utf-8") as f:
                       f.write(new_playlist)
-                  print("Playlist updated successfully.")
+                  print("Playlist updated successfully with new links.")
               else:
-                  print("No changes needed.")
+                  print("No changes found in source.")
 
           except Exception as e:
               print(f"An error occurred: {e}")
@@ -91,7 +102,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           if ! git diff --cached --quiet; then
-            git commit -m "Sync JioTV tagged blocks"
+            git commit -m "Sync JioTV links from Jojo.m3u"
             git push
           else
             echo "No changes to commit"
