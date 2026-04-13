@@ -31,24 +31,28 @@ jobs:
           import re
           import os
 
-          FILE_NAME = "Zoh.txt"
+          # ഫയൽ പേര് ശ്രദ്ധിക്കുക (Zoh.m3u അല്ലെങ്കിൽ Zoh.txt)
+          FILE_NAME = "Zoh.m3u" 
           SOURCE_URL = "https://jp.techparag.xyz/playlist.m3u"
           HEADERS = {"User-Agent": "Mozilla/5.0"}
 
           def get_all_blocks(content):
-              return re.findall(r'((?:#KODIPROP:.*?|#EXTINF:.*?)\n(?:^[^#].*$\n?)*)', content, re.MULTILINE)
+              # Blocks identify regex
+              return re.findall(r'(#EXTINF:.*?(?:\n#KODIPROP:.*)*\n(?:http|https)://\S+)', content, re.DOTALL)
 
           def get_channel_id(block):
               match = re.search(r'tvg-id="([^"]+)"', block)
               return match.group(1) if match else None
 
           try:
+              print("Fetching source playlist...")
               response = requests.get(SOURCE_URL, headers=HEADERS, timeout=30)
               response.raise_for_status()
               source_blocks = get_all_blocks(response.text)
               source_dict = {get_channel_id(sb): sb.strip() for sb in source_blocks if get_channel_id(sb)}
 
               if not os.path.exists(FILE_NAME):
+                  print(f"Error: {FILE_NAME} not found in repository!")
                   exit(1)
 
               with open(FILE_NAME, "r", encoding="utf-8") as f:
@@ -57,17 +61,27 @@ jobs:
               my_blocks = get_all_blocks(current_playlist)
               new_playlist = current_playlist
 
+              changes_made = False
               for mb in my_blocks:
-                  # Focus strictly on the "JioTV" tag
+                  # JioTV ടാഗ് ഉള്ളവ മാത്രം നോക്കുന്നു
                   if "jiotv" in mb.lower():
                       cid = get_channel_id(mb)
                       if cid in source_dict:
-                          new_playlist = new_playlist.replace(mb.strip(), source_dict[cid])
+                          original_block = mb.strip()
+                          new_block = source_dict[cid]
+                          if original_block != new_block:
+                              new_playlist = new_playlist.replace(original_block, new_block)
+                              changes_made = True
 
-              with open(FILE_NAME, "w", encoding="utf-8") as f:
-                  f.write(new_playlist)
+              if changes_made:
+                  with open(FILE_NAME, "w", encoding="utf-8") as f:
+                      f.write(new_playlist)
+                  print("Playlist updated successfully.")
+              else:
+                  print("No changes needed.")
 
           except Exception as e:
+              print(f"An error occurred: {e}")
               exit(1)
           EOF
 
@@ -79,4 +93,6 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "Sync JioTV tagged blocks"
             git push
+          else
+            echo "No changes to commit"
           fi
