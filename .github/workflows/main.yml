@@ -32,7 +32,7 @@ jobs:
           import os
 
           FILE_NAME = "Zoh.txt"
-          SOURCE_URL = "https://raw.githubusercontent.com/amazeyourself/m3u/refs/heads/main/jtv.m3u"
+          SOURCE_URL = ""
           HEADERS = {"User-Agent": "Mozilla/5.0"}
 
           def get_all_blocks(content):
