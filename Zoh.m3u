@@ -1,11 +1,5 @@
 #EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 
-#EXTINF:-1 tvg-id="443" group-title="Entertainment" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet.png",Asianet HD
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mini.allinonereborn.fun/key/key.php?id=443
-#EXTVLCOPT:http-user-agent=@allinone_reborn
-#EXTHTTP:{"cookie":"__hdnea__=st=1776088839~exp=1776110439~acl=/*~hmac=bc91dc2c1804d38c22c8a6547340a2fa2ce932a9a9c5becc20f91d44e9380e01"}
-https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_HD_MOB/WDVLive/index.mpd?__hdnea__=st=1776088839~exp=1776110439~acl=/*~hmac=bc91dc2c1804d38c22c8a6547340a2fa2ce932a9a9c5becc20f91d44e9380e01&__hdnea__=st=1776088839~exp=1776110439~acl=/*~hmac=bc91dc2c1804d38c22c8a6547340a2fa2ce932a9a9c5becc20f91d44e9380e01
 
 
 
@@ -20,12 +14,13 @@ https://cdn-7.pishow.tv/live/1129/master.m3u8
 
 
 
-#EXTINF:-1 tvg-id="1118" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet.png" group-title="Malayalam",Asianet
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://jp.techparag.xyz/1118.json
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-https://jp.techparag.xyz/1118.mpd
 
+#EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7420/567420-h" group-title="𝐉𝐢𝐨𝐇𝐨𝐭𝐬𝐭𝐚𝐫 | Entertainment" group-logo="https://variety.com/wp-content/uploads/2017/12/hotstar.jpg",Asianet
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=1dd2d0a48be14cc3a9666d861dd60000:24e889ab81444af0bceb8f8b9a530b18
+#EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
+#EXTHTTP:{"Cookie":"hdntl=exp=1776345513~acl=%2f*~id=99684fe6bcea99ebbe3f4a72cfc92ddd~data=hdntl~hmac=25daea1c030c227bbe803026b5cb4b793d09ca8828f9276785f13181a976653d","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
+https://livetv.hotstar.com/mp2/gec-india-1540057084/6569043a1d874fb49fc2cf2f273fe097/index.mpd
 
 
 
@@ -39,27 +34,25 @@ https://livestream6.sunnxt.com/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_inde
 https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mazhavilmanorama_nim_https/050522/mazhavilmanorama/playlist.m3u8
 
 
-#EXTINF:-1 tvg-id="634" group-title="Entertainment" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Flower_TV.png",Flower TV
+#EXTINF:-1 tvg-id="634" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Flower_TV.png" tvg-language="Malayalam" group-logo="https://www.smartprix.com/bytes/wp-content/uploads/2017/12/jio-tv.jpg" group-title="JioTv | Entertainment",Flower TV
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (Linux;Android 13) ExoPlayerLib/2.11.7
+#EXTVLCOPT:http-cookie=__hdnea__=st=1776254434~exp=1776276034~acl=/*~hmac=46438bc7c1b0f7a723c3acf220f6bc4e7919a62d79cbf594b48006736562d843
+#EXTHTTP:{"cookie":"__hdnea__=st=1776254434~exp=1776276034~acl=/*~hmac=46438bc7c1b0f7a723c3acf220f6bc4e7919a62d79cbf594b48006736562d843"}
+https://jiotvmblive.cdn.jio.com/bpk-tv/Flower_TV_MOB/WDVLive/index.mpd|cookie=__hdnea__=st=1776254434~exp=1776276034~acl=/*~hmac=46438bc7c1b0f7a723c3acf220f6bc4e7919a62d79cbf594b48006736562d843
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mini.allinonereborn.fun/key/key.php?id=634
-#EXTVLCOPT:http-user-agent=@allinone_reborn
-#EXTHTTP:{"cookie":"__hdnea__=st=1776088839~exp=1776110439~acl=/*~hmac=bc91dc2c1804d38c22c8a6547340a2fa2ce932a9a9c5becc20f91d44e9380e01"}
-https://jiotvmblive.cdn.jio.com/bpk-tv/Flower_TV_MOB/WDVLive/index.mpd?__hdnea__=st=1776088839~exp=1776110439~acl=/*~hmac=bc91dc2c1804d38c22c8a6547340a2fa2ce932a9a9c5becc20f91d44e9380e01&__hdnea__=st=1776088839~exp=1776110439~acl=/*~hmac=bc91dc2c1804d38c22c8a6547340a2fa2ce932a9a9c5becc20f91d44e9380e01
-
-#EXTINF:-1 tvg-id="1641" group-title="Entertainment" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Zee_Keralam_HD.png",Zee Keralam HD
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mini.allinonereborn.fun/key/key.php?id=1641
-#EXTVLCOPT:http-user-agent=@allinone_reborn
-#EXTHTTP:{"cookie":"__hdnea__=st=1776088839~exp=1776110439~acl=/*~hmac=bc91dc2c1804d38c22c8a6547340a2fa2ce932a9a9c5becc20f91d44e9380e01"}
-https://jiotvmblive.cdn.jio.com/bpk-tv/ZeeKeralamHD_MOB/WDVLive/index.mpd?__hdnea__=st=1776088839~exp=1776110439~acl=/*~hmac=bc91dc2c1804d38c22c8a6547340a2fa2ce932a9a9c5becc20f91d44e9380e01&__hdnea__=st=1776088839~exp=1776110439~acl=/*~hmac=bc91dc2c1804d38c22c8a6547340a2fa2ce932a9a9c5becc20f91d44e9380e01
+#KODIPROP:inputstream.adaptive.license_key=https://jiocdn.07in.workers.dev/626/gana-sunega/krish-ka/key.json
 
 
-#EXTINF:-1 tvg-id="459" group-title="Movies" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_Movies.png",Asianet Movies HD
+#EXTINF:-1 tvg-id="0-9-129" tvg-country="IN" tvg-chno="023" tvg-language="ml" tvg-name="Zee Keralam HD" tvg-logo="https://akamaividz2.zee5.com/image/upload/w_auto,h_396,c_scale,f_webp,q_auto:eco/resources/0-9-129/list/1920x1080list18c8c56d87da4f43ac13a1990c44a2e5.jpg" group-logo="https://www.medianews4u.com/wp-content/uploads/2025/06/Zee-5.jpg" group-title="Zee5 | Entertainment", Zee Keralam HD
+https://zee5.cr7x.workers.dev/live/gana-sunega/krish-ka/0-9-129/master.m3u8|User-Agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+
+
+#EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7400/567400-h" group-title="𝐉𝐢𝐨𝐇𝐨𝐭𝐬𝐭𝐚𝐫 | Entertainment" group-logo="https://variety.com/wp-content/uploads/2017/12/hotstar.jpg",Asianet Movies
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mini.allinonereborn.fun/key/key.php?id=459
-#EXTVLCOPT:http-user-agent=@allinone_reborn
-#EXTHTTP:{"cookie":"__hdnea__=st=1776088839~exp=1776110439~acl=/*~hmac=bc91dc2c1804d38c22c8a6547340a2fa2ce932a9a9c5becc20f91d44e9380e01"}
-https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Movies_HD_MOB/WDVLive/index.mpd?__hdnea__=st=1776088839~exp=1776110439~acl=/*~hmac=bc91dc2c1804d38c22c8a6547340a2fa2ce932a9a9c5becc20f91d44e9380e01&__hdnea__=st=1776088839~exp=1776110439~acl=/*~hmac=bc91dc2c1804d38c22c8a6547340a2fa2ce932a9a9c5becc20f91d44e9380e01
+#KODIPROP:inputstream.adaptive.license_key=53e552bf422a4feeb017e38ba43e0000:9cf91549836b4ce98e9d8137591dd38e
+#EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
+#EXTHTTP:{"Cookie":"hdntl=exp=1776345513~acl=%2f*~id=99684fe6bcea99ebbe3f4a72cfc92ddd~data=hdntl~hmac=25daea1c030c227bbe803026b5cb4b793d09ca8828f9276785f13181a976653d","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
+https://livetv.hotstar.com/mp1/gec-india-1540057039/96454b89b9cd49df822108b6975a1a60/index.mpd
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"LoRgxH0/AWk+GT26WWOl4Q", "kid":"a2e8zvcCTy2im0LhDcE/iQ" } ], "type":"temporary" }
@@ -69,19 +62,13 @@ https://livestream.sunnxt.com/e24ee14c395945bd8ccb065e1bce8b9b/SuryaMoviesB_IN_i
 
 
 
-#EXTINF:-1 tvg-id="1139" group-title="Malayalam" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_Plus.png",Asianet Plus
+#EXTINF:-1 tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7424/567424-h" group-title="𝐉𝐢𝐨𝐇𝐨𝐭𝐬𝐭𝐚𝐫 | Entertainment" group-logo="https://variety.com/wp-content/uploads/2017/12/hotstar.jpg",Asianet Plus
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://mini.allinonereborn.fun/key/key.php?id=1139
-#EXTVLCOPT:http-user-agent=@allinone_reborn
-#EXTHTTP:{"cookie":"__hdnea__=st=1776088839~exp=1776110439~acl=/*~hmac=bc91dc2c1804d38c22c8a6547340a2fa2ce932a9a9c5becc20f91d44e9380e01"}
-https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Plus_MOB/WDVLive/index.mpd?__hdnea__=st=1776088839~exp=1776110439~acl=/*~hmac=bc91dc2c1804d38c22c8a6547340a2fa2ce932a9a9c5becc20f91d44e9380e01&__hdnea__=st=1776088839~exp=1776110439~acl=/*~hmac=bc91dc2c1804d38c22c8a6547340a2fa2ce932a9a9c5becc20f91d44e9380e01
+#KODIPROP:inputstream.adaptive.license_key=5f1a41f1f8c04e209dfcdfff2fdc0000:e0a5f3aa6afe414b902d6b729dd9b11b
+#EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)
+#EXTHTTP:{"Cookie":"hdntl=exp=1776345513~acl=%2f*~id=99684fe6bcea99ebbe3f4a72cfc92ddd~data=hdntl~hmac=25daea1c030c227bbe803026b5cb4b793d09ca8828f9276785f13181a976653d","Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/"}
+https://livetv.hotstar.com/mp1/gec-india-1540057042/65edc0359d4b49f7a42d06d4dfe8457b/index.mpd
 
-
-#EXTINF:-1 tvg-id="1153" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_Movies.png" group-title="Malayalam",Asianet Movies
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://jp.techparag.xyz/1153.json
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-https://jp.techparag.xyz/1153.mpd
 
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
