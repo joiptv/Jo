@@ -1,7 +1,7 @@
 #EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 
 #EXTINF:-1 tvg-id="ASIANET HD" tvg-logo="https://img.logo-cdn.cc/asianet.png" group-title="Entertainment" ,ASIANET HD 
-http://line.nspivot.com:80/live/C01D92/60CA8D/63503.m3u8
+https://xtreamup.hakunamata.workers.dev/play/98891/8op0x9km18x/live/ts
 
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
