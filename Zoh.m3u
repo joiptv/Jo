@@ -38,11 +38,11 @@ https://livestream6.sunnxt.com/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_inde
 #EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://exchange4media.gumlet.io/news-photo/92907-MazhavilManorama.jpg" group-title="Entertainment",Mazhavil Manorama
 https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mazhavilmanorama_nim_https/050522/mazhavilmanorama/playlist.m3u8
 
-#EXTINF:-1 tvg-id="1641" tvg-name="Zee Keralam HD" tvg-language="Hindi" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ZeeKeralamHD.png" group-title="『𝐉𝐢𝐨𝐓𝐕』 | Entertainment" group-logo="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/output5-1693920521386.jpg" catchup="append" catchup-days="8" ,Zee Keralam HD
-#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://jioplus.cr7x.workers.dev/license/999/999/1641/key.json
-https://jioplus.cr7x.workers.dev/live/999/999/1641/index.mpd|User-Agent=plaYtv/7.1.5 (Linux;Android 15;Airxtream_network) ExoPlayerLib/2.11.7
 
+#EXTINF:-1 tvg-id="634" tvg-name="Flower TV" tvg-language="Hindi" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Flower_TV.png" group-title="『𝐉𝐢𝐨𝐓𝐕』 | Entertainment" group-logo="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/output5-1693920521386.jpg" catchup="append" catchup-days="8" ,Flower TV
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://jioplus.cr7x.workers.dev/license/999/999/634/key.json
+https://jioplus.cr7x.workers.dev/live/999/999/634/index.mpd|User-Agent=plaYtv/7.1.5 (Linux;Android 15;Airxtream_network) ExoPlayerLib/2.11.7
 
 #EXTINF:-1 tvg-id="1641" tvg-name="Zee Keralam HD" tvg-language="Hindi" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ZeeKeralamHD.png" group-title="『𝐉𝐢𝐨𝐓𝐕』 | Entertainment" group-logo="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/output5-1693920521386.jpg" catchup="append" catchup-days="8" ,Zee Keralam HD
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
