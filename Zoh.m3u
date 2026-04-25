@@ -4,6 +4,12 @@
 https://xtreamup.hakunamata.workers.dev/play/98891/8op0x9km18x/live/ts
 
 
+#EXTINF:-1 tvg-id="443" tvg-name="Asianet HD" tvg-language="Hindi" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_HD.png" group-title="『𝐉𝐢𝐨𝐓𝐕』 | Star" group-logo="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/output5-1693920521386.jpg" catchup="append" catchup-days="8" ,Asianet HD
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://jioplus.cr7x.workers.dev/license/999/999/443/key.json
+https://jioplus.cr7x.workers.dev/live/999/999/443/index.mpd|User-Agent=plaYtv/7.1.5 (Linux;Android 15;Airxtream_network) ExoPlayerLib/2.11.7
+
+
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"glnODBEnJaTSyU0VQgdCXw", "kid":"6ug4zNddSh+/9v190cl3gA" } ], "type":"temporary" }
 #EXTINF:-1 tvg-id="Surya HD" tvg-logo="https://sund-images.sunnxt.com/194397/640x360_SuryaTVHD_194397_7b54e231-bbb9-48d2-8aae-35a5886deed3.jpg" group-title="Sun NX",Surya HD
@@ -39,21 +45,17 @@ http://103.154.3.101:5001/live/634.m3u8
 #EXTINF:-1 tvg-id="0-9-129" tvg-country="IN" tvg-chno="023" tvg-language="ml" tvg-name="Zee Keralam HD" tvg-logo="https://akamaividz2.zee5.com/image/upload/w_auto,h_396,c_scale,f_webp,q_auto:eco/resources/0-9-129/list/1920x1080list18c8c56d87da4f43ac13a1990c44a2e5.jpg" group-logo="https://www.medianews4u.com/wp-content/uploads/2025/06/Zee-5.jpg" group-title="Zee5 | Entertainment", Zee Keralam HD
 https://zee5.cr7x.workers.dev/live/gana-sunega/krish-ka/0-9-129/master.m3u8|User-Agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
 
+#EXTINF:-1 tvg-id="459" tvg-name="Asianet Movies HD" tvg-language="Hindi" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_Movies_HD.png" group-title="『𝐉𝐢𝐨𝐓𝐕』 | Movies" group-logo="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/output5-1693920521386.jpg" catchup="append" catchup-days="8" ,Asianet Movies HD
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://jioplus.cr7x.workers.dev/license/999/999/459/key.json
+https://jioplus.cr7x.workers.dev/live/999/999/459/index.mpd|User-Agent=plaYtv/7.1.5 (Linux;Android 15;Airxtream_network) ExoPlayerLib/2.11.7
 
 
-#EXTINF:-1 tvg-id="1153" tvg-name="Asianet Movies" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_Movies.png" tvg-language="Malayalam" tvg-type="Movies" group-title="Movies", Asianet Movies
-#EXTVLCOPT:http-referrer=https://tulnit.com
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_headers="Referer=https://tulnit.com"
-#KODIPROP:mimetype=application/dash+xml
-https://anet.keralive.workers.dev/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/asianetmovies_live_https/index.m3u8
+#EXTINF:-1 tvg-id="1139" tvg-name="Asianet Plus" tvg-language="Hindi" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_Plus.png" group-title="『𝐉𝐢𝐨𝐓𝐕』 | Star" group-logo="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/output5-1693920521386.jpg" catchup="append" catchup-days="8" ,Asianet Plus
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://jioplus.cr7x.workers.dev/license/999/999/1139/key.json
+https://jioplus.cr7x.workers.dev/live/999/999/1139/index.mpd|User-Agent=plaYtv/7.1.5 (Linux;Android 15;Airxtream_network) ExoPlayerLib/2.11.7
 
-#EXTINF:-1 tvg-id="1139" tvg-name="Asianet Plus" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_Plus.png" tvg-language="Malayalam" tvg-type="Entertainment" group-title="Entertainment", Asianet Plus
-#EXTVLCOPT:http-referrer=https://tulnit.com
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_headers="Referer=https://tulnit.com"
-#KODIPROP:mimetype=application/dash+xml
-https://anet.keralive.workers.dev/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/asianetplus_live_https/index.m3u8
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"LoRgxH0/AWk+GT26WWOl4Q", "kid":"a2e8zvcCTy2im0LhDcE/iQ" } ], "type":"temporary" }
@@ -143,6 +145,17 @@ https://cdn-3.pishow.tv/live/1629/master.m3u8ndex.mpd
 
 ==MOVIES===
 
+
+#EXTINF:-1 tvg-id="1104" tvg-name="Star Movies HD" tvg-language="Hindi" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Movies_HD.png" group-title="『𝐉𝐢𝐨𝐓𝐕』 | Star" group-logo="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/output5-1693920521386.jpg" catchup="append" catchup-days="8" ,Star Movies HD
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://jioplus.cr7x.workers.dev/license/999/999/1104/key.json
+https://jioplus.cr7x.workers.dev/live/999/999/1104/index.mpd|User-Agent=plaYtv/7.1.5 (Linux;Android 15;Airxtream_network) ExoPlayerLib/2.11.7
+
+
+#EXTINF:-1 tvg-id="1110" tvg-name="Star Movies Select HD" tvg-language="Hindi" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Movies_Select_HD.png" group-title="『𝐉𝐢𝐨𝐓𝐕』 | Star" group-logo="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/output5-1693920521386.jpg" catchup="append" catchup-days="8" ,Star Movies Select HD
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://jioplus.cr7x.workers.dev/license/999/999/1110/key.json
+https://jioplus.cr7x.workers.dev/live/999/999/1110/index.mpd|User-Agent=plaYtv/7.1.5 (Linux;Android 15;Airxtream_network) ExoPlayerLib/2.11.7
 
 
 #EXTINF:-1 tvg-id="760" tvg-name="Sony Pix HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/SonyPIX.png" tvg-language="English" tvg-type="Movies" group-title="Movies", Sony Pix HD
