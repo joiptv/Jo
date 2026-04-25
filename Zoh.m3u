@@ -38,12 +38,17 @@ https://livestream6.sunnxt.com/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_inde
 #EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://exchange4media.gumlet.io/news-photo/92907-MazhavilManorama.jpg" group-title="Entertainment",Mazhavil Manorama
 https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mazhavilmanorama_nim_https/050522/mazhavilmanorama/playlist.m3u8
 
-#EXTINF:-1 tvg-id="Flower Tv" tvg-logo="https://img.logo-cdn.cc/flowersinternational.png" group-title="Entertainment" ,FLOWERS TV
-http://103.154.3.101:5001/live/634.m3u8
+#EXTINF:-1 tvg-id="1641" tvg-name="Zee Keralam HD" tvg-language="Hindi" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ZeeKeralamHD.png" group-title="『𝐉𝐢𝐨𝐓𝐕』 | Entertainment" group-logo="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/output5-1693920521386.jpg" catchup="append" catchup-days="8" ,Zee Keralam HD
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://jioplus.cr7x.workers.dev/license/999/999/1641/key.json
+https://jioplus.cr7x.workers.dev/live/999/999/1641/index.mpd|User-Agent=plaYtv/7.1.5 (Linux;Android 15;Airxtream_network) ExoPlayerLib/2.11.7
 
 
-#EXTINF:-1 tvg-id="0-9-129" tvg-country="IN" tvg-chno="023" tvg-language="ml" tvg-name="Zee Keralam HD" tvg-logo="https://akamaividz2.zee5.com/image/upload/w_auto,h_396,c_scale,f_webp,q_auto:eco/resources/0-9-129/list/1920x1080list18c8c56d87da4f43ac13a1990c44a2e5.jpg" group-logo="https://www.medianews4u.com/wp-content/uploads/2025/06/Zee-5.jpg" group-title="Zee5 | Entertainment", Zee Keralam HD
-https://zee5.cr7x.workers.dev/live/gana-sunega/krish-ka/0-9-129/master.m3u8|User-Agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15
+#EXTINF:-1 tvg-id="1641" tvg-name="Zee Keralam HD" tvg-language="Hindi" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ZeeKeralamHD.png" group-title="『𝐉𝐢𝐨𝐓𝐕』 | Entertainment" group-logo="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/output5-1693920521386.jpg" catchup="append" catchup-days="8" ,Zee Keralam HD
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://jioplus.cr7x.workers.dev/license/999/999/1641/key.json
+https://jioplus.cr7x.workers.dev/live/999/999/1641/index.mpd|User-Agent=plaYtv/7.1.5 (Linux;Android 15;Airxtream_network) ExoPlayerLib/2.11.7
+
 
 #EXTINF:-1 tvg-id="459" tvg-name="Asianet Movies HD" tvg-language="Hindi" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_Movies_HD.png" group-title="『𝐉𝐢𝐨𝐓𝐕』 | Movies" group-logo="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/output5-1693920521386.jpg" catchup="append" catchup-days="8" ,Asianet Movies HD
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
@@ -158,8 +163,10 @@ https://jioplus.cr7x.workers.dev/live/999/999/1104/index.mpd|User-Agent=plaYtv/7
 https://jioplus.cr7x.workers.dev/live/999/999/1110/index.mpd|User-Agent=plaYtv/7.1.5 (Linux;Android 15;Airxtream_network) ExoPlayerLib/2.11.7
 
 
-#EXTINF:-1 tvg-id="760" tvg-name="Sony Pix HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/SonyPIX.png" tvg-language="English" tvg-type="Movies" group-title="Movies", Sony Pix HD
-https://sl.vodep39240327.workers.dev/channel/SONY%20PIX%20HD.m3u8
+#EXTINF:-1 tvg-id="762" tvg-name="Sony Pix HD" tvg-language="Hindi" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/SonyPIX.png" group-title="『𝐉𝐢𝐨𝐓𝐕』 | Movies" group-logo="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/output5-1693920521386.jpg" catchup="append" catchup-days="8" ,Sony Pix HD
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://jioplus.cr7x.workers.dev/license/999/999/762/key.json
+https://jioplus.cr7x.workers.dev/live/999/999/762/index.mpd|User-Agent=plaYtv/7.1.5 (Linux;Android 15;Airxtream_network) ExoPlayerLib/2.11.7
 
 #EXTINF:-1 tvg-logo="https://d229kpbsb5jevy.cloudfront.net/timesplay/content/common/logos/channel/logos/wthfwe.jpeg" group-logo="https://upload.wikimedia.org/wikipedia/commons/1/19/DishTV_logo_%282025%29.svg" group-title="Movies",Movies Now HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
