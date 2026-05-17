@@ -1,7 +1,6 @@
 #EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 
-#EXTINF:-1 tvg-id="ASIANET HD" tvg-logo="https://img.logo-cdn.cc/asianet.png" group-title="Entertainment" ,ASIANET HD 
-https://xtreamup.hakunamata.workers.dev/play/98891/8op0x9km18x/live/ts
+
 
 
 #EXTINF:-1 tvg-id="443" tvg-name="Asianet HD" tvg-language="Hindi" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_HD.png" group-title="『𝐉𝐢𝐨𝐓𝐕』 | Star" group-logo="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/output5-1693920521386.jpg" catchup="append" catchup-days="8" ,Asianet HD
