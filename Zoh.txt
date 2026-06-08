@@ -2,11 +2,13 @@
 
 #EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 
+ExoPlayerLib/2.11.7
 
-#EXTINF:-1 tvg-name="Asianet HD" tvg-language="Hindi" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_HD.png" group-logo="https://images.gizbot.com/img/2024/08/jiotv2-1724241950.jpeg" group-title="【JioTV+】| 𝐉𝐢𝐨𝐓𝐯 | Entertainment",Asianet HD
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://alex4528.site/jplus/license
-https://alex4528.site/jplus/oiOLLO0LlO0IO0I1lOIo/manifest.mpd
+#EXTINF:-1 tvg-id="443" tvg-name="Asianet HD" tvg-language="Hindi" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_HD.png" group-title="🔹𝐉𝐢𝐨𝐓𝐕 | Star" group-logo="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/output5-1693920521386.jpg" catchup="append" catchup-days="8" ,Asianet HD
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=https://terminal-jio.07in.workers.dev/license/test/test/443/key.json
+https://terminal-jio.07in.workers.dev/live/test/test/443/index.mpd|User-Agent=plaYtv/7.1.5 (Linux;Android 15;Version 07) ExoPlayerLib/2.11.7
 
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -17,13 +19,18 @@ https://livestream15.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_i
 #EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://www.keralatv.in/media/2019/03/mazhavil-manorama-hd-latest-logo.png" group-title="Entertainment",Mazhavil Manorama HD
 https://cdn-7.pishow.tv/live/1129/master.m3u8
 
+#EXTINF:-1 tvg-id="1641" tvg-name="Zee Keralam HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ZeeKeralamHD.png" group-logo="https://assets.thetradedesk.com/assets/global/JioTVPlus.png" group-title="♦️𝗝𝗶𝗼𝗧𝗩⁺ | Entertainment", Zee Keralam HD
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=https://clearkey.joker-verse.workers.dev/license
+https://terminal-jtv.07in.workers.dev/live/test/test/1641/index.mpd|User-Agent=plaYtv/7.1.5 (Linux;Android 15;Jioplus) ExoPlayerLib/2.11.7
 
 
-#EXTINF:-1 tvg-name="Asianet" tvg-language="Hindi" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet.png" group-logo="https://images.gizbot.com/img/2024/08/jiotv2-1724241950.jpeg" group-title="【JioTV+】| 𝐉𝐢𝐨𝐓𝐯 | Entertainment",Asianet
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://alex4528.site/jplus/license
-https://alex4528.site/jplus/LI1iLILolOlliiL1lOi1io/manifest.mpd
-
+#EXTINF:-1 tvg-id="634" tvg-name="Flower TV" tvg-language="Hindi" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Flower_TV.png" group-title="🔹𝐉𝐢𝐨𝐓𝐕 | Entertainment" group-logo="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/output5-1693920521386.jpg" catchup="append" catchup-days="8" ,Flower TV
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=https://terminal-jio.07in.workers.dev/license/test/test/634/key.json
+https://terminal-jio.07in.workers.dev/live/test/test/634/index.mpd|User-Agent=plaYtv/7.1.5 (Linux;Android 15;Version 07) ExoPlayerLib/2.11.7
 
 
 
@@ -37,20 +44,11 @@ https://livestream6.sunnxt.com/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_inde
 https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mazhavilmanorama_nim_https/050522/mazhavilmanorama/playlist.m3u8
 
 
-#EXTINF:-1 tvg-name="Flower TV" tvg-language="Hindi" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Flower_TV.png" group-logo="https://images.gizbot.com/img/2024/08/jiotv2-1724241950.jpeg" group-title="【JioTV+】| 𝐉𝐢𝐨𝐓𝐯 | Entertainment",Flower TV
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://alex4528.site/jplus/license
-https://alex4528.site/jplus/lO0IoiIooOOLoi0ILIil/manifest.mpd
-
-#EXTINF:-1 tvg-name="Zee Keralam HD" tvg-language="Hindi" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeKeralamHD.png" group-logo="https://images.gizbot.com/img/2024/08/jiotv2-1724241950.jpeg" group-title="【JioTV+】| 𝐉𝐢𝐨𝐓𝐯 | Entertainment",Zee Keralam HD
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://alex4528.site/jplus/license
-https://alex4528.site/jplus/lOiLooIoLIlliiiLLIllii/manifest.mpd
-
-#EXTINF:-1 tvg-name="Asianet Movies HD" tvg-language="Hindi" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_Movies_HD.png" group-logo="https://images.gizbot.com/img/2024/08/jiotv2-1724241950.jpeg" group-title="【JioTV+】| 𝐉𝐢𝐨𝐓𝐯 | Movies",Asianet Movies HD
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://alex4528.site/jplus/license
-https://alex4528.site/jplus/LI1iiilolOi1O0o1O1O0/manifest.mpd
+#EXTINF:-1 tvg-id="459" tvg-name="Asianet Movies HD" tvg-language="Hindi" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_Movies_HD.png" group-title="🔹𝐉𝐢𝐨𝐓𝐕 | Movies" group-logo="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/output5-1693920521386.jpg" catchup="append" catchup-days="8" ,Asianet Movies HD
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=https://terminal-jio.07in.workers.dev/license/test/test/459/key.json
+https://terminal-jio.07in.workers.dev/live/test/test/459/index.mpd|User-Agent=plaYtv/7.1.5 (Linux;Android 15;Version 07) ExoPlayerLib/2.11.7
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"LoRgxH0/AWk+GT26WWOl4Q", "kid":"a2e8zvcCTy2im0LhDcE/iQ" } ], "type":"temporary" }
@@ -59,15 +57,12 @@ https://livestream.sunnxt.com/e24ee14c395945bd8ccb065e1bce8b9b/SuryaMoviesB_IN_i
 
 
 
-#EXTINF:-1 tvg-name="Asianet Movies" tvg-language="Hindi" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_Movies.png" group-logo="https://images.gizbot.com/img/2024/08/jiotv2-1724241950.jpeg" group-title="【JioTV+】| 𝐉𝐢𝐨𝐓𝐯 | Movies",Asianet Movies
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://alex4528.site/jplus/license
-https://alex4528.site/jplus/LIlll0OLlOlliiL1LIi1lO/manifest.mpd
 
-#EXTINF:-1 tvg-name="Asianet Plus" tvg-language="Hindi" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_Plus.png" group-logo="https://images.gizbot.com/img/2024/08/jiotv2-1724241950.jpeg" group-title="【JioTV+】| 𝐉𝐢𝐨𝐓𝐯 | Entertainment",Asianet Plus
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://alex4528.site/jplus/license
-https://alex4528.site/jplus/lOllOOOilOi1iiL1lO0I0i/manifest.mpd
+#EXTINF:-1 tvg-id="1139" tvg-name="Asianet Plus" tvg-language="Hindi" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_Plus.png" group-title="🔹𝐉𝐢𝐨𝐓𝐕 | Star" group-logo="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/output5-1693920521386.jpg" catchup="append" catchup-days="8" ,Asianet Plus
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.manifest_type=mpd
+#KODIPROP:inputstream.adaptive.license_key=https://terminal-jio.07in.workers.dev/license/test/test/1139/key.json
+https://terminal-jio.07in.workers.dev/live/test/test/1139/index.mpd|User-Agent=plaYtv/7.1.5 (Linux;Android 15;Version 07) ExoPlayerLib/2.11.7
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"m60orW8j27kXxj7mgPZqHw", "kid":"EVY7AKRrQ/Kg+A7PQqT7dw" } ], "type":"temporary" }
