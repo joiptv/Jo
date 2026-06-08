@@ -30,10 +30,10 @@ jobs:
     - name: Step 2 - Fetch and Rename Main Playlist
       run: |
         echo "Downloading source playlist with active session token..."
-        curl -s -L "https://raw.githubusercontent.com/joiptv/jojo/refs/heads/main/Ser.m3u" -o Sir.m3u
+        curl -s -L "https://raw.githubusercontent.com/joiptv/jojo/refs/heads/main/Ser.m3u" -o Zoh.txt
         
         # Validation check to ensure the file isn't empty or broken
-        if [ -s Sir.m3u ]; then
+        if [ -s Zoh.txt ]; then
           echo "Playlist successfully updated and saved as Zoh.txt"
         else
           echo "Error: The source link returned an empty file!" && exit 1
@@ -47,7 +47,7 @@ jobs:
         # Push changes only if the playlist data has refreshed/changed
         if [ -n "$(git status --porcelain)" ]; then
           git add Zoh.txt
-          git commit -m "Automated Refresh: Handshake renewed & Sir.m3u updated [$(date -u +'%Y-%m-%d %H:%M:%S')] UTC"
+          git commit -m "Automated Refresh: Handshake renewed & Zoh.txt updated [$(date -u +'%Y-%m-%d %H:%M:%S')] UTC"
           git push
         else
           echo "Playlist contents are identical. Token state maintained."
