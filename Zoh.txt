@@ -2,7 +2,7 @@
 
 #EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 
-ExoPlayerLib/2.11.7
+
 
 #EXTINF:-1 tvg-id="443" tvg-name="Asianet HD" tvg-language="Hindi" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_HD.png" group-title="🔹𝐉𝐢𝐨𝐓𝐕 | Star" group-logo="https://images.yourstory.com/cs/2/96eabe90392211eb93f18319e8c07a74/output5-1693920521386.jpg" catchup="append" catchup-days="8" ,Asianet HD
 #KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
