@@ -1,4 +1,4 @@
-name: Sync Playlist and Auto Activate
+name: Auto Play Link and Update Zoh.txt
 
 on:
   schedule:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch: # നിങ്ങൾക്ക് ആവശ്യമുള്ളപ്പോൾ മാനുവൽ ആയി റൺ ചെയ്യാം
 
 jobs:
-  sync_and_activate:
+  play_and_update:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,31 +15,33 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v4
 
-    # 2. സ്ട്രീം പ്ലെയർ ചാനലുകൾ ആക്ടീവ് ആക്കാൻ ലിങ്കിലേക്ക് റിക്വസ്റ്റ് അയക്കുന്നു
-    - name: Trigger Playlist Activation
+    # 2. m3u8 ലിങ്ക് ഓട്ടോമാറ്റിക് ആയി പ്ലേ ചെയ്യുന്നു (Activation Trigger)
+    - name: Auto Play Activation Link
       run: |
-        curl -sL "https://activation-07live.pages.dev/activate.m3u8"
-        echo "ആക്ടിവേഷൻ റിക്വസ്റ്റ് വിജയകരമായി അയച്ചു."
+        curl -sL "https://activation-07live.pages.dev/activate.m3u8" -o /dev/null
+        wget -qO- "https://activation-07live.pages.dev/activate.m3u8" > /dev/null
+        echo "ആക്ടിവേഷൻ ലിങ്ക് വിജയകരമായി ബാക്ക്ഗ്രൗണ്ടിൽ പ്ലേ ചെയ്തു."
 
-    # 3. ഒറിജിനൽ സോഴ്സിൽ നിന്ന് ലേറ്റസ്റ്റ് ചാനൽ ലിങ്കുകൾ ഫെച്ച് ചെയ്യുന്നു
+    # 3. ഒറിജിനൽ സോഴ്സിൽ നിന്ന് പുതിയ ചാനൽ ഡാറ്റ ഫെച്ച് ചെയ്യുന്നു
     - name: Fetch Latest Data from Ser.m3u
       run: |
         curl -sL "https://raw.githubusercontent.com/joiptv/jojo/refs/heads/main/Ser.m3u" -o temp_Zoh.txt
 
-    # 4. പുതിയ ലിങ്കുകൾ നിങ്ങളുടെ Zoh.txt ഫയലിലേക്ക് മാറ്റി പുഷ് ചെയ്യുന്നു
-    - name: Commit and Push Changes
+    # 4. പുതിയ ഡാറ്റ Zoh.txt ഫയലിലേക്ക് മാറ്റി പുഷ് ചെയ്യുന്നു
+    - name: Commit and Push Changes to Zoh.txt
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         
+        # ഫയൽ കാലിയല്ലെന്ന് ഉറപ്പ് വരുത്തുന്നു
         if [ -s temp_Zoh.txt ]; then
           mv temp_Zoh.txt Zoh.txt
           git add Zoh.txt
           
           if git diff --staged --quiet; then
-            echo "ചാനലുകളിൽ മാറ്റങ്ങൾ ഒന്നുമില്ല. ഫയൽ അപ്-ടു-ഡേറ്റ് ആണ്."
+            echo "ചാനൽ ലിസ്റ്റിൽ മാറ്റങ്ങൾ ഒന്നുമില്ല."
           else
-            git commit -m "Automated Sync & Activation: $(date)"
+            git commit -m "Auto Played & Updated Zoh.txt: $(date)"
             git push
           fi
         else
