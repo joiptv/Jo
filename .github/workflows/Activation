@@ -1,0 +1,10 @@
+name: Pley List Activation
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+jobs:
+  activate_playlist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send activation request
+        run: curl https://raw.githubusercontent.com/joiptv/Jo/refs/heads/main/Zoh.txt
