@@ -1,36 +1,48 @@
-name: Sync and Activate Playlist
+name: Sync Playlist and Auto Activate
 
 on:
   schedule:
-    # ഓരോ 30 മിനിറ്റിലും റൺ ചെയ്യാനുള്ള ക്രോൺ ജോബ്
+    # ഓരോ 30 മിനിറ്റിലും ഓട്ടോമാറ്റിക് ആയി റൺ ചെയ്യും
     - cron: '*/30 * * * *'
-  workflow_dispatch: # മാനുവൽ ആയി റൺ ചെയ്യാനുള്ള ഓപ്ഷൻ
+  workflow_dispatch: # നിങ്ങൾക്ക് ആവശ്യമുള്ളപ്പോൾ മാനുവൽ ആയി റൺ ചെയ്യാം
 
 jobs:
-  sync:
+  sync_and_activate:
     runs-on: ubuntu-latest
 
     steps:
-    # 1. നിങ്ങളുടെ റെപ്പോസിറ്ററിയിലെ ഫയലുകൾ ചെക്കൗട്ട് ചെയ്യുക
+    # 1. നിങ്ങളുടെ റെപ്പോസിറ്ററി ചെക്കൗട്ട് ചെയ്യുന്നു
     - name: Checkout Repository
       uses: actions/checkout@v4
 
-    # 2. ഒറിജിനൽ സോഴ്സിൽ നിന്ന് പുതിയ ഡാറ്റ ഫെച്ച് ചെയ്ത് Zoh.txt-ലേക്ക് മാറ്റുക
-    - name: Fetch Latest Data from Original Source
+    # 2. സ്ട്രീം പ്ലെയർ ചാനലുകൾ ആക്ടീവ് ആക്കാൻ ലിങ്കിലേക്ക് റിക്വസ്റ്റ് അയക്കുന്നു
+    - name: Trigger Playlist Activation
       run: |
-        curl -s "https://activation-07live.pages.dev/activate.m3u8" -o Zoh.txt
+        curl -sL "https://activation-07live.pages.dev/activate.m3u8"
+        echo "ആക്ടിവേഷൻ റിക്വസ്റ്റ് വിജയകരമായി അയച്ചു."
 
-    # 3. ഡൗൺലോഡ് ചെയ്ത പുതിയ ഡാറ്റ നിങ്ങളുടെ റെപ്പോസിറ്ററിയിലേക്ക് പുഷ് ചെയ്യുക
+    # 3. ഒറിജിനൽ സോഴ്സിൽ നിന്ന് ലേറ്റസ്റ്റ് ചാനൽ ലിങ്കുകൾ ഫെച്ച് ചെയ്യുന്നു
+    - name: Fetch Latest Data from Ser.m3u
+      run: |
+        curl -sL "https://raw.githubusercontent.com/joiptv/jojo/refs/heads/main/Ser.m3u" -o temp_Zoh.txt
+
+    # 4. പുതിയ ലിങ്കുകൾ നിങ്ങളുടെ Zoh.txt ഫയലിലേക്ക് മാറ്റി പുഷ് ചെയ്യുന്നു
     - name: Commit and Push Changes
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         
-        # ഫയലിൽ മാറ്റങ്ങൾ വന്നിട്ടുണ്ടോ എന്ന് പരിശോധിക്കുക
-        git add Zoh.txt
-        if git diff --staged --quiet; then
-          echo "മാറ്റങ്ങൾ ഒന്നുംമില്ല. ഫയൽ ഓൾറെഡി അപ്-ടു-ഡേറ്റ് ആണ്."
+        if [ -s temp_Zoh.txt ]; then
+          mv temp_Zoh.txt Zoh.txt
+          git add Zoh.txt
+          
+          if git diff --staged --quiet; then
+            echo "ചാനലുകളിൽ മാറ്റങ്ങൾ ഒന്നുമില്ല. ഫയൽ അപ്-ടു-ഡേറ്റ് ആണ്."
+          else
+            git commit -m "Automated Sync & Activation: $(date)"
+            git push
+          fi
         else
-          git commit -m "Automated Playlist Sync: $(date)"
-          git push
+          echo "Error: സോഴ്സ് ഫയൽ കാലിയാണ്. അപ്ഡേറ്റ് ചെയ്യുന്നില്ല."
+          exit 1
         fi
