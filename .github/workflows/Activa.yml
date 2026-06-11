@@ -1,11 +1,36 @@
-name: Pley List Activation
+name: Sync and Activate Playlist
+
 on:
   schedule:
+    # ഓരോ 30 മിനിറ്റിലും റൺ ചെയ്യാനുള്ള ക്രോൺ ജോബ്
     - cron: '*/30 * * * *'
-jobs:
-  activate_playlist:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Send activation request
-        run: curl https://raw.githubusercontent.com/joiptv/Jo/refs/heads/main/Zoh.txt
+  workflow_dispatch: # മാനുവൽ ആയി റൺ ചെയ്യാനുള്ള ഓപ്ഷൻ
 
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. നിങ്ങളുടെ റെപ്പോസിറ്ററിയിലെ ഫയലുകൾ ചെക്കൗട്ട് ചെയ്യുക
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    # 2. ഒറിജിനൽ സോഴ്സിൽ നിന്ന് പുതിയ ഡാറ്റ ഫെച്ച് ചെയ്ത് Zoh.txt-ലേക്ക് മാറ്റുക
+    - name: Fetch Latest Data from Original Source
+      run: |
+        curl -s "https://activation-07live.pages.dev/activate.m3u8" -o Zoh.txt
+
+    # 3. ഡൗൺലോഡ് ചെയ്ത പുതിയ ഡാറ്റ നിങ്ങളുടെ റെപ്പോസിറ്ററിയിലേക്ക് പുഷ് ചെയ്യുക
+    - name: Commit and Push Changes
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        
+        # ഫയലിൽ മാറ്റങ്ങൾ വന്നിട്ടുണ്ടോ എന്ന് പരിശോധിക്കുക
+        git add Zoh.txt
+        if git diff --staged --quiet; then
+          echo "മാറ്റങ്ങൾ ഒന്നുംമില്ല. ഫയൽ ഓൾറെഡി അപ്-ടു-ഡേറ്റ് ആണ്."
+        else
+          git commit -m "Automated Playlist Sync: $(date)"
+          git push
+        fi
