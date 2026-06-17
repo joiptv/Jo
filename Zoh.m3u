@@ -1,10 +1,5 @@
 #EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 
-#EXTINF:-1 tvg-id="443" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_HD.png" group-title="Star" group-logo="https://yowaimo.in/Logo/JioTv.png",Asianet HD
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://yowaimo.in/ZioGarmTara-JTV/key443
-https://yowaimo.in/ZioGarmTara-JTV/443/manifest.mpd
-
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"glnODBEnJaTSyU0VQgdCXw", "kid":"6ug4zNddSh+/9v190cl3gA" } ], "type":"temporary" }
@@ -34,29 +29,11 @@ https://livestream6.sunnxt.com/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_inde
 #EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://exchange4media.gumlet.io/news-photo/92907-MazhavilManorama.jpg" group-title="Entertainment",Mazhavil Manorama
 https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mazhavilmanorama_nim_https/050522/mazhavilmanorama/playlist.m3u8
 
+#EXTINF:-1 tvg-id="634" tvg-name="Flower TV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Flower_TV.png" tvg-language="Malayalam" group-title="Entertainment", Flower TV
+http://103.159.180.34:5001/live/634.m3u8
 
-
-#EXTINF:-1 tvg-id="634" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Flower_TV.png" group-title="Entertainment" group-logo="https://yowaimo.in/Logo/JioTv.png",Flower TV
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://yowaimo.in/ZioGarmTara-JTV/key634
-https://yowaimo.in/ZioGarmTara-JTV/634/manifest.mpd
-
-
-#EXTINF:-1 tvg-id="1641" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ZeeKeralamHD.png" group-title="Entertainment" group-logo="https://yowaimo.in/Logo/JioTv.png",Zee Keralam HD
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://yowaimo.in/ZioGarmTara-JTV/key1641
-https://yowaimo.in/ZioGarmTara-JTV/1641/manifest.mpd
-
-#EXTINF:-1 tvg-id="459" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_Movies_HD.png" group-title="Movies" group-logo="https://yowaimo.in/Logo/JioTv.png",Asianet Movies HD
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://yowaimo.in/ZioGarmTara-JTV/key459
-https://yowaimo.in/ZioGarmTara-JTV/459/manifest.mpd
-
-
-#EXTINF:-1 tvg-id="1139" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_Plus.png" group-title="Star" group-logo="https://yowaimo.in/Logo/JioTv.png",Asianet Plus
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://yowaimo.in/ZioGarmTara-JTV/key1139
-https://yowaimo.in/ZioGarmTara-JTV/1139/manifest.mpd
+#EXTINF:-1 tvg-id="1641" tvg-name="Zee Keralam HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/ZeeKeralamHD.png" tvg-language="Malayalam" group-title="Entertainment", Zee Keralam HD
+https://zati5.hasanhabibmottakin.workers.dev/0-9-129/index.m3u8
 
 
 
@@ -146,21 +123,11 @@ https://cdn-3.pishow.tv/live/1629/master.m3u8ndex.mpd
 ==MOVIES===
 
 
-#EXTINF:-1 tvg-id="1104" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Movies_HD.png" group-title="Star" group-logo="https://yowaimo.in/Logo/JioTv.png",Star Movies HD
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://yowaimo.in/ZioGarmTara-JTV/key1104
-https://yowaimo.in/ZioGarmTara-JTV/1104/manifest.mpd
+#EXTINF:-1 tvg-id="1104" tvg-name="Star Movies HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Movies_HD.png" tvg-language="English" group-title="Movies", Star Movies HD
+http://202.70.146.135:8000/play/a06r/index.m3u8
 
-#EXTINF:-1 tvg-id="1110" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Movies_Select_HD.png" group-title="Star" group-logo="https://yowaimo.in/Logo/JioTv.png",Star Movies Select HD
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://yowaimo.in/ZioGarmTara-JTV/key1110
-https://yowaimo.in/ZioGarmTara-JTV/1110/manifest.mpd
-
-
-#EXTINF:-1 tvg-id="762" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/SonyPIX.png" group-title="Movies" group-logo="https://yowaimo.in/Logo/JioTv.png",Sony Pix HD
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://yowaimo.in/ZioGarmTara-JTV/key762
-https://yowaimo.in/ZioGarmTara-JTV/762/manifest.mpd
+#EXTINF:-1 tvg-id="762" tvg-name="Sony Pix HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/SonyPIX.png" tvg-language="English" group-title="Movies", Sony Pix HD
+http://202.70.146.135:8000/play/a06p/index.m3u8
 
 #EXTINF:-1 tvg-logo="https://d229kpbsb5jevy.cloudfront.net/timesplay/content/common/logos/channel/logos/wthfwe.jpeg" group-logo="https://upload.wikimedia.org/wikipedia/commons/1/19/DishTV_logo_%282025%29.svg" group-title="Movies",Movies Now HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -187,15 +154,11 @@ https://times-ott-live.akamaized.net/romedynow_wv_drm/index.mpd
 
 
 #EXTINF:-1 tvg-id="502" group-title="Sports" tvg-logo="https://i.ibb.co/h1gBmjbj/Unite8-1.png",Unite8 Sports 1 HD
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://yowaimo.in/ZioGarmTara-JTV/key1319
-https://yowaimo.in/ZioGarmTara-JTV/1319/manifest.mpd
+https://artl.yowaimo.in/sflex/stream.php?id=Unite8-Sports1-Hindi-HD&ts=1781524499&token=2fbbde18a8152281ce07cc3eb921c406629c27c6421dbb2f252033bd6656973a&exp=1784548499&Powered-by-StreamFlex=363ee5f18d5a2e999d4cdc1159cda91c2f99623a15b41357d593596e17bd2af0
 
 
 #EXTINF:-1 tvg-id="506" group-title="Sports" tvg-logo="https://i.ibb.co/d4JpmFN9/Unite8-2.png",Unite8 Sports 2 HD
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=https://yowaimo.in/ZioGarmTara-JTV/key1322
-https://yowaimo.in/ZioGarmTara-JTV/1322/manifest.mpd
+https://artl.yowaimo.in/sflex/stream.php?id=Unite8-Sports2-HD&ts=1781525061&token=b28fdf6bc7b984ffd188cb0e61f347cd70a02e11b92fb845f57ca034ab4567de&exp=1784549061&Powered-by-StreamFlex=a87a429cd596929edf1578bd3b9dd296242401a3aead4003969b2c4a780b2871
 
 
 
