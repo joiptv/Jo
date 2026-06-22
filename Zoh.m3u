@@ -1,5 +1,10 @@
 #EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz"
 
+#EXTINF:-1 group-title="Entertainment" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_HD.png",Asianet HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://alex4528.site/jplus/license
+https://alex4528.site/jplus/oiOLLO0LlO0IO0I1lOIo/manifest.mpd
+
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"glnODBEnJaTSyU0VQgdCXw", "kid":"6ug4zNddSh+/9v190cl3gA" } ], "type":"temporary" }
@@ -9,12 +14,10 @@ https://livestream15.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_i
 #EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://www.keralatv.in/media/2019/03/mazhavil-manorama-hd-latest-logo.png" group-title="Entertainment",Mazhavil Manorama HD
 https://cdn-7.pishow.tv/live/1129/master.m3u8
 
-#EXTINF:-1 tvg-id="1118" tvg-name="Asianet" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet.png" tvg-language="Malayalam" tvg-type="Entertainment" group-title="Entertainment", Asianet
-#EXTVLCOPT:http-referrer=https://tulnit.com
-#KODIPROP:inputstream=inputstream.adaptive
-#KODIPROP:inputstream.adaptive.manifest_headers="Referer=https://tulnit.com"
-#KODIPROP:mimetype=application/dash+xml
-https://anet.keralive.workers.dev/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/starasianet1_live_https/index.m3u8
+#EXTINF:-1 group-title="Entertainment" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet.png",Asianet
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://alex4528.site/jplus/license
+https://alex4528.site/jplus/LI1iLILolOlliiL1lOi1io/manifest.mpd
 
 
 
@@ -36,6 +39,11 @@ http://103.159.180.34:5001/live/634.m3u8
 https://zati5.hasanhabibmottakin.workers.dev/0-9-129/index.m3u8
 
 
+#EXTINF:-1 group-title="Movies" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_Movies_HD.png",Asianet Movies HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://alex4528.site/jplus/license
+https://alex4528.site/jplus/LI1iiilolOi1O0o1O1O0/manifest.mpd
+
 
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"LoRgxH0/AWk+GT26WWOl4Q", "kid":"a2e8zvcCTy2im0LhDcE/iQ" } ], "type":"temporary" }
@@ -43,13 +51,19 @@ https://zati5.hasanhabibmottakin.workers.dev/0-9-129/index.m3u8
 https://livestream.sunnxt.com/e24ee14c395945bd8ccb065e1bce8b9b/SuryaMoviesB_IN_index.mpd
 
 
-
-
-
+#EXTINF:-1 group-title="Movies" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_Movies.png",Asianet Movies
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"m60orW8j27kXxj7mgPZqHw", "kid":"EVY7AKRrQ/Kg+A7PQqT7dw" } ], "type":"temporary" }
-#EXTINF:-1 tvg-id="Surya Comedy" tvg-logo="https://sund-images.sunnxt.com/194400/640x360_UdayaComedy_194400_476f38f8-3104-4816-a540-968b36f27a5f.jpg" group-title="Movies",Surya Comedy
-https://livestream.sunnxt.com/6505e922bf164423ad122f404747356a/SuryaComedyB_IN_i
+#KODIPROP:inputstream.adaptive.license_key=https://alex4528.site/jplus/license
+https://alex4528.site/jplus/LIlll0OLlOlliiL1LIi1lO/manifest.mpd
+
+
+#EXTINF:-1 group-title="Entertainment" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_Plus.png",Asianet Plus
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=https://alex4528.site/jplus/license
+https://alex4528.site/jplus/lOllOOOilOi1iiL1lO0I0i/manifest.mpd
+
+
+
 
 
 #EXTINF:-1 tvg-id="KairaliWe" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KAIRALI_WE/images/LOGO_HD/image.png" group-title="Movies",Kairali We
@@ -222,28 +236,4 @@ https://dfr80qz435crc.cloudfront.net/MNOP/Amagi/Caze/Caze_TV_BR/1080p-vtt/index.
 #EXTINF:-1 tvg-id="" tvg-name="MX1 App 2" group-title="Live TV", MX1 App 2
 https://raw.githubusercontent.com/ON2026/1smas/refs/heads/main/mx1app2.m3u8
 
-
-
-#EXTINF:-1 tvg-id="" tvg-name="6Play M6" group-title="Live TV", 6Play M6
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=433ffba670963e70857859a9dff4be04:51ede3a821229fe81e71282c8eff80e3
-https://origin-m6web.live.6cloud.fr/out/v1/6play/6play-m6/cmaf_cenc00/dash-short-hd.mpd
-
-#EXTINF:-1 tvg-id="" tvg-name="AIV CDN 2" group-title="Live TV", AIV CDN 2
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=f6564ec2aee819046328a0e153be574d:ff46a8a1031eb27ef22576a077c98ab7
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/jyocixinuk/out/v1/b78800b9b2304879b15843f455836829/cenc.mpd
-
-
-#EXTINF:-1 tvg-id="" tvg-name="D SPORTS" group-title="Live TV", AIV
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=a7d11d37a1f7611ee88d4db880171f32:68f96d618b0b956b008c445896a25a79
-https://otte.cache.aiv-cdn.net/bom-nitro/live/clients/dash/enc/ubehitlwzo/out/v1/8e09c381a51f4366a19e979418112e8f/cenc.mpd
-
-
-
-#EXTINF:-1 tvg-id="" tvg-name="PV CDN" group-title="Live TV", PV CDN
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=d185684e2330de5bea436daa094a5e86:014f0116154f5bf0050e03a6b0a23157
-https://otte-qw.live.pv-cdn.net/lhr-nitro/live/clients/dash/enc/72sjo8hygl/out/v1/3079be34d72a4985852d299a02406a0c/cenc.mpd
 
