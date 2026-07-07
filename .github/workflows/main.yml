@@ -32,7 +32,7 @@ jobs:
           import os
 
           FILE_NAME = "Zoh.txt"
-          SOURCE_URL = "https://raw.githubusercontent.com/joiptv/jojo/refs/heads/main/Ser.m3u"
+          SOURCE_URL = "https://premiumplugjiotvplusplaylist.shieb6655.workers.dev/"
           HEADERS = {"User-Agent": "Mozilla/5.0"}
 
           def get_all_blocks(content):
