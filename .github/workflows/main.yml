@@ -1,5 +1,4 @@
-name: Auto-Sync JioTV Only
-
+name: Update Playlist
 on:
   workflow_dispatch:
   schedule:
@@ -31,19 +30,27 @@ jobs:
           import re
           import os
 
-          FILE_NAME = "Zoh.txt"
-          SOURCE_URL = "https://raw.githubusercontent.com/joiptv/jojo/refs/heads/main/gogo.m3u"
+          FILE_NAME = "Zoh.m3u"
+          SOURCE_URL = "https://raw.githubusercontent.com/joiptv/jojo/refs/heads/main/Asi.m3u"
           HEADERS = {"User-Agent": "Mozilla/5.0"}
 
           def get_all_blocks(content):
               blocks = []
               current_block = []
               for line in content.splitlines():
-                  if line.startswith("#EXTINF") or line.startswith("#KODIPROP"):
+                  line = line.strip()
+                  if not line:
+                      continue
+                  
+                  if line.startswith("#EXTM3U"):
+                      continue
+                  
+                  if line.startswith("#EXTINF"):
                       if current_block:
                           blocks.append("\n".join(current_block))
                           current_block = []
                   current_block.append(line)
+              
               if current_block:
                   blocks.append("\n".join(current_block))
               return blocks
@@ -53,13 +60,13 @@ jobs:
               return match.group(1) if match else None
 
           try:
-              print(f"Fetching from source...")
+              print("Fetching from source...")
               response = requests.get(SOURCE_URL, headers=HEADERS, timeout=30)
               response.raise_for_status()
 
               source_blocks = get_all_blocks(response.text)
               source_dict = {
-                  get_channel_id(sb): sb.strip()
+                  get_channel_id(sb): sb
                   for sb in source_blocks
                   if get_channel_id(sb)
               }
@@ -77,7 +84,7 @@ jobs:
               for mb in my_blocks:
                   if "jiotv" in mb.lower():
                       cid = get_channel_id(mb)
-                      if cid in source_dict:
+                      if cid and cid in source_dict:
                           updated_blocks.append(source_dict[cid])
                           print(f"Updated: {cid}")
                       else:
@@ -85,8 +92,7 @@ jobs:
                   else:
                       updated_blocks.append(mb)
 
-              header = current_playlist.splitlines()[0] if current_playlist.strip() else "#EXTM3U"
-              new_playlist = header + "\n" + "\n".join(updated_blocks)
+              new_playlist = "#EXTM3U\n" + "\n".join(updated_blocks) + "\n"
 
               with open(FILE_NAME, "w", encoding="utf-8") as f:
                   f.write(new_playlist)
@@ -105,6 +111,9 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "Auto-update JioTV links"
             git push
+          else
+            echo "No changes to commit"
+          fi
           else
             echo "No changes to commit"
           fi
