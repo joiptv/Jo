@@ -1,33 +1,22 @@
 #EXTM3U
-
 #EXTINF:-1 tvg-id="443" group-title="JioTV+ ▶ | Malayalam" group-logo="https://i.postimg.cc/52qG6sKt/STREAMXi.png" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_HD.png",Asianet HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ce59e82f061f57c5a423d3342ae4cb7d:5218a59b8da17a2b2e4b217802f716f0
 #EXTVLCOPT:http-user-agent=curl/8.5.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1783872069~exp=1783893669~acl=/*~hmac=778fb069a798c54d334abb4eb0d7db489ea4d46ccfa4d20670d0a0ecf505e0c7","Origin":"https://www.jiotv.com/","Referer":"https://www.jiotv.com/"}
 https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_HD_MOB/WDVLive/index.mpd
-
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"glnODBEnJaTSyU0VQgdCXw", "kid":"6ug4zNddSh+/9v190cl3gA" } ], "type":"temporary" }
 #EXTINF:-1 tvg-id="Surya HD" tvg-logo="https://sund-images.sunnxt.com/194397/640x360_SuryaTVHD_194397_7b54e231-bbb9-48d2-8aae-35a5886deed3.jpg" group-title="Sun NX",Surya HD
 https://livestream15.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_index.mpd
-
-
 #EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://www.keralatv.in/media/2019/03/mazhavil-manorama-hd-latest-logo.png" group-title="Entertainment",Mazhavil Manorama HD
 https://cdn-7.pishow.tv/live/1129/master.m3u8
-
 #EXTINF:-1 tvg-id="1118" group-title="JioTV+ ▶ | Malayalam" group-logo="https://i.postimg.cc/52qG6sKt/STREAMXi.png" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet.png",Asianet
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=6b68a5a175d45f0ba8ed12b3016ea4d8:c7b8ce1a3a24e2f9b4d1249d04155c49
 #EXTVLCOPT:http-user-agent=curl/8.5.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1783873443~exp=1783895043~acl=/bpk-tv/Asianet_BTS/WDVLive/*~hmac=d72edbb4da59a81d2b06aaadc86aa8896432f4fdeca7e422efbd19408506b424","Origin":"https://www.jiotv.com/","Referer":"https://www.jiotv.com/"}
 https://jiotvpllive.cdn.jio.com/bpk-tv/Asianet_BTS/WDVLive/index.mpd
-
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"be6GY+Y8yPjdqEeLiy87cQ", "kid":"VuH1tbcuTkWpi28ofCZauQ" } ], "type":"temporary" }
 #EXTINF:-1 tvg-id="Surya" tvg-logo="https://sund-images.sunnxt.com/194398/640x360_SuryaTV_194398_45a56617-7aa9-4ced-a1c8-82b80adb83a7.jpg" group-title="Sun NX",Surya
 https://livestream6.sunnxt.com/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_index.mpd
-
 #EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://exchange4media.gumlet.io/news-photo/92907-MazhavilManorama.jpg" group-title="Entertainment",Mazhavil Manorama
 https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mazhavilmanorama_nim_https/050522/mazhavilmanorama/playlist.m3u8#EXTINF:-1 tvg-id="634" group-title="JioTV+ ▶ | Malayalam" group-logo="https://i.postimg.cc/52qG6sKt/STREAMXi.png" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Flower_TV.png",Flower TV
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -35,7 +24,6 @@ https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccda
 #EXTVLCOPT:http-user-agent=curl/8.5.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1783872069~exp=1783893669~acl=/*~hmac=778fb069a798c54d334abb4eb0d7db489ea4d46ccfa4d20670d0a0ecf505e0c7","Origin":"https://www.jiotv.com/","Referer":"https://www.jiotv.com/"}
 https://jiotvmblive.cdn.jio.com/bpk-tv/Flower_TV_MOB/WDVLive/index.mpd
-
 #EXTINF:-1 tvg-id="1641" group-title="JioTV+ ▶ | Malayalam" group-logo="https://i.postimg.cc/52qG6sKt/STREAMXi.png" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/ZeeKeralamHD.png",Zee Keralam HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=1f85fea5f617503d9166990f21afc2c2:b2fc26f5b5595606827d4000a9d1b178
@@ -48,12 +36,8 @@ https://jiotvmblive.cdn.jio.com/bpk-tv/ZeeKeralamHD_MOB/WDVLive/index.mpd
 #EXTVLCOPT:http-user-agent=curl/8.5.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1783872069~exp=1783893669~acl=/*~hmac=778fb069a798c54d334abb4eb0d7db489ea4d46ccfa4d20670d0a0ecf505e0c7","Origin":"https://www.jiotv.com/","Referer":"https://www.jiotv.com/"}
 https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Movies_HD_MOB/WDVLive/index.mpd
-
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"LoRgxH0/AWk+GT26WWOl4Q", "kid":"a2e8zvcCTy2im0LhDcE/iQ" } ], "type":"temporary" }
 #EXTINF:-1 tvg-id="Surya Movies" tvg-logo="https://sund-images.sunnxt.com/194385/640x360_SuryaMovies_194385_2d5dbc38-915d-4e41-b8b0-ea98ca6c88d3.jpg" group-title="Sun NX",Surya Movies
 https://livestream.sunnxt.com/e24ee14c395945bd8ccb065e1bce8b9b/SuryaMoviesB_IN_index.mpd
-
 #EXTINF:-1 tvg-id="1153" group-title="JioTV+ ▶ | Malayalam" group-logo="https://i.postimg.cc/52qG6sKt/STREAMXi.png" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_Movies.png",Asianet Movies
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ca83419dfa1b56f794032b271b8f2c84:d592520eea361507a63c94bff799dfb6
@@ -66,16 +50,8 @@ https://jiotvpllive.cdn.jio.com/bpk-tv/Asianet_Movies_BTS/WDVLive/index.mpd
 #EXTVLCOPT:http-user-agent=curl/8.5.0
 #EXTHTTP:{"cookie":"__hdnea__=st=1783872069~exp=1783893669~acl=/*~hmac=778fb069a798c54d334abb4eb0d7db489ea4d46ccfa4d20670d0a0ecf505e0c7","Origin":"https://www.jiotv.com/","Referer":"https://www.jiotv.com/"}
 https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Plus_MOB/WDVLive/index.mpd
-
-
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"m60orW8j27kXxj7mgPZqHw", "kid":"EVY7AKRrQ/Kg+A7PQqT7dw" } ], "type":"temporary" }
 #EXTINF:-1 tvg-id="Surya Comedy" tvg-logo="https://sund-images.sunnxt.com/194400/640x360_UdayaComedy_194400_476f38f8-3104-4816-a540-968b36f27a5f.jpg" group-title="Sun NX",Surya Comedy
 https://livestream.sunnxt.com/6505e922bf164423ad122f404747356a/SuryaComedyB_IN_index.mpd
-
-
-
-
 #EXTINF:-1 tvg-id="KairaliWe" tvg-logo="https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_KAIRALI_WE/images/LOGO_HD/image.png" group-title="Movies",Kairali We
 https://cdn-3.pishow.tv/live/1530/master.m3u8
 #EXTINF:-1 tvg-id="10582" tvg-chno="070" tvg-name="dd-malayalam" tvg-id="abusaeeidx" tvg-logo="https://prodcdn1.wavespb.com/shows/poster_url/1443058650DD_malayalam_______384x512.webp" group-title="DD Regional", DD MALAYALAM
