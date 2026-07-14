@@ -1,4 +1,5 @@
-#EXTM3U
+#EXTM3U EXTM3U x-tvg-url="https://avkb.short.gy/jioepg.xml.gz,https://github.com/whythishome/epg/raw/refs/heads/master/guides/dishtv.in_en.xml.gz" 
+
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=eae838ccd75d4a1fbff6fd7dd1c97780:8259ce0c112725a4d2c94d154207425f
 #EXTINF:-1 group-title="SUNNXT | STREAMX" group-logo="https://m.media-amazon.com/images/I/A13sXw0T8qL.png" tvg-id="194397" tvg-logo="https://sund-images.sunnxt.com/194397/640x360_SuryaTVHD_194397_7b54e231-bbb9-48d2-8aae-35a5886deed3.jpg",Surya HD
