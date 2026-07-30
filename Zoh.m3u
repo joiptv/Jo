@@ -1,3 +1,15 @@
+
+##EXTM3U x-tvg-url="https://whythishome.github.io/epg/guides/watch.tataplay.com.xml.gz"
+#EXTM3U x-tvg-url="https://tsepg.cf/epg.xml.gz"
+#EXTM3U x-tvg-url="https://tsepg.cf/jio.xml.gz"
+#EXTM3U x-tvg-url="https://kliv.in/filtered-epg"
+#EXTM3U x-tvg-url="https://kliv.in/airtel-epg"
+#EXTM3U x-tvg-url="https://kliv.in/tplay-epg"
+#EXTM3U x-tvg-url="https://iptv-epg.org/files/epg-ediaokgxtk.xml.gz"
+#EXTM3U x-tvg-url="https://rb.gy/hspor2"
+
+
+
 #EXTM3U
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=eae838ccd75d4a1fbff6fd7dd1c97780:8259ce0c112725a4d2c94d154207425f
