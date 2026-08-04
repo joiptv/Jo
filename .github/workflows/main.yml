@@ -31,7 +31,7 @@ jobs:
           import os
 
           FILE_NAME = "Zoh.m3u"
-          SOURCE_URL = "https://lemajekaat.streamxlive.workers.dev/"
+          SOURCE_URL = "https://raw.githubusercontent.com/Sflex0719/m3u/main/ZioMobile.m3u"
           HEADERS = {"User-Agent": "Mozilla/5.0"}
 
           def get_all_blocks(content):
