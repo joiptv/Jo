@@ -9,7 +9,7 @@ https://livestream15.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_i
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://ziotvplus.yowaimo.in/license/443/
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (StreamFlex;Android 16) JioTvMobile
-#EXTHTTP:{"cookie":"__hdnea__=st=1785912812~exp=1785934412~acl=/*~hmac=11b6696fb1d54d13e7d3a88ce04797a96709011e30ebaf072ec1a0b0111bb946"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1785936065~exp=1785957665~acl=/*~hmac=861d7ab4844a7751f9533e2cb04ce373185f47d5d59577ddd6f88be06d078339"}
 https://jiotvbpkmob.cdn.jio.com/bpk-tv/Asianet_HD_MOB/WDVLive/index.mpd
 #EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://www.keralatv.in/media/2019/03/mazhavil-manorama-hd-latest-logo.png" group-title="Entertainment",Mazhavil Manorama HD
 https://cdn-7.pishow.tv/live/1129/master.m3u8
@@ -32,7 +32,7 @@ https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccda
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://ziotvplus.yowaimo.in/license/634/
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (StreamFlex;Android 16) JioTvMobile
-#EXTHTTP:{"cookie":"__hdnea__=st=1785912812~exp=1785934412~acl=/*~hmac=11b6696fb1d54d13e7d3a88ce04797a96709011e30ebaf072ec1a0b0111bb946"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1785936065~exp=1785957665~acl=/*~hmac=861d7ab4844a7751f9533e2cb04ce373185f47d5d59577ddd6f88be06d078339"}
 https://jiotvbpkmob.cdn.jio.com/bpk-tv/Flower_TV_MOB/WDVLive/index.mpd
 #EXTINF:-1 tvg-id="0-9-129" tvg-logo="https://akamaividz2.zee5.com/image/upload/w_auto,h_396,c_scale,f_webp,q_auto:eco/resources/0-9-129/list/1920x1080list28fd564242df4f358b7b3671b8bdf99a.png" group-title="Entertainment", Zee Keralam HD
 #EXTVLCOPT:http-user-agent=com.graymatrix.did;Android TV;5.82.6(203230929);Android(10);Xiaomi(Redmi Note 8 Pro)
@@ -42,21 +42,21 @@ http://shoebinfo.qzz.io/zee5/zee5.php?play=0-9-129
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://ziotvplus.yowaimo.in/license/459/
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (StreamFlex;Android 16) JioTvMobile
-#EXTHTTP:{"cookie":"__hdnea__=st=1785912812~exp=1785934412~acl=/*~hmac=11b6696fb1d54d13e7d3a88ce04797a96709011e30ebaf072ec1a0b0111bb946"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1785936065~exp=1785957665~acl=/*~hmac=861d7ab4844a7751f9533e2cb04ce373185f47d5d59577ddd6f88be06d078339"}
 https://jiotvbpkmob.cdn.jio.com/bpk-tv/Asianet_Movies_HD_MOB/WDVLive/index.mpd
 #EXTINF:-1 tvg-id="1153" tvg-name="Asianet Movies" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_Movies.png" group-title="JioStar LiveTv",Asianet Movies
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://ziotvplus.yowaimo.in/license/1153/
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (StreamFlex;Android 16) JioTvMobile
-#EXTHTTP:{"cookie":"__hdnea__=st=1785912812~exp=1785934412~acl=/*~hmac=11b6696fb1d54d13e7d3a88ce04797a96709011e30ebaf072ec1a0b0111bb946"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1785936065~exp=1785957665~acl=/*~hmac=861d7ab4844a7751f9533e2cb04ce373185f47d5d59577ddd6f88be06d078339"}
 https://jiotvbpkmob.cdn.jio.com/bpk-tv/Asianet_Movies_MOB/WDVLive/index.mpd
 #EXTINF:-1 tvg-id="1139" tvg-name="Asianet Plus" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_Plus.png" group-title="JioStar LiveTv",Asianet Plus
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://ziotvplus.yowaimo.in/license/1139/
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (StreamFlex;Android 16) JioTvMobile
-#EXTHTTP:{"cookie":"__hdnea__=st=1785912812~exp=1785934412~acl=/*~hmac=11b6696fb1d54d13e7d3a88ce04797a96709011e30ebaf072ec1a0b0111bb946"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1785936065~exp=1785957665~acl=/*~hmac=861d7ab4844a7751f9533e2cb04ce373185f47d5d59577ddd6f88be06d078339"}
 https://jiotvbpkmob.cdn.jio.com/bpk-tv/Asianet_Plus_MOB/WDVLive/index.mpd
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://i.ibb.co/DgfjRPnf/Picsart-25-02-10-14-22-46-534.png" group-title="SunNXT",SURYA Movies
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -102,7 +102,7 @@ https://cdn-3.pishow.tv/live/1469/master.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://ziotvplus.yowaimo.in/license/1618/
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (StreamFlex;Android 16) JioTvMobile
-#EXTHTTP:{"cookie":"__hdnea__=st=1785912812~exp=1785934412~acl=/*~hmac=11b6696fb1d54d13e7d3a88ce04797a96709011e30ebaf072ec1a0b0111bb946"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1785936065~exp=1785957665~acl=/*~hmac=861d7ab4844a7751f9533e2cb04ce373185f47d5d59577ddd6f88be06d078339"}
 https://jiotvbpkmob.cdn.jio.com/bpk-tv/Real_News_Kerala_MOB/WDVLive/index.mpd
 #EXTINF:-1 tvg-id="News Malayalam 24x7" tvg-logo="https://i.imgur.com/9Yyzvp9.jpeg" group-title="Malayalam News",News Malayalam 24x7
 https://cdn-3.pishow.tv/live/1629/master.m3u8ndex.mpd
@@ -112,7 +112,7 @@ https://cdn-3.pishow.tv/live/1629/master.m3u8ndex.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://ziotvplus.yowaimo.in/license/1104/
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (StreamFlex;Android 16) JioTvMobile
-#EXTHTTP:{"cookie":"__hdnea__=st=1785912812~exp=1785934412~acl=/*~hmac=11b6696fb1d54d13e7d3a88ce04797a96709011e30ebaf072ec1a0b0111bb946"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1785936065~exp=1785957665~acl=/*~hmac=861d7ab4844a7751f9533e2cb04ce373185f47d5d59577ddd6f88be06d078339"}
 https://jiotvbpkmob.cdn.jio.com/bpk-tv/StarMoviesHD_MOB/WDVLive/index.mpd
 #EXTINF:-1 group-title="- " tvg-logo="https://img.media.jio.com/tvpimages/79/1/301984_1753202770200_l_medium.jpg",STAR Movies Select HD
 http://202.70.146.135:8000/play/a06q/index.m3u8
@@ -121,7 +121,7 @@ http://202.70.146.135:8000/play/a06q/index.m3u8
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://ziotvplus.yowaimo.in/license/762/
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.5 (StreamFlex;Android 16) JioTvMobile
-#EXTHTTP:{"cookie":"__hdnea__=st=1785912812~exp=1785934412~acl=/*~hmac=11b6696fb1d54d13e7d3a88ce04797a96709011e30ebaf072ec1a0b0111bb946"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1785936065~exp=1785957665~acl=/*~hmac=861d7ab4844a7751f9533e2cb04ce373185f47d5d59577ddd6f88be06d078339"}
 https://jiotvbpkmob.cdn.jio.com/bpk-tv/SonyPIX_MOB/WDVLive/index.mpd
 #EXTINF:-1 tvg-logo="https://d229kpbsb5jevy.cloudfront.net/timesplay/content/common/logos/channel/logos/wthfwe.jpeg" group-logo="https://upload.wikimedia.org/wikipedia/commons/1/19/DishTV_logo_%282025%29.svg" group-title="Movies",Movies Now HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
