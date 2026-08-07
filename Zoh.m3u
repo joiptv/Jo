@@ -68,13 +68,13 @@ https://login.bheem.tv/bpk-tv/22391/output/index.mpd?
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=1382b4f8623151e88c52787ae11f11ab:de71cbb248a62cc2c4a66c8546b49d7d
 https://login.bheem.tv/bpk-tv/22412/output/index.mpd
-#EXTINF:-1 tvg-id="KairaliWe" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Kairali_People_TV.png" group-title="Movies",Kairali We
+#EXTINF:-1 tvg-id="KairaliWe" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Kairali_WE_TV.png" group-title="Movies",Kairali We
 https://cdn-3.pishow.tv/live/1530/master.m3u8
 #EXTINF:-1 tvg-id="10582" tvg-chno="070" tvg-name="dd-malayalam" tvg-id="abusaeeidx" tvg-logo="https://prodcdn1.wavespb.com/shows/poster_url/1443058650DD_malayalam_______384x512.webp" group-title="DD Regional", DD MALAYALAM
 https://d2lk5u59tns74c.cloudfront.net/out/v1/c313674ffced4c9a90f1bba436df2b9b/index.m3u8
 #EXTINF:-1 tvg-id="KairaliArabia" tvg-logo="https://i.imgur.com/BBEfplL.png" group-title="General",Kairali Arabia
 https://mumt03.tangotv.in/Dsly5z3HKAIRALIARABIA/index.m3u8
-#EXTINF:-1 tvg-id="SafariTV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Rongeen_TV.png" group-title="Entertainment",Safari TV
+#EXTINF:-1 tvg-id="SafariTV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Safari_TV.png" group-title="Entertainment",Safari TV
 https://j78dp346yq5r-hls-live.5centscdn.com/safari/live.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="KappaTV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Kappa_TV.png" group-title="Lifestyle",Kappa TV
 https://cdn-3.pishow.tv/live/1123/master.m3u8
