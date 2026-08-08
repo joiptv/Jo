@@ -91,3 +91,8 @@ https://ranapkz.site/RANAPK33k/TVD/play.php?id=373376
 #EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373375" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/powervisiontv-1.png",┃MALAYALAM┃ POWER VISION
 https://ranapkz.site/RANAPK33k/TVD/play.php?id=373375
 
+#EXTINF:-1 tvg-id="Asianet HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_HD.png" group-title="Entertainment", Asianet HD
+#KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","kid":"2cBiry39UeCpLnZEb19Wfw","k":"NDXrvXDxhaFrB4yWypMjYQ"},{"kty":"oct","kid":"Nlg4jnpLW6mMJGmk8IsrqQ","k":"7GQJWhgSk4OqMX4ufTFJkw"},{"kty":"oct","kid":"zlnoLwYfV8WkI9M0KuTLfQ","k":"Uhilm42heisuSyF4AvcW8A"},{"kty":"oct","kid":"FhOCjm_IVm6XfH1DTg8xQQ","k":"TuPLxeCSs9X-UYnXH7qYTg"}],"type":"temporary"}
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 @alex_vault
+#EXTHTTP:{"cookie":"__hdnea__=st=1786206604~exp=1786228204~acl=/*~hmac=c15fc8ee4242309f728912e8019617ade18dcaede0f32db6d082456696454aef"}
+https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_HD_MOB/WDVLive/index.mpd?
