@@ -189,8 +189,11 @@ https://sliv.tgaadi.workers.dev/ten3hd.m3u8
 https://sliv.tgaadi.workers.dev/ten4hd.m3u8
 #EXTINF:-1 tvg-id="sony-ten-5-hd" tvg-name="Sony Sports Ten 5 HD" tvg-language="English" tvg-logo="https://www.sonypicturesnetworks.com/images/logos/SONY_SportsTen5_HD_Logo_CLR.png" group-title="Sports" group-logo="https://www.sonypicturesnetworks.com/images/logos/Sony_LIV.png", Sony Sports Ten 5 HD
 https://sliv.tgaadi.workers.dev/sonysixhd.m3u8
-#EXTINF:-1 tvg-name="Asianet Plus Digital" tvg-logo="https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/9207/1782286239207-h" group-title="Entertainment",Asianet Plus Digital
+
+#EXTINF:-1 tvg-id="177" tvg-name="ABP News" tvg-logo="https://img.media.jio.com/tvpimages/23/60/300001_1753177482990_l_medium.jpg" group-title="News",ABP News
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=bfe3e4a7670e416d85261d002c3a0000:25955bb289a94ef5978ffa689eea066d
-https://livetv.hotstar.com/mp2/gec-india-1540068714/d1405aea010f40739f1521c6c5b48fc0/index.mpd|Cookie=hdntl=exp=1786898457~acl=%2f*~id=8d37fbcb8b6e019078d2a94f82295dba~data=hdntl~hmac=cf639e4c72f25cbe0d04bdac6c9874a33595c157e7d3b47f3d2208ddd398ed33&User-Agent=Hotstar;in.startv.hotstar/25.02.24.8.11169(Android/15)
+#KODIPROP:inputstream.adaptive.license_key=https://streamflexsmm.in/license/177/
+#EXTVLCOPT:http-user-agent=JioTV.Plus/2.8.4_2076/StreamFlex(StreamFlex;JioSTB) JioTvPlus-AndroidTv
+#EXTHTTP:{"cookie":"__hdnea__=st=1786948899~exp=1786970499~acl=/bpk-tv/ABP_News_India_BTS/WDVLive/*~hmac=f9bcadbd77ae54be7547e5623063fcbd3fed5541e80ed2040dcaa2056012f77c"}
+https://jiotvbpkstb.cdn.jio.com/bpk-tv/ABP_News_India_BTS/WDVLive/index.mpd?|Cookie=__hdnea__=st=1786948899~exp=1786970499~acl=/bpk-tv/ABP_News_India_BTS/WDVLive/*~hmac=f9bcadbd77ae54be7547e5623063fcbd3fed5541e80ed2040dcaa2056012f77c&xxx=%7Ccookie=__hdnea__=st=1786948899~exp=1786970499~acl=/bpk-tv/ABP_News_India_BTS/WDVLive/*~hmac=f9bcadbd77ae54be7547e5623063fcbd3fed5541e80ed2040dcaa2056012f77c
