@@ -8,7 +8,7 @@ https://livestream15.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_i
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ce59e82f061f57c5a423d3342ae4cb7d:5218a59b8da17a2b2e4b217802f716f0
-https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_HD_MOB/WDVLive/index.mpd?__hdnea__=st=1787293094~exp=1787314694~acl=/*~hmac=85e8d00acf63f07ed05f342cfcfafce146cfaa71b5213fd37cc18c4baa5d00c6
+https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_HD_MOB/WDVLive/index.mpd?__hdnea__=st=1787306403~exp=1787328003~acl=/*~hmac=fa4a9084679902e2f699926e7324037e1bea71da162fa660cc6496bf1795918f
 #EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://www.keralatv.in/media/2019/03/mazhavil-manorama-hd-latest-logo.png" group-title="Entertainment",Mazhavil Manorama HD
 https://cdn-7.pishow.tv/live/1129/master.m3u8
 #EXTINF:-1 tvg-id="" tvg-name="Asianet" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet.png" tvg-language="Malayalam" group-title="Entertainment", Asianet
@@ -29,7 +29,7 @@ https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccda
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=442ef9bd1f175d81ad4ef6e2039621fb:5bae63aec5c404b3f25073bcf1f0ba98
-https://jiotvmblive.cdn.jio.com/bpk-tv/Flower_TV_MOB/WDVLive/index.mpd?__hdnea__=st=1787293094~exp=1787314694~acl=/*~hmac=85e8d00acf63f07ed05f342cfcfafce146cfaa71b5213fd37cc18c4baa5d00c6
+https://jiotvmblive.cdn.jio.com/bpk-tv/Flower_TV_MOB/WDVLive/index.mpd?__hdnea__=st=1787306403~exp=1787328003~acl=/*~hmac=fa4a9084679902e2f699926e7324037e1bea71da162fa660cc6496bf1795918f
 #EXTINF:-1 tvg-id="0-9-129" tvg-name="Zee Keralam HD" tvg-logo="https://akamaividz2.zee5.com/image/upload/w_1197,h_674,c_scale,f_webp,q_auto:eco/resources/0-9-129/channel_list/1920x1080list28fd564242df4f358b7b3671b8bdf99a.png" group-title="Zee5",Zee Keralam HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=1f85fea5f617503d9166990f21afc2c2:b2fc26f5b5595606827d4000a9d1b178
@@ -42,14 +42,14 @@ https://login.bheem.tv/bpk-tv/22389/output/index.mpd?
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=24618205971e53fa871bdf9c7b56bffb:751c4311a428fccbd4dda0a74991eb67
-https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Movies_HD_MOB/WDVLive/index.mpd?__hdnea__=st=1787293094~exp=1787314694~acl=/*~hmac=85e8d00acf63f07ed05f342cfcfafce146cfaa71b5213fd37cc18c4baa5d00c6
+https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Movies_HD_MOB/WDVLive/index.mpd?__hdnea__=st=1787306403~exp=1787328003~acl=/*~hmac=fa4a9084679902e2f699926e7324037e1bea71da162fa660cc6496bf1795918f
 #EXTINF:-1 tvg-id="1153" tvg-name="Asianet Movies" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_Movies.png" group-title="Malayalam",Asianet Movies
-https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Movies_MOB/WDVLive/index.mpd?__hdnea__=st=1787293094~exp=1787314694~acl=/*~hmac=85e8d00acf63f07ed05f342cfcfafce146cfaa71b5213fd37cc18c4baa5d00c6
+https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Movies_MOB/WDVLive/index.mpd?__hdnea__=st=1787306403~exp=1787328003~acl=/*~hmac=fa4a9084679902e2f699926e7324037e1bea71da162fa660cc6496bf1795918f
 #EXTINF:-1 tvg-id="1139" tvg-name="Asianet Plus" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_Plus.png" group-title="Malayalam",Asianet Plus
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=679f44827ae353b6ae01046247b47a4f:7a401e0b947861c564af4dabf89410fc
-https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Plus_MOB/WDVLive/index.mpd?__hdnea__=st=1787293094~exp=1787314694~acl=/*~hmac=85e8d00acf63f07ed05f342cfcfafce146cfaa71b5213fd37cc18c4baa5d00c6
+https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Plus_MOB/WDVLive/index.mpd?__hdnea__=st=1787306403~exp=1787328003~acl=/*~hmac=fa4a9084679902e2f699926e7324037e1bea71da162fa660cc6496bf1795918f
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://i.ibb.co/DgfjRPnf/Picsart-25-02-10-14-22-46-534.png" group-title="SunNXT",SURYA Movies
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=6b67bccef7024f2da29b42e10dc13f89:2e8460c47d3f01693e193dba5963a5e1
@@ -108,14 +108,14 @@ https://cdn-3.pishow.tv/live/1629/master.m3u8
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=5fb29e5825b4554090de8d60674e4bd1:4234d56f45d2dc89f80e6d4d30b765be
-https://jiotvmblive.cdn.jio.com/bpk-tv/StarMoviesHD_MOB/WDVLive/index.mpd?__hdnea__=st=1787293094~exp=1787314694~acl=/*~hmac=85e8d00acf63f07ed05f342cfcfafce146cfaa71b5213fd37cc18c4baa5d00c6
+https://jiotvmblive.cdn.jio.com/bpk-tv/StarMoviesHD_MOB/WDVLive/index.mpd?__hdnea__=st=1787306403~exp=1787328003~acl=/*~hmac=fa4a9084679902e2f699926e7324037e1bea71da162fa660cc6496bf1795918f
 #EXTINF:-1 group-title="- " tvg-logo="https://img.media.jio.com/tvpimages/79/1/301984_1753202770200_l_medium.jpg",STAR Movies Select HD
 http://202.70.146.135:8000/play/a06q/index.m3u8
 #EXTINF:-1 tvg-id="762" tvg-name="Sony Pix HD" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/SonyPIX.png" group-title="English",Sony Pix HD
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=1ff1fe6b2519562ca3a28602592cd547:d43132eca3cefc4e29ca8fe548a0638b
-https://jiotvmblive.cdn.jio.com/bpk-tv/SonyPIX_MOB/WDVLive/index.mpd?__hdnea__=st=1787293094~exp=1787314694~acl=/*~hmac=85e8d00acf63f07ed05f342cfcfafce146cfaa71b5213fd37cc18c4baa5d00c6
+https://jiotvmblive.cdn.jio.com/bpk-tv/SonyPIX_MOB/WDVLive/index.mpd?__hdnea__=st=1787306403~exp=1787328003~acl=/*~hmac=fa4a9084679902e2f699926e7324037e1bea71da162fa660cc6496bf1795918f
 #EXTINF:-1 tvg-logo="https://d229kpbsb5jevy.cloudfront.net/timesplay/content/common/logos/channel/logos/wthfwe.jpeg" group-logo="https://upload.wikimedia.org/wikipedia/commons/1/19/DishTV_logo_%282025%29.svg" group-title="Movies",Movies Now HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=40f019b86241d23ef075633fd7f1e927:058dec845bd340178a388edd104a015e
@@ -183,24 +183,24 @@ https://sliv.tgaadi.workers.dev/sonysixhd.m3u8
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=965dc2ddb1d85138ad787999a7f30ca5:859695076e67fe961836b564db6d689c
-https://jiotvpllive.cdn.jio.com//bpk-tv/Star_Sports_HD1_BTS/WDVLive/index.mpd?__hdnea__=st=1787305041~exp=1787326641~acl=/bpk-tv/Star_Sports_HD1_BTS/WDVLive/*~hmac=f290fde31e9bc490bbf097d620ff064ce5ef95814c74d4b4f6600990a468d4f4
+https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_BTS/WDVLive/index.mpd?__hdnea__=st=1787302581~exp=1787324181~acl=/bpk-tv/Star_Sports_HD1_BTS/WDVLive/*~hmac=eecea3f60ba458f9d671c45b83553a094226f9d09b798fa595ddd43d84bc8e65
 #EXTINF:-1 tvg-id="1109" tvg-name="Star Sports 2 HD" tvg-logo="https://img.media.jio.com/tvpimages/41/51/301983_1749666169105_l_medium.jpg" group-title="SPORTS3",Star Sports 2 HD
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=9457eb90129456fa8ea95e10ba4ac51e:e620a970cea474c491ac78ae71a4d764
-https://jiotvpllive.cdn.jio.com//bpk-tv/Star_Sports_HD2_BTS/WDVLive/index.mpd?__hdnea__=st=1787305041~exp=1787326641~acl=/bpk-tv/Star_Sports_HD2_BTS/WDVLive/*~hmac=feaa587f598d7f078a260ab284279715583cc569887c90ab05089ef930f32075
+https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD2_BTS/WDVLive/index.mpd?__hdnea__=st=1787302582~exp=1787324182~acl=/bpk-tv/Star_Sports_HD2_BTS/WDVLive/*~hmac=635865b91980dd79dbd46ae954238a65e99b43461165d4b4e1c646adf45ea471
 #EXTINF:-1 tvg-id="1389" tvg-name="Star Sports 3" tvg-logo="https://img.media.jio.com/tvpimages/78/2/302117_1749666092192_l_medium.jpg" group-title="SPORTS3",Star Sports 3
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=e4e8647eaf0659ac85f61765a5abcdc1:d749c9b27505beb0e1a8b6c30ca65de6
-https://jiotvpllive.cdn.jio.com//bpk-tv/Star_Sports_3_BTS/WDVLive/index.mpd?__hdnea__=st=1787305063~exp=1787326663~acl=/bpk-tv/Star_Sports_3_BTS/WDVLive/*~hmac=d273445b744f8c343adeb2639f13898b9cd09a34563775aeff70a8f37965250e
+https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_3_BTS/WDVLive/index.mpd?__hdnea__=st=1787302593~exp=1787324193~acl=/bpk-tv/Star_Sports_3_BTS/WDVLive/*~hmac=7b46c0538045e4fa3c9c82d064bbe97908087e69746d35ce2ae662ff7c7d1d50
 #EXTINF:-1 tvg-id="3277" tvg-name="Star Sports 1 Tamil HD" tvg-logo="https://img.media.jio.com/tvpimages/19/19/302122_1749662923298_l_medium.jpg" group-title="SPORTS3",Star Sports 1 Tamil HD
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=2272c0bc6b2e5cb090b1f55996e0026c:943923934de1d5536ab01c67fca8b337
-https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_1_Tamil_HD_BTS/WDVLive/index.mpd?__hdnea__=st=1787305064~exp=1787326664~acl=/bpk-tv/Star_Sports_1_Tamil_HD_BTS/WDVLive/*~hmac=f3f1ad1b1980ffa69db0de78633d216578e4c17006c13f2b7c2e732ea9a74fee
+https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_1_Tamil_HD_BTS/output/index.mpd?__hdnea__=st=1787302652~exp=1787324252~acl=/bpk-tv/Star_Sports_1_Tamil_HD_BTS/WDVLive/*~hmac=18fb90569222c8a7769728d452af52a1ae214f1443abac6a5d8ad340a3a5dd37
 #EXTINF:-1 tvg-id="3273" tvg-name="Star Sports 2 Tamil HD" tvg-logo="https://img.media.jio.com/tvpimages/50/43/302120_1749664850896_l_medium.jpg" group-title="SPORTS3",Star Sports 2 Tamil HD
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=dc44fe6251825774b90d58dcfa7d94e0:63e3ae853f483a86752b5b9e6d61eb20
-https://jiotvpllive.cdn.jio.com//bpk-tv/Star_Sports2_Tamil_HD_BTS/WDVLive/index.mpd?__hdnea__=st=1787305063~exp=1787326663~acl=/bpk-tv/Star_Sports2_Tamil_HD_BTS/WDVLive/*~hmac=69d93a3118dba979051996e7a64c3031518b3e635bb7df37efae85b67386bf31
+https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports2_Tamil_HD_BTS/WDVLive/index.mpd?__hdnea__=st=1787302603~exp=1787324203~acl=/bpk-tv/Star_Sports2_Tamil_HD_BTS/WDVLive/*~hmac=508c920069a93795ad38416338007263722ce9fefed4676b79819f778db36a0f
