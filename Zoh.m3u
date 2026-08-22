@@ -183,24 +183,24 @@ https://sliv.tgaadi.workers.dev/sonysixhd.m3u8
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=965dc2ddb1d85138ad787999a7f30ca5:859695076e67fe961836b564db6d689c
-https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD1_BTS/WDVLive/index.mpd?__hdnea__=st=1787345833~exp=1787367433~acl=/bpk-tv/Star_Sports_HD1_BTS/WDVLive/*~hmac=75905876a8f66324c8e25ff3de65302684483c2ddb50fc2dfec70ce2e469066f
+https://jiotvpllive.cdn.jio.com//bpk-tv/Star_Sports_HD1_BTS/WDVLive/index.mpd?__hdnea__=st=1787358604~exp=1787380204~acl=/bpk-tv/Star_Sports_HD1_BTS/WDVLive/*~hmac=4fd7842f9db53eee073fca79a4a058dfc657af4a211d51adcde8d1c85c7fc347
 #EXTINF:-1 tvg-id="1109" tvg-name="Star Sports 2 HD" tvg-logo="https://img.media.jio.com/tvpimages/41/51/301983_1749666169105_l_medium.jpg" group-title="SPORTS3",Star Sports 2 HD
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=9457eb90129456fa8ea95e10ba4ac51e:e620a970cea474c491ac78ae71a4d764
-https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_HD2_BTS/WDVLive/index.mpd?__hdnea__=st=1787345833~exp=1787367433~acl=/bpk-tv/Star_Sports_HD2_BTS/WDVLive/*~hmac=41c3258dda3cf90a3d65acf4f73fbd43daa1fbf0c02e04071b30cdeb7e0c35b8
+https://jiotvpllive.cdn.jio.com//bpk-tv/Star_Sports_HD2_BTS/WDVLive/index.mpd?__hdnea__=st=1787358604~exp=1787380204~acl=/bpk-tv/Star_Sports_HD2_BTS/WDVLive/*~hmac=33642cae4e1db039c6bcae51c8e2807007315571947e077227d609b7d34dee20
 #EXTINF:-1 tvg-id="1389" tvg-name="Star Sports 3" tvg-logo="https://img.media.jio.com/tvpimages/78/2/302117_1749666092192_l_medium.jpg" group-title="SPORTS3",Star Sports 3
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=e4e8647eaf0659ac85f61765a5abcdc1:d749c9b27505beb0e1a8b6c30ca65de6
-https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_3_BTS/WDVLive/index.mpd?__hdnea__=st=1787345842~exp=1787367442~acl=/bpk-tv/Star_Sports_3_BTS/WDVLive/*~hmac=947c53c80e9ddd2d4631d4f4b71d3a38312c1066ac79d8dcd656dec7675107d6
+https://jiotvpllive.cdn.jio.com//bpk-tv/Star_Sports_3_BTS/WDVLive/index.mpd?__hdnea__=st=1787358604~exp=1787380204~acl=/bpk-tv/Star_Sports_3_BTS/WDVLive/*~hmac=768eed41b4e715057f0b28ea761f26fc380d2a71728d56831106bfb4ac41b7a3
 #EXTINF:-1 tvg-id="3277" tvg-name="Star Sports 1 Tamil HD" tvg-logo="https://img.media.jio.com/tvpimages/19/19/302122_1749662923298_l_medium.jpg" group-title="SPORTS3",Star Sports 1 Tamil HD
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=2272c0bc6b2e5cb090b1f55996e0026c:943923934de1d5536ab01c67fca8b337
-https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_1_Tamil_HD_BTS/output/index.mpd?__hdnea__=st=1787345899~exp=1787367499~acl=/bpk-tv/Star_Sports_1_Tamil_HD_BTS/WDVLive/*~hmac=2a18eb8bb670cdc92f8986adc553dcd614faff5ef83fd2b15a08b90d06e45caf
+https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_1_Tamil_HD_BTS/WDVLive/index.mpd?__hdnea__=st=1787358604~exp=1787380204~acl=/bpk-tv/Star_Sports_1_Tamil_HD_BTS/WDVLive/*~hmac=33d7331fc72acaf8a04ee7b0aed445ae7ef0822ce7b6f79eea3c3f52e0d3a942
 #EXTINF:-1 tvg-id="3273" tvg-name="Star Sports 2 Tamil HD" tvg-logo="https://img.media.jio.com/tvpimages/50/43/302120_1749664850896_l_medium.jpg" group-title="SPORTS3",Star Sports 2 Tamil HD
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=dc44fe6251825774b90d58dcfa7d94e0:63e3ae853f483a86752b5b9e6d61eb20
-https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports2_Tamil_HD_BTS/WDVLive/index.mpd?__hdnea__=st=1787345898~exp=1787367498~acl=/bpk-tv/Star_Sports2_Tamil_HD_BTS/WDVLive/*~hmac=1a7623108b96cc5b47bdf46ea01db4c7d80057b989e42d907f66022308d06f9b
+https://jiotvpllive.cdn.jio.com//bpk-tv/Star_Sports2_Tamil_HD_BTS/WDVLive/index.mpd?__hdnea__=st=1787358604~exp=1787380204~acl=/bpk-tv/Star_Sports2_Tamil_HD_BTS/WDVLive/*~hmac=579e7e8aae6b9533a2e523b85ffdd66b806d8788533c93559d5158840e842c6f
