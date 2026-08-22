@@ -1,4 +1,4 @@
-name: Extract Playlist
+name: Extract Full M3U Playlist
 
 on:
   schedule:
@@ -18,24 +18,30 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Extract Playlist Links
+      - name: Extract M3U Playlist File
         run: |
-          # Fetch page source and extract stream URLs directly into Zoh.txt
-          curl -sL "https://jalworldiptv.vercel.app" | \
-          grep -Eo 'https?://[^"'\'' ]+\.(m3u8|mpd|ts|mkv)(\?[^"'\'' ]*)?' | \
-          sort -u > Zoh.txt
+          # 1. Download webpage source
+          curl -sL "https://jalworldiptv.vercel.app" -o raw_source.html
+
+          # 2. Extract only the lines belonging to the playlist structure
+          grep -E '^ *(#EXTM3U|#EXTINF|#EXTVLCOPT|#KODIPROP|#EXTHTTP|https?://)' raw_source.html \
+            | sed -e 's/^[ \t]*//' \
+            > playlist.m3u
+
+          # Clean temporary file
+          rm -f raw_source.html
 
       - name: Commit and Push Changes
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           
-          git add Zoh.txt
+          git add playlist.m3u
           
           if git diff --staged --quiet; then
-            echo "No new playlist links found."
+            echo "No changes found in playlist."
           else
-            git commit -m "chore: update Zoh.txt with extracted links"
+            git commit -m "chore: update playlist.m3u with extracted channels"
             git pull --rebase origin main
             git push origin main
           fi
