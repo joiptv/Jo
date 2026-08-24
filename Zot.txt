@@ -645,7 +645,8 @@ document.addEventListener("keydown", function (e) {
         alert("Warning ⚠️");
     }
 });
-</script>  <!-- 
+</script>  
+<!-- 
 <script>
   window.onload = function () {
     window.location.href = "https://jalworldiptv.vercel.app/home";
@@ -1040,7 +1041,6 @@ document.addEventListener("keydown", function (e) {
 https://lbgo.bozztv.com/ssh101/ssh101/mvtv/playlist.m3u8
 https://live20.bozztv.com/akamaissh101/ssh101/mvtv/chunks.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Mediavision Movies" tvg-logo="https://i.postimg.cc/mrZbqdsq/MV-MOVIES.png" group-title="Malayalam Local TV",Media vision Movies
-
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Mediavision Movies" tvg-logo="https://i.postimg.cc/mrZbqdsq/MV-MOVIES.png" group-title="Malayalam Local TV",Movies Classic
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Kannur Vision" tvg-logo="https://i.postimg.cc/8zR0fcYN/kannur_vision.png" group-title="Malayalam Local TV",Kannur Vision
 https://stream.logichost.in/kannurvision/live/playlist.m3u8
@@ -1121,9 +1121,8 @@ https://5a1178b42cc03.streamlock.net/8212/8212/playlist.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="N Media" tvg-logo="https://i.postimg.cc/pT07zZh8/N-Media.png" group-title="Malayalam Local TV",N Media
 https://live.skystream.in/live/newmedia2924/index.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Starnet" tvg-logo="https://i.postimg.cc/vmPXZk7r/Starnet.png" group-title="Malayalam Local TV",Starnet
-
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="NV TV" tvg-logo="https://i.postimg.cc/mhxmG9YX/NV-TV.png" group-title="Malayalam Local TV",NV TV
-https://ipcloud.live/nvtv/livetvstream/index.m3u8
+h- https://ipcloud.live/nvtv/livetvstream/index.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Drisya TV" tvg-logo="https://i.postimg.cc/TPQ6Thxr/drisya-news-pala.jpg" group-title="Malayalam Local TV",Drisya TV
 https://live.skystream.in/live/DrisyaPala2924/index.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Metro Live" tvg-logo="https://i.postimg.cc/hPkm15M9/Metro-Live.png" group-title="Malayalam Local TV",Metro Live
@@ -1272,7 +1271,7 @@ https://d3dt6rg724ecr3.cloudfront.net/SuryaTv/SuryaTV-HDR10-IN-index.m3u8
 http://exa_edge_2skyd.cdn77.me/58eab44776cce29a3ffa1c244e9e4ce53e356a80f636874bc0b5719af3599e2fc683b1/mono.m3u8?token=28391f4065f9412e2b7ba1be4a094a80
 h- #EXTVLCOPT:http-user-agent=Mozilla/5.0
 h- #EXTVLCOPT:http-referrer=https://white-paper-38cb.keralive.workers.dev/
-https://white-paper-38cb.keralive.workers.dev/livestream/e3b12a222dd341d8b64e2d2ec3432d31/SuryaMovies_IN_index.mpd
+h- https://white-paper-38cb.keralive.workers.dev/livestream/e3b12a222dd341d8b64e2d2ec3432d31/SuryaMovies_IN_index.mpd
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Surya Music" tvg-logo="https://i.postimg.cc/vTtd75nq/sun_surya_music.png" group-title="Malayalam",Surya Music
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Surya Comedy" tvg-logo="https://i.postimg.cc/tgxwthQp/sun_surya_comedy.png" group-title="Malayalam",Surya Comedy
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Kochu TV" tvg-logo="https://i.postimg.cc/FzLYhW24/sun_kochu_tv.png" group-title="Malayalam",Kochu TV
@@ -1306,6 +1305,9 @@ https://mumt01.tangotv.in/O5aw8Zn3KAIRALI/index.m3u8
 https://mumt03.tangotv.in/Dsly5z3HKAIRALIARABIA/index.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Kairali WE" tvg-logo="https://i.postimg.cc/HWK06Cgt/Kairali-WE.png" group-title="Malayalam",WE TV
 https://mumt01.tangotv.in/O5aw8Zn3WETV/index.m3u8
+#EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Kappa TV" tvg-logo="https://i.postimg.cc/mDKw1xZJ/Kappa-TV.png" group-title="Malayalam",Kappa TV
+#EXTVLCOPT:http-referrer=https://colorsportscreen.com/
+https://colorsportscreen.com/freetv/stream.m3u8?id=2933d0818d2f
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Raj Musix malayalam" tvg-logo="https://i.postimg.cc/y6F9y3vp/Raj-Musix-Malayalam.png" group-title="Malayalam",Raj Musix malayalam
 #EXTVLCOPT:http-referrer=https://colorsportscreen.com/
 https://colorsportscreen.com/freetv/stream.m3u8?id=743e3ee3b8c3
@@ -1329,11 +1331,11 @@ https://colorsportscreen.com/freetv/stream.m3u8?id=8914ef2ce69d
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Surya Music" tvg-logo="https://i.postimg.cc/vTtd75nq/sun_surya_music.png" group-title="Music",Surya Music
 
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Kappa TV" tvg-logo="https://i.postimg.cc/mDKw1xZJ/Kappa-TV.png" group-title="Music",Kappa TV
-https://cdn-3.pishow.tv/live/1123/master.m3u8
-#EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Raj Musix malayalam" tvg-logo="https://i.postimg.cc/y6F9y3vp/Raj-Musix-Malayalam.png" http-referrer="https://colorsportscreen.com/" group-title="Music",Raj Musix malayalam
+#EXTVLCOPT:http-referrer=https://colorsportscreen.com/
+https://colorsportscreen.com/freetv/stream.m3u8?id=2933d0818d2f
+#EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Raj Musix malayalam" tvg-logo="https://i.postimg.cc/y6F9y3vp/Raj-Musix-Malayalam.png" group-title="Music",Raj Musix malayalam
 #EXTVLCOPT:http-referrer=https://colorsportscreen.com/
 https://colorsportscreen.com/freetv/stream.m3u8?id=743e3ee3b8c3
-
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Sun music hd" tvg-logo="https://i.postimg.cc/tCPsM4RB/Sun_Music_HD.png" group-title="Music",Sun music HD
 http://103.155.18.186:8000/play/a06k/index.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Isaiaruvi" tvg-logo="https://i.postimg.cc/bNnzdcN0/Isaiaruvi.png" group-title="Music",Isaiaruvi
@@ -1363,7 +1365,6 @@ https://telugu.keralive.workers.dev/GeminiMusicHD/index.m3u8
 https://mumbai-edge.smartplaytv.in/musicbeats/index.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Gee TV Music" tvg-logo="https://i.postimg.cc/rp9RkNxj/Gee-TV-Music.png" group-title="Music",Gee TV Music
 https://mumbai-edge.smartplaytv.in/GeeMusic/index.m3u8
-
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="YRF Music HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/channel/756c50edae8599fb760cbbfb22010a75.png" group-title="Music",YRF Music HD
 https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01412-xiaomiasia-yrfmusic-xiaomi/playlist.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Shemaroo Filmi Gaane" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/channel/93926d5dd30455efa55a1c0a3bb797e9.png" group-title="Music",Shemaroo Filmi Gaane 
@@ -1399,8 +1400,7 @@ https://visionbeats.keralive.workers.dev/Visionbeats/index.m3u8
 https://d3kdywbtdfbp9z.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/dff423e0-3c82-46d6-9ecb-3baa96b5694a/160c818d-4a57-4b89-ae62-0423e18110cf/3.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="M Tunes HD" tvg-logo="https://i.postimg.cc/MKQ1MR1r/M-Tunes-HD.png" group-title="Music",M Tunes HD
 https://rpn3.bozztv.com/dvrfl07/ushba-t4/playlist.m3u8
-#EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Boogle TV" tvg-logo="https://yt3.googleusercontent.com/IAfT9GqVf3w9V2dfIS24X59_MISHwjA0WawtEFNm2vsF8Lcj4MSblQd1rTEIlD1AYKQI_4VxAA=s900-c-k-c0x00ffffff-no-rj" group-title="Music",Boogle TV"
-
+#EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Boogle TV" tvg-logo="https://i.postimg.cc/zf57Ybtx/Boogle.jpg" group-title="Music",Boogle TV"
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="E 24" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/E_24.png?width=400" http-referrer="https://bhoomtv.me" group-title="Music",E 24
 #EXTVLCOPT:http-referrer=https://colorsportscreen.com/
 https://colorsportscreen.com/freetv/stream.m3u8?id=21da616d26aa
@@ -1410,7 +1410,7 @@ https://colorsportscreen.com/freetv/stream.m3u8?id=2bcdeee165a5
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Joo Music" tvg-logo="https://i.postimg.cc/bvLj3JSk/Joo-Music.png" group-title="Music",Joo Music
 https://livecdn.live247stream.com/joomusic/tv/playlist.m3u8
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Desi Channel" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/channel/5b9d4a8f89cbc49f9b1340eba3e3d032.png" http-referrer="https://04jio.teachub.workers.dev/" group-title="Music",Desi Channel
+#EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Desi Channel" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/channel/5b9d4a8f89cbc49f9b1340eba3e3d032.png" group-title="Music",Desi Channel
 
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Balle Balle tv" tvg-logo="https://i.postimg.cc/FHXmTXjx/balleballetv.jpg" group-title="Music",Balle Balle tv
 https://mcncdndigital.com/balleballetv/tracks-v1a1/mono.ts.m3u8
@@ -2768,4 +2768,3 @@ http://31.43.191.142:8080/series/9961775815055/a1ac0f4bc28b/58600.mkv
 http://31.43.191.142:8080/series/9961775815055/a1ac0f4bc28b/58601.mkv
 #EXTINF:-1 tvg-id="Squid Game" tvg-logo="https://m.media-amazon.com/images/M/MV5BYTU3ZDVhNmMtMDVlNC00MDc0LTgwNDMtYWE5MTI2ZGI4YWIwXkEyXkFqcGc@._V1_.jpg" group-title="Squid Game", S03 | Episode 06
 http://31.43.191.142:8080/series/9961775815055/a1ac0f4bc28b/58602.mkv
-
