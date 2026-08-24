@@ -1455,9 +1455,11 @@ https://playyonogames.in/sliv/stream.m3u8?id=1000009278
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Sony Sports Ten 5 HD" tvg-logo="https://i.postimg.cc/0QL3ns2s/Sony-Sports-TEN-5-HD.png" group-title="Sports",Sony Sports Ten 5 HD
 http://103.155.18.186:8000/play/a0ao/index.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Sony Sports Ten 1" tvg-logo="https://i.postimg.cc/hPR67c53/Sony-Sports-TEN-1.png" group-title="Sports",Sony Sports Ten 1
+https://yashlivetv.fun/sony.php/ten1sd.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Sony Sports Ten 2" tvg-logo="https://i.postimg.cc/mkYdS153/Sony-Sports-TEN-2.png" group-title="Sports",Sony Sports Ten 2
+https://yashlivetv.fun/sony.php/ten2sd.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Sony Sports Ten 3 Hindi" tvg-logo="https://i.postimg.cc/0NzcBB4y/Sony-Sports-TEN-3-Hindi.png" group-title="Sports",Sony Sports Ten 3 Hindi
-http://103.253.18.58:8000/play/a00b
+https://yashlivetv.fun/sony.php/ten3sd.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Sony Sports Ten 4 Tamil" tvg-logo="https://i.postimg.cc/J0Lxt4z8/Sony-Sports-TEN-4-Tamil.png" group-title="Sports",Sony Sports Ten 4 Tamil
 #EXTVLCOPT:http-referrer=https://playyonogames.in/
 https://playyonogames.in/sliv/stream.m3u8?id=1000119187
@@ -1465,7 +1467,7 @@ https://playyonogames.in/sliv/stream.m3u8?id=1000119187
 #EXTVLCOPT:http-referrer=https://playyonogames.in/
 https://playyonogames.in/sliv/stream.m3u8?id=1000119186
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-logo="https://brand-websites-prod.s3.ap-south-1.amazonaws.com/sony-sports-networks-live/channel_logos/Sony%20Sports%20TEN%205.png" group-title="Sports",Sony Sports Ten 5
-
+https://yashlivetv.fun/sony.php/sonysixsd.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-logo="https://static.wikia.nocookie.net/logopedia/images/6/67/Screenshot_2026-06-09_234117.png"  group-title="Sports", Unite8 Sports 1 HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36
 #KODIPROP:inputstream.adaptive.manifest_type=hls
@@ -1506,7 +1508,13 @@ https://xemzi.short.gy/2000009
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Sky Sport Select NZ" tvg-logo="https://i.imgur.com/6x2anTA.png" group-title="Sports",Sky Sport Select NZ
 
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Fancode" tvg-logo="https://i.postimg.cc/J4pB3NqR/fancode.webp" group-title="Sports",Fancode
-https://yashlivetv.fun/fancode.php?url=https%3A%2F%2Fin-mc-flive.fancode.com%2Fmumbai%2F4247996_english_hls_53b379b7914499_1ta-di_h264%2F1080p.m3u8%3Fhdntl%3DExpires%3D1787039463~_GO%3DGenerated~acl%3D%2Fmumbai%2F4247996_english_hls_53b379b7914499_1ta-di_h264%2F*~Signature%3DAVMBkTVx8wxr1jSGliaIjWiBY41ksXgSrpg_21hXu0lGbazqySEGksh8k1u-y7GvAjHs9sEvLg3Y6FsT19m-SHqmjp4K
+https://yashlivetv.fun/fancode.php?url=https://in-mc-flive.fancode.com/mumbai/4248352_hindi_hls_35cc2e3af442591_1ta-di_h264/1080p.m3u8?hdntl=Expires=1787649271~_GO=Generated~acl=/mumbai/4248352_hindi_hls_35cc2e3af442591_1ta-di_h264/*~Signature=ARB3KG3coJ2zZnSNID_aqkAtkGNa3W_0lbxD8smD0HbKRGfXkt228DvMeV89DVRSNz4a7KpZHBFRmFPJkpDwk8sKwGsN
+#EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Fancode" tvg-logo="https://i.postimg.cc/J4pB3NqR/fancode.webp" group-title="Sports",Fancode 1
+https://yashlivetv.fun/fancode.php?url=https://in-mc-flive.fancode.com/mumbai/4248513_english_hls_f839819c0a99447_1ta-di_h264/1080p.m3u8?hdntl=Expires=1787660215~_GO=Generated~acl=/mumbai/4248513_english_hls_f839819c0a99447_1ta-di_h264/*~Signature=ARB3KG0p_Qt0JWH348R0Mgi_uSlg8Mp9EEAJoUIxNj0F70KPW2wYAUuQEG52BEeiOohfCvCcGh1Ch7lk5XkiPXICXCgN
+#EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Fancode" tvg-logo="https://i.postimg.cc/J4pB3NqR/fancode.webp" group-title="Sports",Fancode 2
+https://yashlivetv.fun/fancode.php?url=https://in-mc-flive.fancode.com/mumbai/4248444_english_hls_c408f5caa688583_1ta-di_h264/1080p.m3u8?hdntl=Expires=1787649881~_GO=Generated~acl=/mumbai/4248444_english_hls_c408f5caa688583_1ta-di_h264/*~Signature=ARB3KG1C15Mgvvihn6osJ2f4gFMjcZasjw8Zh07i1VQ57mK9-LidjNi8S82x5tgD84phEzmjS5m8V8SqcZloFfYbfNMD
+#EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Fancode" tvg-logo="https://i.postimg.cc/J4pB3NqR/fancode.webp" group-title="Sports",Fancode 3
+https://yashlivetv.fun/fancode.php?url=https://in-mc-flive.fancode.com/mumbai/4247553_english_hls_6b872f507b99405_1ta-di_h264/1080p.m3u8?hdntl=Expires=1787644339~_GO=Generated~acl=/mumbai/4247553_english_hls_6b872f507b99405_1ta-di_h264/*~Signature=ARceAWN-KYmS66HzAF23TNRhK8a3I-t0_SaoHDtyDj5wIC0IqTHvBtg07qfFAojT1YaqECDwKRDAAhRWjntFqPsx9aMG
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="SuperSport Premier league" tvg-logo="https://i.imgur.com/xZFMYj4.png" group-title="Sports",SuperSport Premier league
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Now Sports Premier League 1" tvg-logo="https://i.postimg.cc/brSvdXT1/now_sports_epl.png" group-title="Sports",Now Sports Premier League 1
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Sky Sports Premier League" tvg-logo="https://i.imgur.com/FzzpF1f.png" group-title="Sports",Sky Sports Premier League
@@ -1937,7 +1945,7 @@ http://38.96.178.205/SONYHD/index.m3u8
 http://103.155.18.186:8000/play/a01g/index.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="SSony Max 1" tvg-logo="https://dtil.tmsimg.com/assets/s179440_ld_h15_aa.png?lock=720x540" group-title="Hindi",Sony Max 1
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Sony MAX 2" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/SonyMAX2.png?width=400" group-title="Hindi",Sony MAX 2
-
+https://yashlivetv.fun/sony.php/max2.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Sony SAB" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Sony_SAB.png?width=400" group-title="Hindi",Sony SAB
 http://103.155.18.186:8000/play/a025/index.m3u8
 http://olxi0fko.ukminlt.fun/iptv/HV7NY9RSQCHYZK/6571/index.m3u8
