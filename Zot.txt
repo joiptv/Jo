@@ -1291,7 +1291,8 @@ https://livestream15.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_i
 https://livestream6.sunnxt.com/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_index.mpd
 
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Zee Keralam HD" tvg-logo="https://i.postimg.cc/bND8k1y1/zee-keralam-hd.jpg" group-title="Malayalam",Zee Keralam HD
-http://webotv.watch:8880/live/t6ag8G3r/uGrmXQ5/4540723.ts
+#EXTVLCOPT:http-user-agent=Mozilla/5.0;com.graymatrix.did;Android TV;5.82.6(203230929);Android(10);Xiaomi(Redmi Note 8 Pro)
+https://shoebinfo.qzz.io/ze/zee5.php?play=0-9-129
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Mazhavil Manorama HD" tvg-logo="https://i.postimg.cc/0NL75YyM/Mazhavil-Manorama-HD.png" group-title="Malayalam",Mazhavil Manorama HD
 https://cdn-7.pishow.tv/live/1129/master.m3u8
 https://mmtv-vglivessai.akamaized.net/v1/master/673630b269b766886555eebfddd4f27f3de3ab50/f8a0827f-030f-4a0d-b7e5-338996c09a5b/index.m3u8
@@ -1322,11 +1323,11 @@ https://932y4x26ljv8-hls-live.5centscdn.com/victers/tv.stream/playlist.m3u8
 https://d3eyhgoylams0m.cloudfront.net/v1/manifest/93ce20f0f52760bf38be911ff4c91ed02aa2fd92/ed7bd2c7-8d10-4051-b397-2f6b90f99acb/562ee8f9-9950-48a0-ba1d-effa00cf0478/2.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Kaumudy TV" tvg-logo="https://i.postimg.cc/vZ9d4MQS/kaumudy-tv.png" group-title="Malayalam",Kaumudy TV
 https://oqgdrkxby4rm-hls-live.5centscdn.com/kaumudytv/live.stream/chunks.m3u8
-#EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Jeevan TV" tvg-logo="https://i.postimg.cc/bwfBFnhM/Jeevan-TV.png" http-referrer="https://yupp-tv.keralive.workers.dev/" group-title="Malayalam",Jeevan TV
+#EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Jeevan TV" tvg-logo="https://i.postimg.cc/bwfBFnhM/Jeevan-TV.png" group-title="Malayalam",Jeevan TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
 #EXTVLCOPT:http-referrer=https://bhoomtv.me/
 https://yupp-tv.keralive.workers.dev/120723/smil:jeevan.smil/playlist.m3u8
-#EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Darshana TV" tvg-logo="https://i.postimg.cc/Z5J15NMJ/Darshana-TV.png" http-referrer="https://colorsportscreen.com" group-title="Malayalam",Darshana TV 
+#EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Darshana TV" tvg-logo="https://i.postimg.cc/Z5J15NMJ/Darshana-TV.png" group-title="Malayalam",Darshana TV 
 #EXTVLCOPT:http-referrer=https://colorsportscreen.com/
 https://colorsportscreen.com/freetv/stream.m3u8?id=8914ef2ce69d
 
