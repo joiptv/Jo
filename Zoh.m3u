@@ -197,7 +197,7 @@ https://game.denver69.fun/Jtv/j2Jc4z/Jtv.mpd?id=1109
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=e4e8647eaf0659ac85f61765a5abcdc1:d749c9b27505beb0e1a8b6c30ca65de6
-https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_3_BTS/WDVLive/index.mpd?__hdnea__=st=1787713169~exp=1787734769~acl=/bpk-tv/Star_Sports_3_BTS/WDVLive/*~hmac=df6980e0b193d9a21eb7785fabcbc73d0690f618c2acc3ffa24732c845356964
+https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports_3_BTS/WDVLive/index.mpd?__hdnea__=st=1787734807~exp=1787756407~acl=/bpk-tv/Star_Sports_3_BTS/WDVLive/*~hmac=8bb5221c1dc45097e047cbdf1519095171317c7c9337c030999fb54606fd5192
 #EXTINF:-1 tvg-id="3277" tvg-name="Star Sports 1 Tamil HD" tvg-logo="https://img.media.jio.com/tvpimages/19/19/302122_1749662923298_l_medium.jpg" group-title="SPORTS",Star Sports 1 Tamil HD
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
@@ -207,6 +207,6 @@ https://game.denver69.fun/Jtv/j2Jc4z/Jtv.mpd?id=3277
 #KODIPROP:inputstream.adaptive.manifest_type=mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=dc44fe6251825774b90d58dcfa7d94e0:63e3ae853f483a86752b5b9e6d61eb20
-https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports2_Tamil_HD_BTS/WDVLive/index.mpd?__hdnea__=st=1787713051~exp=1787734651~acl=/bpk-tv/Star_Sports2_Tamil_HD_BTS/WDVLive/*~hmac=9cc26535377a0c292c8abea3fc7e99820b58a3b6849474194adeb25a0875bc47
+https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Sports2_Tamil_HD_BTS/WDVLive/index.mpd?__hdnea__=st=1787734692~exp=1787756292~acl=/bpk-tv/Star_Sports2_Tamil_HD_BTS/WDVLive/*~hmac=e4764723e6daf12ab66ea26939009aaa4b31784ecfe1420bab2b5cfc308bf3bd
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="DD Sports" tvg-logo="https://dtil.tmsimg.com/assets/s158255_ld_h15_aa.png?lock=720x540" group-title="Sports",DD Sports
 https://cdn-6.pishow.tv/live/13/master.m3u8
