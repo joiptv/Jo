@@ -12,15 +12,12 @@ https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_HD_MOB/WDVLive/index.mpd?__hdnea_
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=37b4403a66f2565da33ba3b5704bb178:449f87256b3c1d7c2cdcbe04cbfd5530
 https://login.bheem.tv/bpk-tv/22020/output/index.mpd?
-
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Asianet HD" tvg-logo="https://i.postimg.cc/DfHxNGTx/Asianet-hd.webp" group-title="Malayalam",Asianet HD
 https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starasianet.smil/chunklist_b1928000.m3u8
-
 #EXTINF:-1 tvg-id="Surya" tvg-logo="https://sund-images.sunnxt.com/194398/640x360_SuryaTV_194398_45a56617-7aa9-4ced-a1c8-82b80adb83a7.jpg" group-title="Entertainment",Surya
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key={ "keys":[ { "kty":"oct", "k":"be6GY+Y8yPjdqEeLiy87cQ", "kid":"VuH1tbcuTkWpi28ofCZauQ" } ], "type":"temporary" }
 https://livestream6.sunnxt.com/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_index.mpd
-
 #EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://exchange4media.gumlet.io/news-photo/92907-MazhavilManorama.jpg" group-title="Entertainment",Mazhavil Manorama
 https://cdn-3.pishow.tv/live/1479/master.m3u8
 #EXTINF:-1 tvg-id="634" tvg-name="Flower TV" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Flower_TV.png" group-title="Malayalam",Flower TV
