@@ -8,8 +8,10 @@ https://livestream15.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_i
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=ce59e82f061f57c5a423d3342ae4cb7d:5218a59b8da17a2b2e4b217802f716f0
 https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_HD_MOB/WDVLive/index.mpd?__hdnea__=st=1787700605~exp=1787722205~acl=/*~hmac=9b3c4dc9dcec31394d04eaf23462d1628a19b7e77cbab43647c9562fbe2e9528
-#EXTINF:-1 tvg-id="MazhavilManorama" tvg-logo="https://www.keralatv.in/media/2019/03/mazhavil-manorama-hd-latest-logo.png" group-title="Entertainment",Mazhavil Manorama HD
-https://cdn-7.pishow.tv/live/1129/master.m3u8
+#EXTINF:-1 tvg-id="22020" tvg-logo="https://i.imgur.com/fjgzW20.png" group-title="Malayalam Entertainment",Mazhavil Manorama HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=37b4403a66f2565da33ba3b5704bb178:449f87256b3c1d7c2cdcbe04cbfd5530
+https://login.bheem.tv/bpk-tv/22020/output/index.mpd?
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Asianet HD" tvg-logo="https://i.postimg.cc/DfHxNGTx/Asianet-hd.webp" group-title="Malayalam",Asianet HD
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
 #EXTVLCOPT:http-referrer=https://bhoomtv.me/
