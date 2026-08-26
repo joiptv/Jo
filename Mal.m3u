@@ -1,98 +1,99 @@
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373405" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/Amrita_TV.svg.png",┃MALAYALAM┃ AMRITHA TV
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373405
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373404" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/1200px-Asianet_Logo.svg.png",┃MALAYALAM┃ ASIANET HD
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373404
+   MALAYALAM
+   
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=eae838ccd75d4a1fbff6fd7dd1c97780:8259ce0c112725a4d2c94d154207425f
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="194397" tvg-language="Malayalam" tvg-logo="https://sund-images.sunnxt.com/195489/640x360_SuryaTVHDDolbyVision_195489_b51cb569-382c-4dc4-b9ec-5c09396ebd2a.jpg" group-title="SunNxt", Surya TV HD - Dolby Vision
+https://livestream15.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_index.mpd
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373403" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/Flowers_TV_2023_logo.png",┃MALAYALAM┃ FLOWERS TV
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373403
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=eae838ccd75d4a1fbff6fd7dd1c97780:8259ce0c112725a4d2c94d154207425f
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="194397" tvg-language="Malayalam" tvg-logo="https://sund-images.sunnxt.com/194397/640x360_SuryaTVHD_194397_7b54e231-bbb9-48d2-8aae-35a5886deed3.jpg" group-title="SunNxt", Surya TV HD
+https://livestream15.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_index.mpd
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373402" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/Kairali_TV.svg.png",┃MALAYALAM┃ KAIRALI PEOPLE TV
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373402
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=6b67bccef7024f2da29b42e10dc13f89:2e8460c47d3f01693e193dba5963a5e1
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="194385" tvg-language="Malayalam" tvg-logo="https://sund-images.sunnxt.com/194385/640x360_SuryaMovies_194385_2d5dbc38-915d-4e41-b8b0-ea98ca6c88d3.jpg" group-title="SunNxt", Surya Movies
+https://livestream.sunnxt.com/e24ee14c395945bd8ccb065e1bce8b9b/SuryaMoviesB_IN_index.mpd
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373401" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/Kochu_TV.png",┃MALAYALAM┃ KOCHU TV
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373401
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=25a1d2a4c3f848b1aed911ad691fe232:3c8b2cf8611c343e6a231b6a9c7c8b58
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="194338" tvg-language="Malayalam" tvg-logo="https://sund-images.sunnxt.com/194338/640x360_SuryaMusic_194338_7fe35164-9a93-45ad-92a1-31126e592a84.jpg" group-title="SunNxt", Surya Music
+https://livestream.sunnxt.com/8c2352ff54954e7b9a4188045dcf3b27/SuryaMusicB_IN_index.mpd
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373400" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/92907-MazhavilManorama.png",┃MALAYALAM┃ MAZAVIL MANORAMA HD
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373400
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=11563b00a46b43f2a0f80ecf42a4fb77:9bad28ad6f23dbb917c63ee680f66a1f
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="193251" tvg-language="Malayalam" tvg-logo="https://sund-images.sunnxt.com/193251/640x360_SuryaComedy_193251_42e64c54-37bb-4dfd-9c06-20efd79986b3.jpg" group-title="SunNxt", Surya Comedy
+https://livestream.sunnxt.com/6505e922bf164423ad122f404747356a/SuryaComedyB_IN_index.mpd
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373399" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/News18_Kerala.png",┃MALAYALAM┃ NEWS 18 KERALA
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373399
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=7354fb333b0c4159bc6c433c4db13d0f:fbf8b4a11febf7d2eed2283006979176
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="" tvg-language="Malayalam" tvg-logo="https://sund-images.sunnxt.com/194348/960x540_KochuTV_194348_9777cbfd-685b-4e06-a7cc-f2902c1874e8.jpg" group-title="SunNxt", Kochu
+https://livestream.sunnxt.com/1893b9ab790747cb80a584873a608dcb/KochuTVB_IN_index.mpd
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373398" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/Raj_msx_tamil.png",┃MALAYALAM┃ RAJ MUSIC
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373398
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=56e1f5b5b72e4e45a98b6f287c265ab9:6dee8663e63cc8f8dda8478b8b2f3b71
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="194398" tvg-language="Malayalam" tvg-logo="https://sund-images.sunnxt.com/194398/640x360_SuryaTV_194398_45a56617-7aa9-4ced-a1c8-82b80adb83a7.jpg" group-title="SunNxt", Surya TV
+https://livestream6.sunnxt.com/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_index.mpd
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373397" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/Asianet_Movies.png",┃MALAYALAM┃ ASIANET MOVIE
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373397
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="" tvg-language="Malayalam" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/TWENTY_FOUR_NEWS.png" group-title="SunNxt", 24 News
+https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/24_nim_https/110322/channel24/playlist.m3u8
+ #KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3891557f1cb14dedb7545bf52499d748:fb662f742e5f5e0c61a7c1c66d2b019a
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="195491" tvg-language="Tamil" tvg-logo="https://sund-images.sunnxt.com/195491/640x360_SunTVHDDolbyVision_195491_8110232c-dd00-4dbe-98ff-25bf5fe8749e.jpg" group-title="SunNxt", Sun TV HD - Dolby Vision
+https://livestream2.sunnxt.com/19ee29194c4d4fc286c3e697362e60cd/SunTVHDB_IN_index.mpd
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373396" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/Asianet_Plus.png",┃MALAYALAM┃ ASIANET PLUS
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373396
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3891557f1cb14dedb7545bf52499d748:fb662f742e5f5e0c61a7c1c66d2b019a
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="194408" tvg-language="Tamil" tvg-logo="https://sund-images.sunnxt.com/194403/640x360_SunTVHD_194403_522c701c-4770-4934-a6d3-47045b0d4fa5.jpg" group-title="SunNxt", Sun TV HD
+https://livestream2.sunnxt.com/19ee29194c4d4fc286c3e697362e60cd/SunTVHDB_IN_index.mpd
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373395" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/Surya_Movies_TV_Logo.png",┃MALAYALAM┃ SURYA MOVIES
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373395
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=351e547391bb45cbac66d2cb9ec0c294:3bd646753f4903eee3b404646c7819d3
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="194405" tvg-language="Tamil" tvg-logo="https://sund-images.sunnxt.com/194405/640x360_KTVHD_194405_3c6880f0-468e-48f4-b09a-89fd5fed775d.jpg" group-title="SunNxt", KTV HD
+https://livestream.sunnxt.com/61477b4c8d8d45d5a49e044cc1dffc60/KTVHDB_IN_index.mpd
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373394" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/Surya_TV.png",┃MALAYALAM┃ SURYA TV HD
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373394
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=b5a2c6d13b9748de9ceebc0a8adc8af3:e806fec1bf1c8a844216118c94bad020
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="194406" tvg-language="Tamil" tvg-logo="https://sund-images.sunnxt.com/194406/640x360_SunMusicHD_194406_87e8d029-f695-477c-9ace-a3c2cbe15004.jpg" group-title="SunNxt", Sun Music HD
+https://livestream.sunnxt.com/d434796d90fa4dc9b7ecfacedbe683f1/SunMusicHDB_IN_index.mpd
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373393" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/we-tv.png",┃MALAYALAM┃ WE TV
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373393
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=81546df3f41c4a6dbc9a4efc7f2fb626:3928505f4054cf1fa935276fdbe40992
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="194391" tvg-language="Tamil" tvg-logo="https://sund-images.sunnxt.com/194391/640x360_SunLife_194391_d407948a-b7a2-4a1f-8409-56f7261cefa1.jpg" group-title="SunNxt", Sun Life
+https://livestream.sunnxt.com/6b79451f54284b3fb680fd717ee008dc/SunLifeB_IN_index.mpd
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373392" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/Asianet_News_Logo.png",┃MALAYALAM┃ ASIANET NEWS HD
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373392
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=4df8f920386e4346ba6b7d7ae935d668:c5fcaa8df5663365d938a50987f71b84
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="194404" tvg-language="Tamil" tvg-logo="https://sund-images.sunnxt.com/194404/640x360_SunNews_194404_0af09ceb-cb6f-48e6-9f5c-395749f0fcee.jpg" group-title="SunNxt", Sun News
+https://livestream3.sunnxt.com/491c99fb6d0c49e88e6349170d890a2f/SunNewsB_IN_index.mpd
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373391" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/Manorama_News_3D.png",┃MALAYALAM┃ MANORAMA NEWS
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373391
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=d674a1a7f43641a29bd8867d87c7259a:812f55dcde68619fc6ad95951b241d2c
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="194407" tvg-language="Tamil" tvg-logo="https://sund-images.sunnxt.com/194407/960x540_AdithyaTV_194407_b6f8fa30-255b-4f4a-8f8f-4264abda8b33.jpg" group-title="SunNxt", Adithya TV
+https://livestream.sunnxt.com/4d0eb3cde30247ada4ade679fdfbaf86/AdithyaTVB_IN_index.mpd
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373390" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/suryamusic.png",┃MALAYALAM┃ SURYA MUSIC
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373390
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=05da38a46fb7403088f41434e44de980:488046139a1e1d65323cfe4bb1b30b7b
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="194390" tvg-language="Tamil" tvg-logo="https://sund-images.sunnxt.com/194390/640x360_ChuttiTV_194390_61005292-313a-45b4-b6a8-3ac5128a513e.jpg" group-title="SunNxt", Chutti TV
+https://livestream.sunnxt.com/3ed29d5b01b546eaa05d184cd87535f1/ChuttiTVB_IN_index.mpd
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373389" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/Janam_TV_logo.png",┃MALAYALAM┃ JANAM TV
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373389
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=6752015acf084572a08dfe21796f8b45:ff823ddbe5625c35d3e93f0ed4520115
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="194408" tvg-language="Tamil" tvg-logo="https://sund-images.sunnxt.com/194408/640x360_SunTV_194408_2617a80e-4f90-42fa-b13a-acc8d7c97f9e.jpg" group-title="SunNxt", Sun TV
+https://livestream1.sunnxt.com/05b5df1221764bca9867054c5e65ee62/SunTVB_IN_index.mpd
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373388" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/Zee_Keralam-HD.png",┃MALAYALAM┃ ZEE KERALAM HD
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373388
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=3891557f1cb14dedb7545bf52499d748:fb662f742e5f5e0c61a7c1c66d2b019a
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="" tvg-language="Tamil" tvg-logo="https://sund-images.sunnxt.com/194403/640x360_SunTVHD_194403_522c701c-4770-4934-a6d3-47045b0d4fa5.jpg" group-title="SunNxt", Sun TV HD AU
+https://livestream5.sunnxt.com/9287b977a5694d3c98c12b79622da462/SunTVHDB_AU_index.mpd
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373387" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/DD_Malayalam_2023_logo%20(1).png",┃MALAYALAM┃ DD MALAYALAM
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373387
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=426117d115b04497b0b0d425e8095184:aa751ae8a41ac6f87141734163ffe3b2
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="194409" tvg-language="Tamil" tvg-logo="https://sund-images.sunnxt.com/194409/640x360_KTV_194409_91b39445-b996-4e46-bafa-b78548e4da2e.jpg" group-title="SunNxt", KTV
+https://livestream.sunnxt.com/6ae70edd4c1440379f5311e8fbddc7c1/KTVB_IN_index.mpd
 
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373386" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/Jaihind_TV_Logo.png",┃MALAYALAM┃ JAIHIND TV
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373386
-
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373385" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/mathrumbhubi.png",┃MALAYALAM┃ MATHRUBHUMI NEWS
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373385
-
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373384" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/2560px-YuppTV_logo.svg.png",┃MALAYALAM┃ REPORTER TV YUPP
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373384
-
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373383" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/Kappa_tv_Channel_Logo.png",┃MALAYALAM┃ KAPPA TV
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373383
-
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373382" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/rai-news-24-new1127.png",┃MALAYALAM┃ RAJ NEWS MALAYALAM
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373382
-
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373381" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/Safari-Television-Added-on-Sun-Direct.png",┃MALAYALAM┃ SAFARI TV
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373381
-
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373380" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/Kairali_TV.svg.png",┃MALAYALAM┃ KAIRALI ARABIA
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373380
-
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373379" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/Kairali_TV.svg.png",┃MALAYALAM┃ KAIRALI NEWS
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373379
-
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373378" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/kaumudy.png",┃MALAYALAM┃ KAUMUDY
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373378
-
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373377" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/ShalomTVlogo.png",┃MALAYALAM┃ SHOLAM TV
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373377
-
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373376" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/24 NEWS MALAYALAM.png",┃MALAYALAM┃ 24 NEWS MALAYALAM
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373376
-
-#EXTINF:-1 group-logo="https://i.postimg.cc/TPjkQ6rY/Airtel-TV.jpg" tvg-id="373375" group-title="Airtel Xtream | ┃ASIA┃ MALAYALAM" tvg-logo="http://picon.tivi-ott.net:25461/picon/ASIA/MALAYALAM/powervisiontv-1.png",┃MALAYALAM┃ POWER VISION
-https://ranapkz.site/RANAPK33k/TVD/play.php?id=373375
-
-#EXTINF:-1 tvg-id="Asianet HD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_HD.png" group-title="Entertainment", Asianet HD
-#KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","kid":"2cBiry39UeCpLnZEb19Wfw","k":"NDXrvXDxhaFrB4yWypMjYQ"},{"kty":"oct","kid":"Nlg4jnpLW6mMJGmk8IsrqQ","k":"7GQJWhgSk4OqMX4ufTFJkw"},{"kty":"oct","kid":"zlnoLwYfV8WkI9M0KuTLfQ","k":"Uhilm42heisuSyF4AvcW8A"},{"kty":"oct","kid":"FhOCjm_IVm6XfH1DTg8xQQ","k":"TuPLxeCSs9X-UYnXH7qYTg"}],"type":"temporary"}
-#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 @alex_vault
-#EXTHTTP:{"cookie":"__hdnea__=st=1786206604~exp=1786228204~acl=/*~hmac=c15fc8ee4242309f728912e8019617ade18dcaede0f32db6d082456696454aef"}
-https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_HD_MOB/WDVLive/index.mpd
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=21ddc14c4da94c079d4f4c343ecdcd80:5701bee4ee9b625d0c8ed7de032a7478
+#EXTINF:-1 group-logo="https://i.ibb.co/2dwmRgM/Sun-NXT-logo-small.png" tvg-id="194410" tvg-language="Tamil" tvg-logo="https://sund-images.sunnxt.com/194410/640x360_SunMusic_194410_d4d08876-9d23-432c-aab4-b5c70c58aaac.jpg" group-title="SunNxt", Sun Music
+https://livestream.sunnxt.com/585bb66e95c84ccea3f828c96b3567b5/SunMusicB_IN_index.mpd
