@@ -1027,6 +1027,16 @@ https://colorsportscreen.com/freetv/stream.m3u8?id=5a474a616417
 https://colorsportscreen.com/freetv/stream.m3u8?id=30f2b161358a
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="ThanthiOne.in@SD" tvg-logo="https://dtil.tmsimg.com/assets/s158791_ld_h15_aa.png?lock=720x540" group-title="Tamil",Thanthi One
 https://mumt07.tangotv.in/zHjX9OFlTHANTHIONE/index.m3u8
+#EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Movies HD" tvg-logo="https://i.postimg.cc/9QCDh73m/Movies-HD.png" group-title="Tamil",Movies HD
+https://live.yettelevision.com:5443/LiveApp/streams/T7mQx9LpV2Nc8HdRw5Ka.m3u8
+#EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="TBC TV" tvg-logo="https://i.postimg.cc/T3jfT7VW/tbc.png" group-title="Tamil",TBC TV
+https://stream.iplive.xyz/smmedia/tbctv/index.m3u8
+#EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Loop Tamil" tvg-logo="https://i.postimg.cc/prP1YC9g/Loop-Tamil.png" group-title="Tamil",Loop Tamil
+https://live.yettelevision.com:5443/LiveApp/streams/P3wHx9NcLm7Qk2RtV5Yd.m3u8
+#EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Yet TV HD" tvg-logo="https://i.postimg.cc/3Jf0hwZz/Yet-TV.png" group-title="Music",YET TV HD
+https://hls.yettelevision.com/LiveApp/streams/yettv.m3u8
+#EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Yet MAX HD" tvg-logo="https://i.postimg.cc/VNHgwwjp/YET-Music.png" group-title="Music",YET Max HD
+https://hls.yettelevision.com/LiveApp/streams/yettv2.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="RojaTV.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/rojatv.png" group-title="Tamil",Roja TV 
 https://live.rojatv.cloud/rojatv/rojatv/index.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="UltimateTV.in@SD" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/utvtamil.png" group-title="Tamil",Ultimate TV
