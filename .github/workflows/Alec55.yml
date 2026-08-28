@@ -76,7 +76,6 @@ jobs:
                   elif not stripped.startswith("#"):
                       url = stripped
 
-              # Clean URL: Remove &xxx trailing params
               if url:
                   url = re.sub(r"&xxx=[^|]*", "", url)
                   url_base = url.split("|", 1)[0]
@@ -92,7 +91,6 @@ jobs:
                   else:
                       url = url_base
 
-              # Build formatted output block
               output = [extinf]
               output.append("#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey")
               if license_key:
@@ -105,6 +103,59 @@ jobs:
           def process_playlist(raw_content):
               lines = raw_content.splitlines()
               formatted_entries = []
+              current_entry = []
+
+              for line in lines:
+                  stripped = line.strip()
+                  if not stripped or stripped.startswith("#EXTM3U"):
+                      continue
+
+                  if stripped.startswith("#EXTINF:"):
+                      if current_entry:
+                          formatted = format_entry(current_entry)
+                          if not FILTER_TAGS or any(tag.lower() in formatted.lower() for tag in FILTER_TAGS):
+                              formatted_entries.append(formatted)
+                      current_entry = [stripped]
+                  elif current_entry:
+                      current_entry.append(stripped)
+
+              if current_entry:
+                  formatted = format_entry(current_entry)
+                  if not FILTER_TAGS or any(tag.lower() in formatted.lower() for tag in FILTER_TAGS):
+                      formatted_entries.append(formatted)
+
+              return formatted_entries
+
+          def main():
+              print("Downloading source playlist...")
+              raw_m3u = fetch_playlist(SOURCE_URL)
+
+              print("Formatting channel entries...")
+              entries = process_playlist(raw_m3u)
+              print(f"Total processed channels: {len(entries)}")
+
+              with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+                  f.write("#EXTM3U\n")
+                  for item in entries:
+                      f.write(item + "\n")
+
+              print(f"{OUTPUT_FILE} successfully written.")
+
+          if __name__ == "__main__":
+              main()
+          EOF
+
+      - name: Commit and Push Updated viva.m3u
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add viva.m3u
+          if git diff --staged --quiet; then
+            echo "No changes in viva.m3u"
+          else
+            git commit -m "Auto-refresh viva.m3u [skip ci]"
+            git push origin main
+          fi
               current_entry = []
 
               for line in lines:
