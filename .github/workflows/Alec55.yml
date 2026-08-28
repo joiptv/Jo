@@ -1,11 +1,13 @@
-name: Update viva.m3u Playlist
+name: Refresh viva.m3u Playlist
 
 on:
   schedule:
-    # Runs every 6 hours
-    - cron: '0 */6 * * *'
-  workflow_dispatch: # Allows manual run from Actions tab
+    # Runs every 30 minutes
+    - cron: '*/30 * * * *'
+  workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
   push:
+    branches:
+      - main
     paths:
       - '.github/workflows/update_viva.yml'
 
@@ -24,14 +26,18 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Download, Filter, and Generate viva.m3u
+      - name: Fetch and Format Playlist
         run: |
           python - << 'EOF'
+          import json
+          import re
           import urllib.request
 
-          SOURCE_URL = "https://alex4528.site/playlist/jtv.m3u"
+          SOURCE_URL = "https://raw.githubusercontent.com/joiptv/Jo/refs/heads/main/Alex55.m3u"
           OUTPUT_FILE = "viva.m3u"
-          FILTER_TAGS = ["jiotv"]
+
+          # Set specific keywords to filter (e.g. ["jiotv"]), or leave empty [] to process all channels
+          FILTER_TAGS = []
 
           def fetch_playlist(url):
               req = urllib.request.Request(
@@ -41,10 +47,73 @@ jobs:
               with urllib.request.urlopen(req, timeout=30) as response:
                   return response.read().decode("utf-8", errors="ignore")
 
+          def format_entry(entry_lines):
+              extinf = entry_lines[0]
+              license_key = None
+              user_agent = None
+              cookie = None
+              url = None
+              other_headers = []
+
+              for line in entry_lines[1:]:
+                  stripped = line.strip()
+                  if not stripped:
+                      continue
+
+                  if stripped.startswith("#KODIPROP:inputstream.adaptive.license_key="):
+                      license_key = stripped
+                  elif stripped.startswith("#KODIPROP:inputstream.adaptive.license_type="):
+                      pass  # Clearkey will be inserted automatically
+                  elif stripped.startswith("#EXTVLCOPT:http-user-agent="):
+                      user_agent = stripped.split("=", 1).strip()
+                  elif stripped.startswith("#EXTHTTP:"):
+                      json_part = stripped[len("#EXTHTTP:"):].strip()
+                      try:
+                          data = json.loads(json_part)
+                          if "cookie" in data:
+                              cookie = data["cookie"]
+                      except Exception:
+                          m = re.search(r'"cookie"\s*:\s*"([^"]+)"', json_part)
+                          if m:
+                              cookie = m.group(1)
+                  elif stripped.startswith("#"):
+                      other_headers.append(stripped)
+                  else:
+                      url = stripped
+
+              # Clean URL: Remove trailing query params like &xxx=...
+              if url:
+                  url = re.sub(r"&xxx=[^|]*", "", url)
+                  url_base = url.split("|", 1)[0]
+
+                  headers = []
+                  if user_agent:
+                      headers.append(f"User-Agent={user_agent}")
+                  if cookie:
+                      headers.append(f"Cookie={cookie}")
+
+                  if headers:
+                      url = f"{url_base}|{'&'.join(headers)}"
+                  else:
+                      url = url_base
+
+              # Assemble the converted block
+              output = [extinf]
+              if license_key:
+                  output.append("#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey")
+                  output.append(license_key)
+              
+              output.extend(other_headers)
+              
+              if url:
+                  output.append(url)
+
+              return "\n".join(output)
+
           def process_playlist(raw_content):
               lines = raw_content.splitlines()
-              matching_entries = []
-              current_entry_lines = []
+              formatted_entries = []
+              current_entry = []
 
               for line in lines:
                   stripped = line.strip()
@@ -52,41 +121,41 @@ jobs:
                       continue
 
                   if stripped.startswith("#EXTINF:"):
-                      current_entry_lines = [stripped]
-                  elif current_entry_lines:
-                      current_entry_lines.append(stripped)
-                      # When a line does not start with '#', it represents the stream URL
-                      if not stripped.startswith("#"):
-                          entry_text = "\n".join(current_entry_lines)
-                          entry_lower = entry_text.lower()
+                      if current_entry:
+                          formatted = format_entry(current_entry)
+                          if not FILTER_TAGS or any(tag.lower() in formatted.lower() for tag in FILTER_TAGS):
+                              formatted_entries.append(formatted)
+                      current_entry = [stripped]
+                  elif current_entry:
+                      current_entry.append(stripped)
 
-                          if any(tag in entry_lower for tag in FILTER_TAGS):
-                              matching_entries.append(entry_text)
+              if current_entry:
+                  formatted = format_entry(current_entry)
+                  if not FILTER_TAGS or any(tag.lower() in formatted.lower() for tag in FILTER_TAGS):
+                      formatted_entries.append(formatted)
 
-                          current_entry_lines = []
-
-              return matching_entries
+              return formatted_entries
 
           def main():
-              print("Fetching source playlist...")
-              content = fetch_playlist(SOURCE_URL)
-              
-              print("Filtering matching channels...")
-              matches = process_playlist(content)
-              print(f"Extracted {len(matches)} channels.")
+              print("Downloading source playlist...")
+              raw_m3u = fetch_playlist(SOURCE_URL)
+
+              print("Formatting channel entries...")
+              entries = process_playlist(raw_m3u)
+              print(f"Total processed channels: {len(entries)}")
 
               with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
                   f.write("#EXTM3U\n")
-                  for entry in matches:
-                      f.write(entry + "\n")
-              
-              print(f"Generated {OUTPUT_FILE} successfully.")
+                  for item in entries:
+                      f.write(item + "\n")
+
+              print(f"{OUTPUT_FILE} successfully written.")
 
           if __name__ == "__main__":
               main()
           EOF
 
-      - name: Commit and Push Changes
+      - name: Commit and Push Updated viva.m3u
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
@@ -94,6 +163,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes detected in viva.m3u."
           else
-            git commit -m "Auto-update viva.m3u [skip ci]"
+            git commit -m "Auto-refresh viva.m3u [skip ci]"
+            git pull --rebase origin main || true
             git push
           fi
