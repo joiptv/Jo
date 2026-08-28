@@ -2,7 +2,6 @@ name: Refresh viva.m3u Playlist
 
 on:
   schedule:
-    # Runs every 30 minutes
     - cron: '*/30 * * * *'
   workflow_dispatch:
   push:
@@ -26,84 +25,16 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Fetch and Format Playlist
+      - name: Run Script
+        run: python update.py
+
+      - name: Commit and Push
         run: |
-          python - << 'EOF'
-          import json
-          import re
-          import urllib.request
-
-          SOURCE_URL = "https://alex4528.site/playlist/jtv.m3u"
-          OUTPUT_FILE = "viva.m3u"
-          FILTER_TAGS = []
-
-          def fetch_playlist(url):
-              req = urllib.request.Request(
-                  url,
-                  headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
-              )
-              with urllib.request.urlopen(req, timeout=30) as response:
-                  return response.read().decode("utf-8", errors="ignore")
-
-          def format_entry(entry_lines):
-              extinf = entry_lines[0]
-              license_key = None
-              user_agent = None
-              cookie = None
-              url = None
-
-              for line in entry_lines[1:]:
-                  stripped = line.strip()
-                  if not stripped:
-                      continue
-
-                  if stripped.startswith("#KODIPROP:inputstream.adaptive.license_key="):
-                      license_key = stripped.split("=", 1)[1].strip()
-                  elif stripped.startswith("#EXTVLCOPT:http-user-agent="):
-                      parts = stripped.split("=", 1)
-                      if len(parts) > 1:
-                          user_agent = parts[1].strip()
-                  elif stripped.startswith("#EXTHTTP:"):
-                      json_part = stripped[len("#EXTHTTP:"):].strip()
-                      try:
-                          data = json.loads(json_part)
-                          if "cookie" in data:
-                              cookie = data["cookie"]
-                      except Exception:
-                          m = re.search(r'"cookie"\s*:\s*"([^"]+)"', json_part)
-                          if m:
-                              cookie = m.group(1)
-                  elif not stripped.startswith("#"):
-                      url = stripped
-
-              if url:
-                  url = re.sub(r"&xxx=[^|]*", "", url)
-                  url_base = url.split("|", 1)[0]
-
-                  headers = []
-                  if user_agent:
-                      headers.append(f"User-Agent={user_agent}")
-                  if cookie:
-                      headers.append(f"Cookie={cookie}")
-
-                  if headers:
-                      url = f"{url_base}|{'&'.join(headers)}"
-                  else:
-                      url = url_base
-
-              output = [extinf]
-              output.append("#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey")
-              if license_key:
-                  output.append(f"#KODIPROP:inputstream.adaptive.license_key={license_key}")
-              if url:
-                  output.append(url)
-
-              return "\n".join(output)
-
-          def process_playlist(raw_content):
-              lines = raw_content.splitlines()
-              formatted_entries = []
-              current_entry = []
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add viva.m3u
+          git commit -m "Auto-refresh viva.m3u [skip ci]" || echo "No changes to commit"
+          git push origin main
 
               for line in lines:
                   stripped = line.strip()
