@@ -11,3 +11,17 @@ https://jiotvmblive.cdn.jio.com/bpk-tv/Soham_TV_MOB/WDVLive/index.mpd?__hdnea__=
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36
 #EXTHTTP:{"cookie":"__hdnea__=st=1787909407\~exp=1787931007\~acl=/*\~hmac=a273976e8b08cd46cbc01c07a56451c96771abf0a3d2dfe0617b3567b53eeee3"}
 https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Plus_MOB/WDVLive/index.mpd?__hdnea__=st=1787909407\~exp=1787931007\~acl=/*\~hmac=a273976e8b08cd46cbc01c07a56451c96771abf0a3d2dfe0617b3567b53eeee3
+
+
+#EXTINF:-1 tvg-id="Asianet Plus" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_Plus.png" group-title="Entertainment",Asianet Plus
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","kid":"CTwAhf60VU-YBPc9l4en8w","k":"THFJcjAY6DQOQ1h0mU6YdA"},{"kty":"oct","kid":"ayXd81t1XCau-KBkki7hNg","k":"LDNrtIRjrAh_xTp40PgbvA"},{"kty":"oct","kid":"Z59EgnrjU7auAQRiR7R6Tw","k":"ekAeC5R4YcVkr02r-JQQ_A"},{"kty":"oct","kid":"CE0iJjB-U5yQUfECF-lZVg","k":"EoeYj6og8godtd7SFNf3AA"}],"type":"temporary"}
+https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Plus_MOB/WDVLive/index.mpd?__hdnea__=st=1787909407~exp=1787931007~acl=/*~hmac=a273976e8b08cd46cbc01c07a56451c96771abf0a3d2dfe0617b3567b53eeee3|User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 @alex_vault&Cookie=__hdnea__=st=1787909407~exp=1787931007~acl=/*~hmac=a273976e8b08cd46cbc01c07a56451c96771abf0a3d2dfe0617b3567b53eeee3
+
+
+#EXTINF:-1 tvg-id="Asianet Plus" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_Plus.png" group-title="Entertainment",Asianet Plus
+#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey
+#KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","kid":"CTwAhf60VU-YBPc9l4en8w","k":"THFJcjAY6DQOQ1h0mU6YdA"},{"kty":"oct","kid":"ayXd81t1XCau-KBkki7hNg","k":"LDNrtIRjrAh_xTp40PgbvA"},{"kty":"oct","kid":"Z59EgnrjU7auAQRiR7R6Tw","k":"ekAeC5R4YcVkr02r-JQQ_A"},{"kty":"oct","kid":"CE0iJjB-U5yQUfECF-lZVg","k":"EoeYj6og8godtd7SFNf3AA"}],"type":"temporary"}
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 @alex_vault
+#EXTHTTP:{"cookie":"__hdnea__=st=1787909407~exp=1787931007~acl=/*~hmac=a273976e8b08cd46cbc01c07a56451c96771abf0a3d2dfe0617b3567b53eeee3"}
+https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Plus_MOB/WDVLive/index.mpd?__hdnea__=st=1787909407~exp=1787931007~acl=/*~hmac=a273976e8b08cd46cbc01c07a56451c96771abf0a3d2dfe0617b3567b53eeee3
