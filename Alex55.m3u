@@ -1,0 +1,5 @@
+#EXTINF:-1 tvg-id="Soham TV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Soham_TV.png" group-title="Devotional", Soham TV
+#KODIPROP:inputstream.adaptive.license_key={"keys":[{"kty":"oct","kid":"mGJ2N_pDUJ2EFJs5E3WD6w","k":"iDEQOTKZmPPgoVIRM-RIUQ"},{"kty":"oct","kid":"JvabbyvjVk2tEWb2ZzcP0g","k":"KhdHBF1wc2Kj4y6tj9CQMQ"},{"kty":"oct","kid":"MI7Ss7NZW0mDSrXAMnZdsw","k":"h5AZDkTucoqOds7GgJ6KMg"},{"kty":"oct","kid":"TPDAzjHgWgabNcU9cFlHmQ","k":"uayJAvbE-8-h0McNRydfNA"}],"type":"temporary"}
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36
+#EXTHTTP:{"cookie":"__hdnea__=st=1787909407\~exp=1787931007\~acl=/*\~hmac=a273976e8b08cd46cbc01c07a56451c96771abf0a3d2dfe0617b3567b53eeee3"}
+https://jiotvmblive.cdn.jio.com/bpk-tv/Soham_TV_MOB/WDVLive/index.mpd?__hdnea__=st=1787909407\~exp=1787931007\~acl=/*\~hmac=a273976e8b08cd46cbc01c07a56451c96771abf0a3d2dfe0617b3567b53eeee3
