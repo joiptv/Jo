@@ -1,0 +1,158 @@
+name: Refresh vivo.m3u Playlist
+
+on:
+  schedule:
+    # Runs every 30 minutes
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/update_viva.yml'
+
+jobs:
+  update-playlist:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch and Format Playlist
+        run: |
+          python - << 'EOF'
+          import json
+          import re
+          import urllib.request
+
+          SOURCE_URL = "https://alex4528.site/jplus/playlist.m3u"
+          OUTPUT_FILE = "vivo.m3u"
+          FILTER_TAGS = []
+
+          def fetch_playlist(url):
+              req = urllib.request.Request(
+                  url,
+                  headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+              )
+              with urllib.request.urlopen(req, timeout=30) as response:
+                  return response.read().decode("utf-8", errors="ignore")
+
+          def format_entry(entry_lines):
+              extinf = entry_lines[0]
+              license_key = None
+              user_agent = None
+              cookie = None
+              url = None
+
+              for line in entry_lines[1:]:
+                  stripped = line.strip()
+                  if not stripped:
+                      continue
+
+                  if stripped.startswith("#KODIPROP:inputstream.adaptive.license_key="):
+                      license_key = stripped.split("=", 1)[1].strip()
+                  elif stripped.startswith("#EXTVLCOPT:http-user-agent="):
+                      parts = stripped.split("=", 1)
+                      if len(parts) > 1:
+                          user_agent = parts[1].strip()
+                  elif stripped.startswith("#EXTHTTP:"):
+                      json_part = stripped[len("#EXTHTTP:"):].strip()
+                      try:
+                          data = json.loads(json_part)
+                          if "cookie" in data:
+                              cookie = data["cookie"]
+                      except Exception:
+                          m = re.search(r'"cookie"\s*:\s*"([^"]+)"', json_part)
+                          if m:
+                              cookie = m.group(1)
+                  elif not stripped.startswith("#"):
+                      url = stripped
+
+              if url:
+                  url = re.sub(r"&xxx=[^|]*", "", url)
+                  url_base = url.split("|", 1)[0]
+
+                  headers = []
+                  if user_agent:
+                      headers.append(f"User-Agent={user_agent}")
+                  if cookie:
+                      headers.append(f"Cookie={cookie}")
+
+                  if headers:
+                      url = f"{url_base}|{'&'.join(headers)}"
+                  else:
+                      url = url_base
+
+              output = [extinf]
+              output.append("#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey")
+              if license_key:
+                  output.append(f"#KODIPROP:inputstream.adaptive.license_key={license_key}")
+              if url:
+                  output.append(url)
+
+              return "\n".join(output)
+
+          def process_playlist(raw_content):
+              lines = raw_content.splitlines()
+              formatted_entries = []
+              current_entry = []
+
+              for line in lines:
+                  stripped = line.strip()
+                  if not stripped or stripped.startswith("#EXTM3U"):
+                      continue
+
+                  if stripped.startswith("#EXTINF:"):
+                      if current_entry:
+                          formatted = format_entry(current_entry)
+                          if not FILTER_TAGS or any(tag.lower() in formatted.lower() for tag in FILTER_TAGS):
+                              formatted_entries.append(formatted)
+                      current_entry = [stripped]
+                  elif current_entry:
+                      current_entry.append(stripped)
+
+              if current_entry:
+                  formatted = format_entry(current_entry)
+                  if not FILTER_TAGS or any(tag.lower() in formatted.lower() for tag in FILTER_TAGS):
+                      formatted_entries.append(formatted)
+
+              return formatted_entries
+
+          def main():
+              print("Downloading source playlist...")
+              raw_m3u = fetch_playlist(SOURCE_URL)
+
+              print("Formatting channel entries...")
+              entries = process_playlist(raw_m3u)
+              print(f"Total processed channels: {len(entries)}")
+
+              with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+                  f.write("#EXTM3U\n")
+                  for item in entries:
+                      f.write(item + "\n")
+
+              print(f"{OUTPUT_FILE} successfully written.")
+
+          if __name__ == "__main__":
+              main()
+          EOF
+
+      - name: Commit and Push Updated viva.m3u
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add vivo.m3u
+          if git diff --staged --quiet; then
+            echo "No changes in vivo.m3u"
+          else
+            git commit -m "Auto-refresh vivo.m3u [skip ci]"
+            git push origin main
+          fi
