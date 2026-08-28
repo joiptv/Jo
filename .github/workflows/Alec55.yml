@@ -4,7 +4,7 @@ on:
   schedule:
     # Runs every 30 minutes
     - cron: '*/30 * * * *'
-  workflow_dispatch: # Allows manual trigger anytime from GitHub Actions tab
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -31,13 +31,23 @@ jobs:
           python - << 'EOF'
           import json
           import re
+          import base64
           import urllib.request
 
-          SOURCE_URL = "https://raw.githubusercontent.com/joiptv/Jo/refs/heads/main/Alex55.m3u"
+          SOURCE_URL = "https://alex4528.site/playlist/jtv.m3u"
           OUTPUT_FILE = "viva.m3u"
-
-          # Set specific keywords to filter (e.g. ["jiotv"]), or leave empty [] to process all channels
           FILTER_TAGS = []
+
+          def b64url_to_hex(val):
+              """Convert base64 / base64url string to hex string."""
+              val = val.replace('-', '+').replace('_', '/')
+              padding = len(val) % 4
+              if padding:
+                  val += '=' * (4 - padding)
+              try:
+                  return base64.b64decode(val).hex()
+              except Exception:
+                  return None
 
           def fetch_playlist(url):
               req = urllib.request.Request(
@@ -49,23 +59,46 @@ jobs:
 
           def format_entry(entry_lines):
               extinf = entry_lines[0]
-              license_key = None
+              
+              # Ensure tvg-name is added if missing
+              if 'tvg-name=' not in extinf and 'tvg-id="' in extinf:
+                  m = re.search(r'tvg-id="([^"]+)"', extinf)
+                  if m:
+                      tvg_id_val = m.group(1)
+                      extinf = extinf.replace(f'tvg-id="{tvg_id_val}"', f'tvg-id="{tvg_id_val}" tvg-name="{tvg_id_val}"', 1)
+
+              hex_key = None
               user_agent = None
               cookie = None
               url = None
-              other_headers = []
 
               for line in entry_lines[1:]:
                   stripped = line.strip()
                   if not stripped:
                       continue
 
+                  # Extract and convert base64url JSON Clearkey to hex kid:key
                   if stripped.startswith("#KODIPROP:inputstream.adaptive.license_key="):
-                      license_key = stripped
-                  elif stripped.startswith("#KODIPROP:inputstream.adaptive.license_type="):
-                      pass  # Clearkey will be inserted automatically
+                      raw_val = stripped.split("=", 1)[1].strip()
+                      try:
+                          key_data = json.loads(raw_val)
+                          if "keys" in key_data and len(key_data["keys"]) > 0:
+                              first_key = key_data["keys"][0]
+                              kid_hex = b64url_to_hex(first_key.get("kid", ""))
+                              k_hex = b64url_to_hex(first_key.get("k", ""))
+                              if kid_hex and k_hex:
+                                  hex_key = f"{kid_hex}:{k_hex}"
+                      except Exception:
+                          if ":" in raw_val and "{" not in raw_val:
+                              hex_key = raw_val
+
                   elif stripped.startswith("#EXTVLCOPT:http-user-agent="):
-                      user_agent = stripped.split("=", 1).strip()
+                      parts = stripped.split("=", 1)
+                      if len(parts) > 1:
+                          ua = parts[1].strip()
+                          # Clean trailing custom comments if present
+                          user_agent = ua.split(" @")[0].strip()
+
                   elif stripped.startswith("#EXTHTTP:"):
                       json_part = stripped[len("#EXTHTTP:"):].strip()
                       try:
@@ -76,12 +109,10 @@ jobs:
                           m = re.search(r'"cookie"\s*:\s*"([^"]+)"', json_part)
                           if m:
                               cookie = m.group(1)
-                  elif stripped.startswith("#"):
-                      other_headers.append(stripped)
-                  else:
+                  elif not stripped.startswith("#"):
                       url = stripped
 
-              # Clean URL: Remove trailing query params like &xxx=...
+              # Clean URL: strip &xxx parameter
               if url:
                   url = re.sub(r"&xxx=[^|]*", "", url)
                   url_base = url.split("|", 1)[0]
@@ -97,14 +128,75 @@ jobs:
                   else:
                       url = url_base
 
-              # Assemble the converted block
+              # Build formatted output exactly matching your reference
               output = [extinf]
-              if license_key:
-                  output.append("#KODIPROP:inputstream.adaptive.license_type=org.w3.clearkey")
-                  output.append(license_key)
-              
-              output.extend(other_headers)
-              
+              output.append("#KODIPROP:inputstream.adaptive.license_type=clearkey")
+              if hex_key:
+                  output.append(f"#KODIPROP:inputstream.adaptive.license_key={hex_key}")
+              if user_agent:
+                  output.append(f"#EXTVLCOPT:http-user-agent={user_agent}")
+              if url:
+                  output.append(url)
+
+              return "\n".join(output)
+
+          def process_playlist(raw_content):
+              lines = raw_content.splitlines()
+              formatted_entries = []
+              current_entry = []
+
+              for line in lines:
+                  stripped = line.strip()
+                  if not stripped or stripped.startswith("#EXTM3U"):
+                      continue
+
+                  if stripped.startswith("#EXTINF:"):
+                      if current_entry:
+                          formatted = format_entry(current_entry)
+                          if not FILTER_TAGS or any(tag.lower() in formatted.lower() for tag in FILTER_TAGS):
+                              formatted_entries.append(formatted)
+                      current_entry = [stripped]
+                  elif current_entry:
+                      current_entry.append(stripped)
+
+              if current_entry:
+                  formatted = format_entry(current_entry)
+                  if not FILTER_TAGS or any(tag.lower() in formatted.lower() for tag in FILTER_TAGS):
+                      formatted_entries.append(formatted)
+
+              return formatted_entries
+
+          def main():
+              print("Downloading source playlist...")
+              raw_m3u = fetch_playlist(SOURCE_URL)
+
+              print("Formatting channel entries...")
+              entries = process_playlist(raw_m3u)
+              print(f"Total processed channels: {len(entries)}")
+
+              with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+                  f.write("#EXTM3U\n")
+                  for item in entries:
+                      f.write(item + "\n")
+
+              print(f"{OUTPUT_FILE} successfully written.")
+
+          if __name__ == "__main__":
+              main()
+          EOF
+
+      - name: Commit and Push Updated viva.m3u
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add viva.m3u
+          if git diff --staged --quiet; then
+            echo "No changes detected in viva.m3u."
+          else
+            git commit -m "Auto-refresh viva.m3u [skip ci]"
+            git pull --rebase origin main || true
+            git push
+          fi
               if url:
                   output.append(url)
 
