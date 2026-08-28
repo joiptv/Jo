@@ -29,7 +29,7 @@ jobs:
           python - << 'EOF'
           import urllib.request
 
-          SOURCE_URL = "https://raw.githubusercontent.com/joiptv/Jo/refs/heads/main/Alex55.m3u"
+          SOURCE_URL = "https://alex4528.site/playlist/jtv.m3u"
           OUTPUT_FILE = "viva.m3u"
           FILTER_TAGS = ["jiotv"]
 
