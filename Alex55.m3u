@@ -38,3 +38,9 @@ https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Plus_MOB/WDVLive/index.mpd?__hdne
     "cookie": "__hdnea__=st=1787969874~exp=1787991474~acl=/bpk-tv/Star_Plus_HD_BTS/WDVLive/*~hmac=0f5115a3dab069ba6500559ba7c90f4f895047dc681d6f2749d19321a15d6e7c"
   },
   {
+#EXTINF:-1 tvg-id="1132" tvg-name="Star Plus HD" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Plus_HD.png" group-title="Entertainment",Star Plus HD
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=6f7b7241b2935a909d389fe318e5baaa:65783311644973348f359dc154bb41db
+#EXTVLCOPT:http-user-agent=plaYtv/7.0.8 (Linux;Android 13) ExoPlayerLib/2.11.7
+#EXTHTTP:{"cookie":"__hdnea__=st=1787969874~exp=1787991474~acl=/bpk-tv/Star_Plus_HD_BTS/WDVLive/*~hmac=0f5115a3dab069ba6500559ba7c90f4f895047dc681d6f2749d19321a15d6e7c"}
+https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Plus_HD_BTS/WDVLive/index.mpd|Cookie=__hdnea__=st=1787969874~exp=1787991474~acl=/bpk-tv/Star_Plus_HD_BTS/WDVLive/*~hmac=0f5115a3dab069ba6500559ba7c90f4f895047dc681d6f2749d19321a15d6e7c
