@@ -25,3 +25,16 @@ https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Plus_MOB/WDVLive/index.mpd?__hdne
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 @alex_vault
 #EXTHTTP:{"cookie":"__hdnea__=st=1787909407~exp=1787931007~acl=/*~hmac=a273976e8b08cd46cbc01c07a56451c96771abf0a3d2dfe0617b3567b53eeee3"}
 https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Plus_MOB/WDVLive/index.mpd?__hdnea__=st=1787909407~exp=1787931007~acl=/*~hmac=a273976e8b08cd46cbc01c07a56451c96771abf0a3d2dfe0617b3567b53eeee3
+
+
+  {
+    "id": "1132",
+    "key": "65783311644973348f359dc154bb41db",
+    "url": "https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Plus_HD_BTS/WDVLive/index.mpd",
+    "logo": "https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Plus_HD.png",
+    "name": "Star Plus HD",
+    "keyId": "6f7b7241b2935a909d389fe318e5baaa",
+    "category": "Entertainment",
+    "cookie": "__hdnea__=st=1787969874~exp=1787991474~acl=/bpk-tv/Star_Plus_HD_BTS/WDVLive/*~hmac=0f5115a3dab069ba6500559ba7c90f4f895047dc681d6f2749d19321a15d6e7c"
+  },
+  {
