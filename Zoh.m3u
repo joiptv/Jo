@@ -5,7 +5,6 @@
 https://livestream15.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_index.mpd
 #EXTINF:-1 tvg-id="443" tvg-name="Asianet HD" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_HD.png" group-title="Malayalam",Asianet HD
 https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/AsianetHD.m3u8
-
 #EXTINF:-1 tvg-id="22020" tvg-logo="https://i.imgur.com/fjgzW20.png" group-title="Malayalam Entertainment",Mazhavil Manorama HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=37b4403a66f2565da33ba3b5704bb178:449f87256b3c1d7c2cdcbe04cbfd5530
@@ -20,7 +19,6 @@ https://livestream6.sunnxt.com/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_inde
 https://cdn-3.pishow.tv/live/1479/master.m3u8
 #EXTINF:-1 tvg-id="634" tvg-name="Flower TV" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Flower_TV.png" group-title="Malayalam",Flower TV
 https://ranapkx.site/RANAPK33k/TVD/play.php?id=908579
-
 #EXTINF:-1 tvg-id="" tvg-name="Zee Keralam HD" tvg-logo="https://akamaividz2.zee5.com/image/upload/w_1197,h_674,c_scale,f_webp,q_auto:eco/resources/0-9-129/channel_list/1920x1080list28fd564242df4f358b7b3671b8bdf99a.png" group-title="Entertainment",Zee Keralam HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=1f85fea5f617503d9166990f21afc2c2:b2fc26f5b5595606827d4000a9d1b178
@@ -32,13 +30,10 @@ https://login.bheem.tv/bpk-tv/22389/output/index.mpd?
 #EXTINF:-1 tvg-id="459" tvg-name="Asianet Movies HD" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_Movies_HD.png" group-title="Malayalam",Asianet Movies HD
 https://da86m1sqpm3o0.cloudfront.net/28072023/smil:asianetmovies1.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="1153" tvg-name="Asianet Movies" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_Movies.png" group-title="Malayalam",Asianet Movies
-
 #EXTINF:-1 tvg-id="1139" tvg-name="Asianet Plus" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Asianet_Plus.png" group-title="Malayalam",Asianet Plus
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
 #EXTVLCOPT:http-referrer=https://bhoomtv.me/
 https://anet.keralive.workers.dev/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/asianetplus_live_https/index.m3u8
-
-
 #EXTINF:-1 tvg-id="" tvg-name="" tvg-logo="https://i.ibb.co/DgfjRPnf/Picsart-25-02-10-14-22-46-534.png" group-title="Entertainment",SURYA Movies
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=6b67bccef7024f2da29b42e10dc13f89:2e8460c47d3f01693e193dba5963a5e1
@@ -110,7 +105,6 @@ https://jiotvmblive.cdn.jio.com/bpk-tv/Star_Movies_Select_HD_MOB/WDVLive/index.m
 #EXTVLCOPT:http-referrer=https://www.sonyliv.com/
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36
 https://sonyliv.joker-verse.workers.dev/master.m3u8?id=1000009258&uid=8004188626&pass=61498d15
-
 #EXTINF:-1 tvg-logo="https://d229kpbsb5jevy.cloudfront.net/timesplay/content/common/logos/channel/logos/wthfwe.jpeg" group-logo="https://upload.wikimedia.org/wikipedia/commons/1/19/DishTV_logo_%282025%29.svg" group-title="English Movies",Movies Now HD
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=40f019b86241d23ef075633fd7f1e927:058dec845bd340178a388edd104a015e
