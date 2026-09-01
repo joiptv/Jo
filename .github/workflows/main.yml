@@ -31,7 +31,7 @@ jobs:
           import os
 
           FILE_NAME = "Zoh.m3u"
-          SOURCE_URL = "https://t.ayush848694.workers.dev/"
+          SOURCE_URL = "https://raw.githubusercontent.com/joiptv/Alx/refs/heads/main/vivo.m3u"
           HEADERS = {"User-Agent": "Mozilla/5.0"}
 
           def get_all_blocks(content):
