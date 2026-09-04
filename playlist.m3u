@@ -20,6 +20,7 @@ https://mmtvnews1.akamaized.net/v1/master/673630b269b766886555eebfddd4f27f3de3ab
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Mathrubhumi News" tvg-logo="https://i.postimg.cc/RF04H4H3/mathrubhumi-news.png" group-title="Malayalam News",Mathrubhumi News
 https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/mathrubhuminews_nim_https/110322/mathrubhuminews/playlist.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Media One" tvg-logo="https://i.postimg.cc/L6FgkVh8/Media-One.png" http-referrer="https://colorsportscreen.com/" group-title="Malayalam News",Media One
+https://mumt01.tangotv.in/O5aw8Zn3MEDIAONETV/tracks-v1a1/mono.m3u8
 https://streamhub.dhruvpatil681.workers.dev/862.m3u8
 https://streams.tangotv.in/MEDIAONETV/ORIGIN/index.m3u8
 #EXTVLCOPT:http-referrer=https://colorsportscreen.com/
@@ -122,8 +123,9 @@ https://oqgdrkxby4rm-hls-live.5centscdn.com/kaumudytv/live.stream/chunks.m3u8
 #EXTVLCOPT:http-referrer=https://bhoomtv.me/
 https://yupp-tv.keralive.workers.dev/120723/smil:jeevan.smil/playlist.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Darshana TV" tvg-logo="https://i.postimg.cc/Z5J15NMJ/Darshana-TV.png" group-title="Malayalam",Darshana TV 
-#EXTVLCOPT:http-referrer=https://colorsportscreen.com/
+#EXTVLCOPT:http-referrer=hthttps://bhoomtv.me/
 https://colorsportscreen.com/freetv/stream.m3u8?id=8914ef2ce69d
+https://yuppparoriglin.akamaized.net/181224/smil:darshanatv.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="NTV" tvg-logo="https://i.postimg.cc/Df984p2r/ntv-uae.png" group-title="Malayalam",NTV UAE
 https://stream.logichost.in/NTV/live/playlist.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Vibgyor TV" tvg-logo="https://i.postimg.cc/QxHqvM1D/Vibgyor-TV.png" group-title="Malayalam",Vibgyor TV
