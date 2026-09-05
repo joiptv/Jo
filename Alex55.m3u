@@ -1,33 +1,5 @@
-#EXTINF:-1 tvg-name="Asianet" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7420/567420-h" group-title="Entertainment", Asianet
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=1dd2d0a48be14cc3a9666d861dd60000:24e889ab81444af0bceb8f8b9a530b18
-#EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169(Android/15)
-#EXTVLCOPT:http-referrer=https://www.hotstar.com/
-#EXTVLCOPT:http-extra-headers=Origin: https://www.hotstar.com
-#EXTVLCOPT:http-cookie=hdntl=exp=1788074432~acl=%2f*~id=c362582a8169198d984bcedc535831f7~data=hdntl~hmac=ab6edd11f58b1b8a95a6b151a73602166101a0be0f8d2c6af6a0b2d7a4108fd7
-#EXTHTTP:{"Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/","User-Agent":"Hotstar;in.startv.hotstar/25.02.24.8.11169(Android/15)","Cookie":"hdntl=exp=1788074432~acl=%2f*~id=c362582a8169198d984bcedc535831f7~data=hdntl~hmac=ab6edd11f58b1b8a95a6b151a73602166101a0be0f8d2c6af6a0b2d7a4108fd7"}
-https://livetv.hotstar.com/mp2/gec-india-1540057084/6569043a1d874fb49fc2cf2f273fe097/index.mpd
-
-#EXTINF:-1 tvg-id="1132" tvg-name="Star Plus HD" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Plus_HD.png" group-title="Entertainment",Star Plus HD
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=6f7b7241b2935a909d389fe318e5baaa:65783311644973348f359dc154bb41db
-#EXTVLCOPT:http-user-agent=plaYtv/7.0.8 (Linux;Android 13) ExoPlayerLib/2.11.7
-#EXTHTTP:{"cookie":"__hdnea__=st=1787969874~exp=1787991474~acl=/bpk-tv/Star_Plus_HD_BTS/WDVLive/*~hmac=0f5115a3dab069ba6500559ba7c90f4f895047dc681d6f2749d19321a15d6e7c"}
-https://jiotvpllive.cdn.jio.com/bpk-tv/Star_Plus_HD_BTS/WDVLive/index.mpd|Cookie=__hdnea__=st=1787969874~exp=1787991474~acl=/bpk-tv/Star_Plus_HD_BTS/WDVLive/*~hmac=0f5115a3dab069ba6500559ba7c90f4f895047dc681d6f2749d19321a15d6e7c
-
-
-#EXTINF:-1 tvg-name="Asianet" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7420/567420-h" group-title="Entertainment",Asianet
-#KODIPROP:inputstream.adaptive.manifest_type=mpd
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=1dd2d0a48be14cc3a9666d861dd60000:24e889ab81444af0bceb8f8b9a530b18
-#EXTVLCOPT:http-user-agent=Hotstar;in.startv.hotstar/25.02.24.8.11169@Premiumplugx(Android/15)
-#EXTVLCOPT:http-referrer=https://www.hotstar.com/
-#EXTHTTP:{"Origin":"https://www.hotstar.com","Referer":"https://www.hotstar.com/","User-Agent":"Hotstar;in.startv.hotstar/25.02.24.8.11169@Premiumplugx(Android/15)","Cookie":"hdntl=exp=1788074432~acl=%2f*~id=c362582a8169198d984bcedc535831f7~data=hdntl~hmac=ab6edd11f58b1b8a95a6b151a73602166101a0be0f8d2c6af6a0b2d7a4108fd7"}
-https://livetv.hotstar.com/mp2/gec-india-1540057084/6569043a1d874fb49fc2cf2f273fe097/index.mpd|Cookie=hdntl=exp=1788074432~acl=%2f*~id=c362582a8169198d984bcedc535831f7~data=hdntl~hmac=ab6edd11f58b1b8a95a6b151a73602166101a0be0f8d2c6af6a0b2d7a4108fd7&Referer=https://www.hotstar.com/&Origin=https://www.hotstar.com&User-Agent=Hotstar;in.startv.hotstar/25.02.24.8.11169@Premiumplugx(Android/15)
-
-
-#EXTINF:-1 tvg-id="Asianet.in" tvg-name="Asianet" tvg-logo="https://img10.hotstar.com/image/upload/f_auto,q_90,w_1920/sources/r1/cms/prod/7420/567420-h" group-title="Entertainment",Asianet
-#KODIPROP:inputstream.adaptive.license_type=clearkey
-#KODIPROP:inputstream.adaptive.license_key=1dd2d0a48be14cc3a9666d861dd60000:24e889ab81444af0bceb8f8b9a530b18
-https://livetv.hotstar.com/mp2/gec-india-1540057084/6569043a1d874fb49fc2cf2f273fe097/index.mpd|Cookie=hdntl=exp=1788074432~acl=%2f*~id=c362582a8169198d984bcedc535831f7~data=hdntl~hmac=ab6edd11f58b1b8a95a6b151a73602166101a0be0f8d2c6af6a0b2d7a4108fd7&Referer=https://www.hotstar.com/&Origin=https://www.hotstar.com&User-Agent=Hotstar;in.startv.hotstar/25.02.24.8.11169(Android/15)
+#EXTINF:-1 tvg-id="1132" tvg-name="Star Plus HD" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Plus_HD.png" tvg-language="hin" group-title="Jio TV+ | Entertainment",Star Plus HD
+#EXTVLCOPT:http-user-agent=@shoebbro
+#EXTVLCOPT:http-referrer=https://www.jiotv.com/
+#EXTVLCOPT:http-cookie=__hdnea__=st=1788609030~exp=1788630630~acl=/*~hmac=55a122c166554d6774daaf76ac1dc3626b06f39c523e93760cad3e271fa2e09e
+https://jiotvmblive.cdn.jio.com/bpk-tv/Star_Plus_HD_MOB/WDVLive/index.mpd|User-Agent=@shoebbro&Referer=https://www.jiotv.com/&Cookie=__hdnea__=st=1788609030~exp=1788630630~acl=/*~hmac=55a122c166554d6774daaf76ac1dc3626b06f39c523e93760cad3e271fa2e09e
