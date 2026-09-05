@@ -7,3 +7,13 @@
 #EXTVLCOPT:http-referrer=https://www.jiotv.com/
 #EXTVLCOPT:http-cookie=__hdnea__=st=1788609030~exp=1788630630~acl=/*~hmac=55a122c166554d6774daaf76ac1dc3626b06f39c523e93760cad3e271fa2e09e
 https://jiotvmblive.cdn.jio.com/bpk-tv/Star_Plus_HD_MOB/WDVLive/index.mpd|User-Agent=@shoebbro&Referer=https://www.jiotv.com/&Cookie=__hdnea__=st=1788609030~exp=1788630630~acl=/*~hmac=55a122c166554d6774daaf76ac1dc3626b06f39c523e93760cad3e271fa2e09e
+
+
+
+
+#KODIPROP:inputstream.adaptive.license_type=clearkey
+#KODIPROP:inputstream.adaptive.license_key=c6255706bca250079aeaf1fc4474d1b9:eab6217aac6f1feec103120e6218eb43
+#EXTINF:-1 tvg-id="1132" tvg-name="Star Plus HD" tvg-logo="https://jiotv.catchup.cdn.jio.com/dare_images/images/Star_Plus_HD.png" tvg-language="hin" group-title="Jio TV+ | Entertainment",Star Plus HD
+#EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) - @Vortex Tv - ExoPlayerLib/824.0
+#EXTHTTP:{"User-Agent":"plaYtv/7.1.3 (Linux;Android 13) - @Vortex Tv - ExoPlayerLib/824.0","cookie":"__hdnea__=st=1788609030~exp=1788630630~acl=/*~hmac=55a122c166554d6774daaf76ac1dc3626b06f39c523e93760cad3e271fa2e09e"}
+https://jiotvmblive.cdn.jio.com/bpk-tv/Star_Plus_HD_MOB/WDVLive/index.mpd
