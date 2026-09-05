@@ -5,7 +5,7 @@
 https://livestream15.sunnxt.com/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_index.mpd
 #EXTINF:-1 tvg-id="443" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_HD.png" group-title="Malayalam",Asianet HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) - @Vortex Tv - ExoPlayerLib/824.0
-#EXTHTTP:{"cookie":"__hdnea__=st=1788616805~exp=1788638405~acl=/*~hmac=a645546c479dc058e6f77a17537edde5c5c117a6f4981816b644b5a184acf23b"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1788631218~exp=1788652818~acl=/*~hmac=39be0570747f94a6c170e3d970c80bba217678124c7297615b15eff0e3626160"}
 https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_HD_MOB/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://vortexsu.azmodz.in/vortextv/serve/keys/key.php?id=445
@@ -23,7 +23,7 @@ https://livestream6.sunnxt.com/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_inde
 https://cdn-3.pishow.tv/live/1479/master.m3u8
 #EXTINF:-1 tvg-id="634" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Flower_TV.png" group-title="Malayalam",Flower TV
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) - @Vortex Tv - ExoPlayerLib/824.0
-#EXTHTTP:{"cookie":"__hdnea__=st=1788616805~exp=1788638405~acl=/*~hmac=a645546c479dc058e6f77a17537edde5c5c117a6f4981816b644b5a184acf23b"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1788631218~exp=1788652818~acl=/*~hmac=39be0570747f94a6c170e3d970c80bba217678124c7297615b15eff0e3626160"}
 https://jiotvmblive.cdn.jio.com/bpk-tv/Flower_TV_MOB/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://vortexsu.azmodz.in/vortextv/serve/keys/key.php?id=636
@@ -37,19 +37,19 @@ https://liveserverayush.onrender.com/0-9-129.m3u8
 https://login.bheem.tv/bpk-tv/22389/output/index.mpd?
 #EXTINF:-1 tvg-id="459" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_Movies_HD.png" group-title="Malayalam",Asianet Movies HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) - @Vortex Tv - ExoPlayerLib/824.0
-#EXTHTTP:{"cookie":"__hdnea__=st=1788616805~exp=1788638405~acl=/*~hmac=a645546c479dc058e6f77a17537edde5c5c117a6f4981816b644b5a184acf23b"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1788631218~exp=1788652818~acl=/*~hmac=39be0570747f94a6c170e3d970c80bba217678124c7297615b15eff0e3626160"}
 https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Movies_HD_MOB/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://vortexsu.azmodz.in/vortextv/serve/keys/key.php?id=460
 #EXTINF:-1 tvg-id="1153" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_Movies.png" group-title="Malayalam",Asianet Movies
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) - @Vortex Tv - ExoPlayerLib/824.0
-#EXTHTTP:{"cookie":"__hdnea__=st=1788616805~exp=1788638405~acl=/*~hmac=a645546c479dc058e6f77a17537edde5c5c117a6f4981816b644b5a184acf23b"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1788631218~exp=1788652818~acl=/*~hmac=39be0570747f94a6c170e3d970c80bba217678124c7297615b15eff0e3626160"}
 https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Movies_MOB/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://vortexsu.azmodz.in/vortextv/serve/keys/key.php?id=1154
 #EXTINF:-1 tvg-id="1139" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Asianet_Plus.png" group-title="Malayalam",Asianet Plus
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) - @Vortex Tv - ExoPlayerLib/824.0
-#EXTHTTP:{"cookie":"__hdnea__=st=1788616805~exp=1788638405~acl=/*~hmac=a645546c479dc058e6f77a17537edde5c5c117a6f4981816b644b5a184acf23b"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1788631218~exp=1788652818~acl=/*~hmac=39be0570747f94a6c170e3d970c80bba217678124c7297615b15eff0e3626160"}
 https://jiotvmblive.cdn.jio.com/bpk-tv/Asianet_Plus_MOB/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://vortexsu.azmodz.in/vortextv/serve/keys/key.php?id=1140
@@ -111,19 +111,19 @@ https://cdn-3.pishow.tv/live/1629/master.m3u8
 ==MOVIES===
 #EXTINF:-1 tvg-id="1104" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Movies_HD.png" group-title="English",Star Movies HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) - @Vortex Tv - ExoPlayerLib/824.0
-#EXTHTTP:{"cookie":"__hdnea__=st=1788616805~exp=1788638405~acl=/*~hmac=a645546c479dc058e6f77a17537edde5c5c117a6f4981816b644b5a184acf23b"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1788631218~exp=1788652818~acl=/*~hmac=39be0570747f94a6c170e3d970c80bba217678124c7297615b15eff0e3626160"}
 https://jiotvmblive.cdn.jio.com/bpk-tv/StarMoviesHD_MOB/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://vortexsu.azmodz.in/vortextv/serve/keys/key.php?id=1106
 #EXTINF:-1 tvg-id="1110" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Star_Movies_Select_HD.png" group-title="English",Star Movies Select HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) - @Vortex Tv - ExoPlayerLib/824.0
-#EXTHTTP:{"cookie":"__hdnea__=st=1788616805~exp=1788638405~acl=/*~hmac=a645546c479dc058e6f77a17537edde5c5c117a6f4981816b644b5a184acf23b"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1788631218~exp=1788652818~acl=/*~hmac=39be0570747f94a6c170e3d970c80bba217678124c7297615b15eff0e3626160"}
 https://jiotvmblive.cdn.jio.com/bpk-tv/Star_Movies_Select_HD_MOB/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://vortexsu.azmodz.in/vortextv/serve/keys/key.php?id=1111
 #EXTINF:-1 tvg-id="762" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/SonyPIX.png" group-title="English",Sony Pix HD
 #EXTVLCOPT:http-user-agent=plaYtv/7.1.3 (Linux;Android 13) - @Vortex Tv - ExoPlayerLib/824.0
-#EXTHTTP:{"cookie":"__hdnea__=st=1788616805~exp=1788638405~acl=/*~hmac=a645546c479dc058e6f77a17537edde5c5c117a6f4981816b644b5a184acf23b"}
+#EXTHTTP:{"cookie":"__hdnea__=st=1788631218~exp=1788652818~acl=/*~hmac=39be0570747f94a6c170e3d970c80bba217678124c7297615b15eff0e3626160"}
 https://jiotvmblive.cdn.jio.com/bpk-tv/SonyPIX_MOB/WDVLive/index.mpd
 #KODIPROP:inputstream.adaptive.license_type=clearkey
 #KODIPROP:inputstream.adaptive.license_key=https://vortexsu.azmodz.in/vortextv/serve/keys/key.php?id=764
