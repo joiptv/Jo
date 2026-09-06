@@ -74,7 +74,7 @@ https://cdn-3.pishow.tv/live/1530/master.m3u8
 #EXTINF:-1 tvg-id="10582" tvg-chno="070" tvg-name="dd-malayalam" tvg-id="abusaeeidx" tvg-logo="https://prodcdn1.wavespb.com/shows/poster_url/1443058650DD_malayalam_______384x512.webp" group-title="Entertainment", DD MALAYALAM
 https://d2lk5u59tns74c.cloudfront.net/out/v1/c313674ffced4c9a90f1bba436df2b9b/index.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Kaumudy TV" tvg-logo="https://i.postimg.cc/vZ9d4MQS/kaumudy-tv.png" group-title="Entertainment",Kaumudy TV
-https://cdn-3.pishow.tv/live/1237/master.m3u8
+https://oqgdrkxby4rm-hls-live.5centscdn.com/kaumudytv/live.stream/chunks.m3u8
 #EXTINF:-1 group-logo="https://i.postimg.cc/YCLy5Bfd/IPTV-logo.png" tvg-id="Jeevan TV" tvg-logo="https://i.postimg.cc/bwfBFnhM/Jeevan-TV.png" group-title="Entertainment",Jeevan TV
 https://cdn-3.pishow.tv/live/1467/master.m3u8
 #EXTINF:-1 tvg-id="SafariTV" tvg-logo="https://jiotvimages.cdn.jio.com/dare_images/images/Safari_TV.png" group-title="Entertainment",Safari TV
